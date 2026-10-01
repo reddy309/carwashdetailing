@@ -1,0 +1,1240 @@
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root {
+  /* ===============================
+     AUTOSHINE 4 COLOR SYSTEM
+  =============================== */
+
+  --primary: #d88327;
+  --secondary: #2d6c85;
+  --bg: #f8f8f8;
+  --text: #181b1d;
+
+  --border: rgba(0, 0, 0, 0.12);
+
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Montserrat", sans-serif;
+}
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+html.dark {
+  --primary: #d88327;
+  --secondary: #2d6c85;
+
+  --bg: #181b1d;
+  --text: #faf3dd;
+  --border: rgba(255, 255, 255, 0.14);
+
+  --shadow: 0 18px 45px rgba(0, 0, 0, 0.42);
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+
+  min-height: 100%;
+}
+
+body {
+  width: 100%;
+
+  min-height: 100vh;
+
+  font-family: var(--font-body);
+
+  background: var(--bg);
+
+  color: var(--text);
+
+  overflow-x: hidden;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+/* =========================================================
+   LOGIN PAGE
+========================================================= */
+
+.login-page {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 70px 20px 60px;
+
+  background: var(--bg);
+
+  overflow: hidden;
+
+  transition: background 0.3s ease;
+}
+
+/* =========================================================
+   BACKGROUND DECORATION
+========================================================= */
+
+.background-decoration {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+/* =========================================================
+   SOFT BACKGROUND GLOW
+========================================================= */
+
+.background-decoration::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+
+  height: 420px;
+
+  top: -190px;
+
+  left: -150px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle, rgba(5, 183, 243, 0.1), transparent 68%);
+}
+
+.background-decoration::after {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+
+  height: 500px;
+
+  right: -220px;
+
+  bottom: -250px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle, rgba(5, 183, 243, 0.06), transparent 70%);
+}
+
+/* =========================================================
+   CIRCLES
+========================================================= */
+
+.bg-circle {
+  position: absolute;
+
+  border: 1px solid rgba(5, 183, 243, 0.18);
+
+  border-radius: 50%;
+}
+
+.circle-one {
+  width: 44px;
+
+  height: 44px;
+
+  left: 22%;
+
+  top: 35%;
+}
+
+.circle-two {
+  width: 86px;
+
+  height: 86px;
+
+  right: 20%;
+
+  bottom: 18%;
+
+  border-color: rgba(9, 35, 145, 0.12);
+}
+
+.circle-three {
+  width: 20px;
+
+  height: 20px;
+
+  left: 13%;
+
+  bottom: 31%;
+
+  border: none;
+
+  background: rgba(5, 183, 243, 0.25);
+}
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.bg-dot {
+  position: absolute;
+
+  width: 6px;
+
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: rgba(5, 183, 243, 0.28);
+}
+
+.dot-one {
+  left: 49%;
+
+  top: 18%;
+}
+
+.dot-two {
+  right: 14%;
+
+  top: 30%;
+}
+
+.dot-three {
+  left: 10%;
+
+  top: 67%;
+}
+
+/* =========================================================
+   BACKGROUND LINES
+========================================================= */
+
+.bg-line {
+  position: absolute;
+
+  height: 1px;
+
+  border-radius: 50%;
+
+  opacity: 0.5;
+}
+
+.line-one {
+  width: 430px;
+
+  left: -40px;
+
+  top: 37%;
+
+  transform: rotate(-7deg);
+
+  background: rgba(5, 183, 243, 0.16);
+}
+
+.line-two {
+  width: 460px;
+
+  right: -100px;
+
+  bottom: 34%;
+
+  transform: rotate(5deg);
+
+  background: rgba(5, 183, 243, 0.14);
+}
+
+/* =========================================================
+   HEADER ACTIONS — TOP LEFT
+========================================================= */
+
+.header-actions {
+  position: absolute;
+
+  top: 30px;
+  right: 20px;
+
+  transform: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+
+  z-index: 1000;
+}
+
+/* =========================================================
+   RTL BUTTON
+========================================================= */
+
+.rtl-button {
+  height: 40px;
+  min-width: 62px;
+  padding: 0 9px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  border: 1px solid var(--primary);
+  border-radius: 13px;
+
+  background: var(--bg);
+  color: var(--text);
+
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+  box-sizing: border-box;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.rtl-button:hover {
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+/* =========================================================
+   DARK MODE BUTTON
+========================================================= */
+
+.icon-button {
+  width: 40px;
+  height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--primary);
+  border-radius: 13px;
+
+  background: var(--bg);
+  color: var(--text);
+
+  cursor: pointer;
+  box-sizing: border-box;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.icon-button svg {
+  width: 17px;
+  height: 17px;
+}
+
+.icon-button:hover {
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+/* =========================================================
+   LOGIN CARD
+
+   SAME CENTER ALIGNMENT
+========================================================= */
+
+.login-card {
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+
+  max-width: 450px;
+
+  padding: 28px 25px 18px;
+
+  background: var(--card-bg);
+
+  border: 1px solid var(--border);
+
+  border-radius: 16px;
+
+  box-shadow: var(--shadow);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.login-brand {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin-bottom: 5px;
+}
+
+/* =========================================================
+   BRAND LINK
+========================================================= */
+
+.brand-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  text-decoration: none;
+}
+
+/* =========================================================
+   LOGO IMAGE
+
+   IMPORTANT:
+   ALWAYS VISIBLE IN DARK MODE
+========================================================= */
+
+.brand-logo {
+  width: 50px;
+
+  height: 50px;
+
+  object-fit: contain;
+
+  display: block;
+
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   LOGO NAME
+========================================================= */
+
+.brand-name {
+  font-family: var(--font-heading);
+
+  font-size: 21px;
+
+  line-height: 1;
+
+  font-weight: 700;
+
+  letter-spacing: -0.6px;
+
+  color: var(--primary);
+
+  white-space: nowrap;
+}
+
+.brand-name span {
+  color: var(--secondary);
+}
+
+/* =========================================================
+   DARK MODE LOGO NAME
+========================================================= */
+
+html.dark .brand-name {
+  color: var(--bg);
+}
+
+html.dark .brand-name span {
+  color: var(--secondary);
+}
+
+/* =========================================================
+   LOGIN TITLE
+========================================================= */
+
+.login-title {
+  text-align: center;
+
+  margin-bottom: 14px;
+}
+
+.login-title h1 {
+  font-family: var(--font-heading);
+
+  font-size: 25px;
+
+  line-height: 1;
+
+  font-weight: 700;
+
+  color: var(--primary);
+
+  margin-bottom: 4px;
+}
+
+.login-title p {
+  font-family: var(--font-body);
+
+  font-size: 13px;
+
+  line-height: 1.4;
+
+  color: var(--muted);
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.login-form {
+  width: 100%;
+}
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+  width: 100%;
+
+  margin-bottom: 9px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-family: var(--font-body);
+
+  font-size: 12px;
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  color: var(--text);
+}
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.input-wrapper {
+  width: 100%;
+
+  height: 37px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 9px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 8px;
+
+  background: var(--input-bg);
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.input-wrapper:focus-within {
+  border-color: var(--secondary);
+
+  box-shadow: 0 0 0 2px rgba(5, 183, 243, 0.1);
+}
+
+.input-wrapper > svg {
+  width: 14px;
+
+  height: 14px;
+
+  flex-shrink: 0;
+
+  margin-right: 8px;
+
+  color: var(--primary);
+
+  stroke-width: 1.7;
+}
+
+.input-wrapper input {
+  width: 100%;
+
+  height: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: var(--text);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+}
+
+.input-wrapper input::placeholder {
+  color: #9ca3af;
+}
+
+/* =========================================================
+   PASSWORD BUTTON
+========================================================= */
+
+.password-button {
+  width: 24px;
+
+  height: 24px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: var(--text);
+
+  cursor: pointer;
+
+  padding: 0;
+}
+
+.password-button svg {
+  width: 14px;
+
+  height: 14px;
+
+  margin: 0;
+}
+
+.password-button:hover {
+  color: var(--secondary);
+}
+
+/* =========================================================
+   FORM OPTIONS
+========================================================= */
+
+.form-options {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin: 4px 0 20px;
+}
+
+/* =========================================================
+   REMEMBER
+========================================================= */
+
+.remember-me {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  cursor: pointer;
+
+  color: var(--text);
+
+  font-family: var(--font-body);
+
+  font-size: 12px;
+
+  font-weight: 500;
+}
+
+.remember-me input {
+  width: 14px;
+
+  height: 14px;
+
+  margin: 0;
+
+  accent-color: var(--primary);
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   FORGOT PASSWORD
+========================================================= */
+
+.forgot-password {
+  font-family: var(--font-body);
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  color: var(--primary);
+
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  color: var(--secondary);
+}
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.login-submit {
+  width: 100%;
+
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 14px;
+
+  background: transparent;
+
+  color: var(--text);
+
+  border: 1px solid var(--primary);
+
+  font-family: var(--font-body);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.login-submit:hover {
+  background: var(--primary);
+
+  color: var(--bg);
+}
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.divider {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin: 10px 0;
+}
+
+.divider span {
+  flex: 1;
+
+  height: 1px;
+
+  background: var(--border);
+}
+
+.divider small {
+  font-family: var(--font-body);
+
+  font-size: 10px;
+
+  color: var(--muted);
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   SOCIAL BUTTONS
+========================================================= */
+
+.social-buttons {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 7px;
+}
+
+.social-button {
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: var(--text);
+
+  font-family: var(--font-body);
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.25s ease,
+    color 0.25s ease,
+    background 0.25s ease;
+}
+
+.social-button:hover {
+  border-color: var(--secondary);
+
+  color: var(--secondary);
+}
+
+.social-button svg {
+  width: 13px;
+
+  height: 13px;
+}
+
+.google-symbol {
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  color: var(--secondary);
+}
+
+/* =========================================================
+   SIGN UP
+========================================================= */
+
+.signup-text {
+  text-align: center;
+
+  margin-top: 8px;
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  line-height: 1.5;
+
+  color: var(--muted);
+}
+
+.signup-text a {
+  color: var(--primary);
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  margin-left: 2px;
+}
+
+.signup-text a:hover {
+  color: var(--secondary);
+}
+
+/* =========================================================
+   BOTTOM BRAND
+
+   SAME GENERAL POSITION AS REFERENCE
+========================================================= */
+
+.bottom-brand {
+  position: absolute;
+
+  right: 18px;
+
+  bottom: 18px;
+
+  z-index: 10;
+
+  min-width: 105px;
+
+  height: 38px;
+
+  padding: 0 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 25px;
+
+  background: var(--primary);
+
+  color: var(--bg);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  box-shadow: 0 7px 20px rgba(9, 35, 145, 0.15);
+}
+
+html.dark .bottom-brand {
+  background: var(--secondary);
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+
+   360px
+========================================================= */
+
+@media (max-width: 360px) {
+  .login-page {
+    padding: 65px 12px 55px;
+  }
+
+  /* ===============================
+     TOP BUTTONS
+  =============================== */
+
+  .top-actions {
+    top: 13px;
+
+    right: 12px;
+
+    gap: 5px;
+  }
+
+  html[dir="rtl"] .top-actions {
+    right: auto;
+
+    left: 12px;
+  }
+
+  .rtl-button,
+  .theme-button {
+    width: 34px;
+
+    height: 34px;
+  }
+
+  .rtl-button {
+    font-size: 9px;
+  }
+
+  .theme-button svg {
+    width: 14px;
+
+    height: 14px;
+  }
+
+  /* ===============================
+     CARD
+  =============================== */
+
+  .login-card {
+    max-width: 100%;
+
+    padding: 24px 18px 17px;
+
+    border-radius: 14px;
+  }
+
+  /* ===============================
+     LOGO
+  =============================== */
+
+  .brand-logo {
+    width: 32px;
+
+    height: 32px;
+  }
+
+  .brand-name {
+    font-size: 19px;
+  }
+
+  .brand-link {
+    gap: 4px;
+  }
+
+  .login-title {
+    margin-bottom: 13px;
+  }
+
+  .login-title h1 {
+    font-size: 24px;
+  }
+
+  .login-title p {
+    font-size: 7px;
+  }
+
+  /* ===============================
+     INPUTS
+  =============================== */
+
+  .form-group {
+    margin-bottom: 8px;
+  }
+
+  .form-group label {
+    font-size: 8px;
+  }
+
+  .input-wrapper {
+    height: 36px;
+  }
+
+  .input-wrapper input {
+    font-size: 8px;
+  }
+
+  .form-options {
+    margin-bottom: 18px;
+  }
+
+  .remember-me,
+  .forgot-password {
+    font-size: 8px;
+  }
+
+  .login-submit {
+    height: 37px;
+
+    font-size: 8px;
+  }
+
+  .social-button {
+    height: 33px;
+
+    font-size: 8px;
+  }
+
+  .signup-text {
+    font-size: 7px;
+  }
+
+  /* ===============================
+     BOTTOM
+  =============================== */
+
+  .bottom-brand {
+    right: 12px;
+
+    bottom: 11px;
+
+    height: 34px;
+
+    min-width: 90px;
+
+    padding: 0 11px;
+
+    font-size: 8px;
+  }
+
+  html[dir="rtl"] .bottom-brand {
+    right: auto;
+
+    left: 12px;
+  }
+
+  /* ===============================
+     BACKGROUND
+  =============================== */
+
+  .circle-one {
+    left: 7%;
+
+    top: 31%;
+  }
+
+  .circle-two {
+    right: 7%;
+
+    bottom: 17%;
+  }
+
+  .line-one {
+    left: -120px;
+  }
+
+  .line-two {
+    right: -150px;
+  }
+}
+
+/* =========================================================
+   IPAD MINI
+   768px
+========================================================= */
+
+@media (min-width: 361px) and (max-width: 768px) {
+  .login-page {
+    padding: 75px 20px 60px;
+  }
+
+  .top-actions {
+    top: 17px;
+
+    right: 22px;
+  }
+
+  html[dir="rtl"] .top-actions {
+    right: auto;
+
+    left: 22px;
+  }
+
+  .login-card {
+    max-width: 430px;
+  }
+
+  .brand-logo {
+    width: 35px;
+
+    height: 35px;
+  }
+
+  .brand-name {
+    font-size: 21px;
+  }
+
+  .bottom-brand {
+    right: 20px;
+
+    bottom: 17px;
+  }
+
+  html[dir="rtl"] .bottom-brand {
+    right: auto;
+
+    left: 20px;
+  }
+}
+
+/* =========================================================
+   NEST HUB
+   1280px+
+========================================================= */
+
+@media (min-width: 769px) {
+  .login-page {
+    min-height: 100vh;
+
+    padding: 70px 25px 55px;
+  }
+
+  .login-card {
+    max-width: 450px;
+  }
+
+  .top-actions {
+    top: 18px;
+
+    right: 25px;
+  }
+
+  html[dir="rtl"] .top-actions {
+    right: auto;
+
+    left: 25px;
+  }
+
+  .bottom-brand {
+    right: 18px;
+
+    bottom: 18px;
+  }
+
+  html[dir="rtl"] .bottom-brand {
+    right: auto;
+
+    left: 18px;
+  }
+}
+
+/* =========================================================
+   DARK MODE AUTOFILL
+========================================================= */
+
+html.dark .input-wrapper input:-webkit-autofill {
+  -webkit-text-fill-color: var(--text);
+
+  -webkit-box-shadow: 0 0 0 1000px var(--input-bg) inset;
+}

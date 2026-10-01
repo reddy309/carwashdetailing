@@ -1,0 +1,1005 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CarShine Customer Dashboard</title>
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- =====================================================
+         LUCIDE ICONS
+    ====================================================== -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         DASHBOARD
+    ====================================================== -->
+
+    <div class="dashboard">
+      <!-- ===================================================
+           SIDEBAR
+      ==================================================== -->
+
+      <aside class="sidebar" id="sidebar">
+        <!-- =================================================
+             LOGO
+        ================================================== -->
+
+        <div class="sidebar-logo">
+          <div class="logo-icon">
+            <img src="images/logo pro2.png" alt="CarShine Logo" />
+          </div>
+
+          <div class="logo-text"><span>Car</span><strong>Shine</strong></div>
+        </div>
+
+        <!-- =================================================
+             NAVIGATION
+        ================================================== -->
+
+        <nav class="sidebar-nav">
+          <!-- DASHBOARD -->
+
+          <a href="#dashboard" class="nav-item active" data-page="dashboard">
+            <i data-lucide="layout-dashboard"></i>
+
+            <span>Dashboard</span>
+          </a>
+
+          <!-- BOOKINGS -->
+
+          <a href="#bookings" class="nav-item" data-page="bookings">
+            <i data-lucide="calendar-days"></i>
+
+            <span>My Bookings</span>
+          </a>
+
+          <!-- VEHICLES -->
+
+          <a href="#vehicles" class="nav-item" data-page="vehicles">
+            <i data-lucide="car"></i>
+
+            <span>My Vehicles</span>
+          </a>
+
+          <!-- SERVICE PACKAGES -->
+
+          <a href="#packages" class="nav-item" data-page="packages">
+            <i data-lucide="sparkles"></i>
+
+            <span>Service Packages</span>
+          </a>
+
+          <!-- TECHNICIAN TRACKING -->
+
+          <a href="#tracking" class="nav-item" data-page="tracking">
+            <i data-lucide="map-pin"></i>
+
+            <span>Technician Tracking</span>
+          </a>
+
+          <!-- SERVICE HISTORY -->
+
+          <a href="#history" class="nav-item" data-page="history">
+            <i data-lucide="history"></i>
+
+            <span>Service History</span>
+          </a>
+
+          <!-- PAYMENTS -->
+
+          <a href="#payments" class="nav-item" data-page="payments">
+            <i data-lucide="credit-card"></i>
+
+            <span>Payments</span>
+          </a>
+
+          <!-- DIVIDER -->
+
+          <div class="nav-divider"></div>
+
+          <!-- NOTIFICATIONS -->
+
+          <a href="#notifications" class="nav-item" data-page="notifications">
+            <i data-lucide="bell"></i>
+
+            <span>Notifications</span>
+
+            <span class="notification-count"> 3 </span>
+          </a>
+
+          <!-- ACCOUNT SETTINGS -->
+
+          <a href="#settings" class="nav-item" data-page="settings">
+            <i data-lucide="settings"></i>
+
+            <span>Account Settings</span>
+          </a>
+        </nav>
+
+        <!-- =================================================
+             SIDEBAR BOTTOM
+        ================================================== -->
+
+        <div class="sidebar-bottom">
+          <!-- HELP CARD -->
+
+          <div class="help-card">
+            <div class="help-icon">
+              <i data-lucide="headphones"></i>
+            </div>
+
+            <div>
+              <strong> Need Help? </strong>
+
+              <small> Our support team is here for you. </small>
+            </div>
+          </div>
+
+          <!-- SIDEBAR LOGOUT -->
+
+          <button type="button" class="logout" id="sidebarLogoutButton">
+            <i data-lucide="log-out"></i>
+
+            <span> Logout </span>
+          </button>
+
+          <!-- SIDEBAR FOOTER -->
+
+          <div class="sidebar-footer">© 2026 CarShine</div>
+        </div>
+      </aside>
+
+      <!-- ===================================================
+           MAIN AREA
+      ==================================================== -->
+
+      <main class="main-area">
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="top-header">
+          <!-- HEADER LEFT -->
+
+          <div class="header-left">
+            <div class="page-label" id="headerLabel">CUSTOMER DASHBOARD</div>
+
+            <h1 id="headerTitle">Welcome back, Customer</h1>
+          </div>
+
+          <!-- =================================================
+               HEADER ACTIONS
+          ================================================== -->
+
+          <div class="header-actions">
+            <!-- =================================================
+                 DARK MODE
+            ================================================== -->
+
+            <button
+              type="button"
+              class="header-icon-button"
+              id="darkToggle"
+              aria-label="Toggle dark mode"
+              title="Dark Mode"
+            >
+              <i data-lucide="moon"></i>
+            </button>
+
+            <!-- =================================================
+                 RTL
+            ================================================== -->
+
+            <button
+              type="button"
+              class="header-icon-button"
+              id="rtlToggle"
+              aria-label="Toggle RTL"
+              title="RTL"
+            >
+              <i data-lucide="languages"></i>
+            </button>
+
+            <!-- =================================================
+                 ADMIN PROFILE
+            ================================================== -->
+
+            <div class="admin-profile-wrapper">
+              <!-- ADMIN BUTTON -->
+
+              <button
+                class="admin-profile"
+                id="adminProfileButton"
+                type="button"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                <div class="admin-avatar">
+                  <i data-lucide="user"></i>
+                </div>
+
+                <div class="admin-info">
+                  <strong> Admin </strong>
+
+                  <span> Customer Account </span>
+                </div>
+
+                <i data-lucide="chevron-down" class="admin-chevron"></i>
+              </button>
+
+              <!-- =================================================
+                   ADMIN DROPDOWN
+              ================================================== -->
+
+              <div class="admin-dropdown" id="adminDropdown">
+                <!-- DROPDOWN HEADER -->
+
+                <div class="admin-dropdown-header">
+                  <strong> Admin / Customer Account </strong>
+
+                  <span> Manage your customer account </span>
+                </div>
+
+                <!-- MY PROFILE -->
+
+                <button
+                  class="admin-dropdown-item"
+                  type="button"
+                  data-page-link="profile"
+                >
+                  <i data-lucide="user"></i>
+
+                  <span> My Profile </span>
+                </button>
+
+                <!-- NOTIFICATIONS -->
+
+                <button
+                  class="admin-dropdown-item"
+                  type="button"
+                  data-page-link="notifications"
+                >
+                  <i data-lucide="bell"></i>
+
+                  <span> Notifications </span>
+                </button>
+
+                <!-- DIVIDER -->
+
+                <div class="admin-dropdown-divider"></div>
+
+                <!-- LOGOUT -->
+
+                <button
+                  class="admin-dropdown-item logout-item"
+                  id="adminLogoutButton"
+                  type="button"
+                >
+                  <i data-lucide="log-out"></i>
+
+                  <span> Logout </span>
+                </button>
+              </div>
+            </div>
+
+            <!-- =================================================
+                 MOBILE MENU
+            ================================================== -->
+
+            <button
+              type="button"
+              class="menu-toggle"
+              id="menuToggle"
+              aria-label="Open menu"
+              aria-expanded="false"
+            >
+              <i data-lucide="menu"></i>
+            </button>
+          </div>
+        </header>
+
+        <!-- =================================================
+             DASHBOARD CONTENT
+        ================================================== -->
+
+        <div class="dashboard-content">
+          <!-- =================================================
+               DASHBOARD
+          ================================================== -->
+
+          <section class="page-content dynamic-page" data-content="dashboard">
+            <!-- INTRO -->
+
+            <div class="dashboard-intro">
+              <div>
+                <span class="section-label"> YOUR CAR CARE </span>
+
+                <h2>Welcome back</h2>
+
+                <p>
+                  Book on-location detailing slots, track technician arrival,
+                  view service package history, and manage payments from one
+                  dashboard.
+                </p>
+              </div>
+
+              <button type="button" class="primary-button book-service-button">
+                Book a Service
+
+                <i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+
+            <!-- =================================================
+                 STATS
+            ================================================== -->
+
+            <div class="stats-grid">
+              <!-- UPCOMING -->
+
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i data-lucide="calendar-check"></i>
+                </div>
+
+                <div class="stat-content">
+                  <span> Upcoming Bookings </span>
+
+                  <strong> 02 </strong>
+
+                  <small> Next service scheduled </small>
+                </div>
+              </div>
+
+              <!-- VEHICLES -->
+
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i data-lucide="car"></i>
+                </div>
+
+                <div class="stat-content">
+                  <span> My Vehicles </span>
+
+                  <strong> 03 </strong>
+
+                  <small> Vehicles registered </small>
+                </div>
+              </div>
+
+              <!-- SERVICES -->
+
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i data-lucide="sparkles"></i>
+                </div>
+
+                <div class="stat-content">
+                  <span> Services Completed </span>
+
+                  <strong> 12 </strong>
+
+                  <small> Total detailing services </small>
+                </div>
+              </div>
+
+              <!-- SPENT -->
+
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i data-lucide="wallet"></i>
+                </div>
+
+                <div class="stat-content">
+                  <span> Total Spent </span>
+
+                  <strong> ₹18,450 </strong>
+
+                  <small> This year </small>
+                </div>
+              </div>
+            </div>
+
+            <!-- =================================================
+                 MAIN GRID
+            ================================================== -->
+
+            <div class="main-grid">
+              <!-- UPCOMING BOOKING -->
+
+              <div class="dashboard-card">
+                <div class="card-header">
+                  <h3>Upcoming Booking</h3>
+
+                  <a href="#bookings" data-page-link="bookings">
+                    View All
+
+                    <i data-lucide="arrow-right"></i>
+                  </a>
+                </div>
+
+                <div class="booking-details">
+                  <div class="booking-date">
+                    <strong> 18 </strong>
+
+                    <span> OCT </span>
+                  </div>
+
+                  <div class="booking-info">
+                    <h4>Full Vehicle Detailing</h4>
+
+                    <p>
+                      <i data-lucide="car"></i>
+                      BMW 5 Series
+                    </p>
+
+                    <p>
+                      <i data-lucide="clock"></i>
+                      10:00 AM
+                    </p>
+
+                    <p>
+                      <i data-lucide="map-pin"></i>
+                      Hyderabad
+                    </p>
+                  </div>
+
+                  <span class="booking-status"> CONFIRMED </span>
+                </div>
+
+                <div class="booking-actions">
+                  <button type="button" class="secondary-button">
+                    View Booking
+                  </button>
+
+                  <button type="button" class="outline-button">
+                    Reschedule
+                  </button>
+                </div>
+              </div>
+
+              <!-- TECHNICIAN -->
+
+              <div class="dashboard-card">
+                <div class="card-header">
+                  <h3>Technician</h3>
+
+                  <div class="live-status">
+                    <span></span>
+
+                    LIVE
+                  </div>
+                </div>
+
+                <div class="technician-content">
+                  <div class="technician-avatar">
+                    <i data-lucide="user"></i>
+                  </div>
+
+                  <div class="technician-info">
+                    <h4>Rajesh Kumar</h4>
+
+                    <p>Professional Detailing Technician</p>
+
+                    <strong> Arriving in 18 minutes </strong>
+                  </div>
+                </div>
+
+                <div class="progress-wrapper">
+                  <div class="progress-top">
+                    <span> Technician Arrival </span>
+
+                    <strong> 75% </strong>
+                  </div>
+
+                  <div class="progress-bar">
+                    <span style="width: 75%"></span>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  class="tracking-button"
+                  data-page-link="tracking"
+                >
+                  Track Technician
+
+                  <i data-lucide="navigation"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- =================================================
+                 RECENT SERVICES / PAYMENTS
+            ================================================== -->
+
+            <div class="main-grid" style="margin-top: 20px">
+              <!-- RECENT SERVICES -->
+
+              <div class="dashboard-card">
+                <div class="card-header">
+                  <h3>Recent Services</h3>
+
+                  <a href="#history" data-page-link="history">
+                    View History
+
+                    <i data-lucide="arrow-right"></i>
+                  </a>
+                </div>
+
+                <div class="service-list">
+                  <div class="service-row">
+                    <div class="service-icon">
+                      <i data-lucide="sparkles"></i>
+                    </div>
+
+                    <div class="service-info">
+                      <strong> Premium Interior Detailing </strong>
+
+                      <small> BMW 5 Series · 12 Sep 2026 </small>
+                    </div>
+
+                    <span class="service-price"> ₹2,500 </span>
+                  </div>
+
+                  <div class="service-row">
+                    <div class="service-icon">
+                      <i data-lucide="car"></i>
+                    </div>
+
+                    <div class="service-info">
+                      <strong> Foam Wash & Deep Cleaning </strong>
+
+                      <small> Honda City · 02 Sep 2026 </small>
+                    </div>
+
+                    <span class="service-price"> ₹1,800 </span>
+                  </div>
+
+                  <div class="service-row">
+                    <div class="service-icon">
+                      <i data-lucide="shield-check"></i>
+                    </div>
+
+                    <div class="service-info">
+                      <strong> Wax & Paint Protection </strong>
+
+                      <small> Toyota Camry · 25 Aug 2026 </small>
+                    </div>
+
+                    <span class="service-price"> ₹3,200 </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- RECENT PAYMENTS -->
+
+              <div class="dashboard-card">
+                <div class="card-header">
+                  <h3>Recent Payments</h3>
+
+                  <a href="#payments" data-page-link="payments">
+                    View All
+
+                    <i data-lucide="arrow-right"></i>
+                  </a>
+                </div>
+
+                <div class="payment-list">
+                  <div class="payment-row">
+                    <div class="payment-icon">
+                      <i data-lucide="credit-card"></i>
+                    </div>
+
+                    <div>
+                      <strong> Interior Detailing </strong>
+
+                      <small> 12 Sep 2026 </small>
+                    </div>
+
+                    <div class="payment-right">
+                      <strong> ₹2,500 </strong>
+
+                      <span> PAID </span>
+                    </div>
+                  </div>
+
+                  <div class="payment-row">
+                    <div class="payment-icon">
+                      <i data-lucide="credit-card"></i>
+                    </div>
+
+                    <div>
+                      <strong> Foam Wash </strong>
+
+                      <small> 02 Sep 2026 </small>
+                    </div>
+
+                    <div class="payment-right">
+                      <strong> ₹1,800 </strong>
+
+                      <span> PAID </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+               MY BOOKINGS
+          ================================================== -->
+
+          <section
+            class="page-content dynamic-page"
+            data-content="bookings"
+            hidden
+          >
+            <span class="section-label"> MY BOOKINGS </span>
+
+            <h2>Your Bookings</h2>
+
+            <p>
+              View and manage your upcoming and previous detailing appointments.
+            </p>
+
+            <div class="content-list">
+              <div class="content-row">
+                <div class="content-icon">
+                  <i data-lucide="calendar-days"></i>
+                </div>
+
+                <div>
+                  <strong> Full Vehicle Detailing </strong>
+
+                  <small> BMW 5 Series · 18 Oct 2026 · 10:00 AM </small>
+                </div>
+
+                <span class="status-badge"> CONFIRMED </span>
+
+                <span class="price"> ₹4,500 </span>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+               MY VEHICLES
+          ================================================== -->
+
+          <section
+            class="page-content dynamic-page"
+            data-content="vehicles"
+            hidden
+          >
+            <span class="section-label"> MY VEHICLES </span>
+
+            <h2>Your Vehicles</h2>
+
+            <p>Manage the vehicles connected to your AutoShine account.</p>
+
+            <div class="content-grid">
+              <div class="content-box">
+                <i data-lucide="car"></i>
+
+                <h3>BMW 5 Series</h3>
+
+                <p>Sedan · Petrol · Automatic</p>
+
+                <strong> TS 09 AB 1234 </strong>
+              </div>
+
+              <div class="content-box">
+                <i data-lucide="car"></i>
+
+                <h3>Honda City</h3>
+
+                <p>Sedan · Petrol · Automatic</p>
+
+                <strong> TS 10 CD 5678 </strong>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+               SERVICE PACKAGES
+          ================================================== -->
+
+          <section
+            class="page-content dynamic-page"
+            data-content="packages"
+            hidden
+          >
+            <span class="section-label"> SERVICE PACKAGES </span>
+
+            <h2>Available Services</h2>
+
+            <p>Choose the right detailing package for your vehicle.</p>
+
+            <div class="content-grid">
+              <div class="content-box">
+                <i data-lucide="droplets"></i>
+
+                <h3>Vehicle Wash</h3>
+
+                <p>Exterior wash and basic vehicle cleaning.</p>
+
+                <strong> From ₹799 </strong>
+              </div>
+
+              <div class="content-box">
+                <i data-lucide="sparkles"></i>
+
+                <h3>Interior Detailing</h3>
+
+                <p>Deep cleaning and care for your vehicle interior.</p>
+
+                <strong> From ₹2,500 </strong>
+              </div>
+
+              <div class="content-box">
+                <i data-lucide="shield-check"></i>
+
+                <h3>Full Detailing</h3>
+
+                <p>Complete interior and exterior detailing service.</p>
+
+                <strong> From ₹4,500 </strong>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+               TECHNICIAN TRACKING
+          ================================================== -->
+
+          <section
+            class="page-content dynamic-page"
+            data-content="tracking"
+            hidden
+          >
+            <span class="section-label"> TECHNICIAN TRACKING </span>
+
+            <h2>Track Your Technician</h2>
+
+            <p>Follow your technician's arrival status in real time.</p>
+
+            <div class="tracking-panel">
+              <div class="tracking-avatar">
+                <i data-lucide="user"></i>
+              </div>
+
+              <div class="tracking-info">
+                <h3>Rajesh Kumar</h3>
+
+                <p>Your technician is currently on the way to your location.</p>
+
+                <strong> Estimated arrival: 18 minutes </strong>
+              </div>
+
+              <div class="live-status">
+                <span></span>
+
+                LIVE
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+               SERVICE HISTORY
+          ================================================== -->
+
+          <section
+            class="page-content dynamic-page"
+            data-content="history"
+            hidden
+          >
+            <span class="section-label"> SERVICE HISTORY </span>
+
+            <h2>Your Service History</h2>
+
+            <p>Review all previously completed AutoShine services.</p>
+
+            <div class="content-list">
+              <div class="content-row">
+                <div class="content-icon">
+                  <i data-lucide="check-circle"></i>
+                </div>
+
+                <div>
+                  <strong> Premium Interior Detailing </strong>
+
+                  <small> BMW 5 Series · 12 Sep 2026 </small>
+                </div>
+
+                <span class="status-badge completed"> COMPLETED </span>
+
+                <span class="price"> ₹2,500 </span>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+               PAYMENTS
+          ================================================== -->
+
+          <section
+            class="page-content dynamic-page"
+            data-content="payments"
+            hidden
+          >
+            <span class="section-label"> PAYMENTS </span>
+
+            <h2>Your Payments</h2>
+
+            <p>View your AutoShine payment records and transaction status.</p>
+
+            <div class="content-list">
+              <div class="content-row">
+                <div class="content-icon">
+                  <i data-lucide="credit-card"></i>
+                </div>
+
+                <div>
+                  <strong> Interior Detailing </strong>
+
+                  <small> 12 Sep 2026 · Card Payment </small>
+                </div>
+
+                <span class="status-badge completed"> PAID </span>
+
+                <span class="price"> ₹2,500 </span>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+               NOTIFICATIONS
+          ================================================== -->
+
+          <section
+            class="page-content dynamic-page"
+            data-content="notifications"
+            hidden
+          >
+            <span class="section-label"> NOTIFICATIONS </span>
+
+            <h2>Your Notifications</h2>
+
+            <p>Stay updated with your bookings, payments and services.</p>
+
+            <div class="content-list">
+              <div class="content-row">
+                <div class="content-icon">
+                  <i data-lucide="bell"></i>
+                </div>
+
+                <div>
+                  <strong> Technician Assigned </strong>
+
+                  <small>
+                    Rajesh Kumar has been assigned to your booking.
+                  </small>
+                </div>
+
+                <span class="status-badge"> NEW </span>
+              </div>
+
+              <div class="content-row">
+                <div class="content-icon">
+                  <i data-lucide="calendar-check"></i>
+                </div>
+
+                <div>
+                  <strong> Booking Confirmed </strong>
+
+                  <small> Your October 18 booking is confirmed. </small>
+                </div>
+
+                <span class="status-badge completed"> READ </span>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+               ACCOUNT SETTINGS
+          ================================================== -->
+
+          <section
+            class="page-content dynamic-page"
+            data-content="settings"
+            hidden
+          >
+            <span class="section-label"> ACCOUNT SETTINGS </span>
+
+            <h2>Account Settings</h2>
+
+            <p>Manage your account preferences and personal information.</p>
+
+            <div class="settings-list">
+              <div class="setting-row">
+                <div>
+                  <strong> Personal Information </strong>
+
+                  <small> Manage your name, email and phone number. </small>
+                </div>
+
+                <button type="button" class="outline-button">Edit</button>
+              </div>
+
+              <div class="setting-row">
+                <div>
+                  <strong> Password </strong>
+
+                  <small> Update your account password. </small>
+                </div>
+
+                <button type="button" class="outline-button">Change</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+               MY PROFILE
+          ================================================== -->
+
+          <section
+            class="page-content dynamic-page"
+            data-content="profile"
+            hidden
+          >
+            <span class="section-label"> MY PROFILE </span>
+
+            <h2>My Profile</h2>
+
+            <p>View and manage your AutoShine customer account information.</p>
+
+            <div class="profile-card">
+              <div class="profile-avatar">
+                <i data-lucide="user"></i>
+              </div>
+
+              <div class="profile-details">
+                <h3>Admin</h3>
+
+                <p>Customer Account</p>
+
+                <span> AutoShine Customer </span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- =====================================================
+         DASHBOARD JS
+    ====================================================== -->
+
+    <script src="main .js"></script>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

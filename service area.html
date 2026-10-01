@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mobile Vehicle Detailing & Wash Service</title>
+
+    <link rel="stylesheet" href="service area.css" />
+    <link rel="stylesheet" href="global.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <!-- ==================================================
+     HEADER
+================================================== -->
+
+    <header class="site-header" id="siteHeader">
+      <div class="header-container">
+        <!-- ================= LOGO ================= -->
+
+        <a href="index.html" class="logo">
+          <span class="logo-icon">
+            <img
+              src="images/logo pro2.png"
+              alt="Mobile Vehicle Detailing Logo"
+            />
+          </span>
+
+          <span class="logo-name"> Car<strong>Shine</strong> </span>
+        </a>
+
+        <!-- ================= NAVIGATION ================= -->
+
+        <nav class="main-nav" id="mainNav">
+          <!-- HOME DROPDOWN -->
+          <div class="nav-dropdown">
+            <button
+              class="nav-link dropdown-button"
+              id="homeDropdownButton"
+              type="button"
+              aria-expanded="false"
+            >
+              <span>Home</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+
+            <div class="dropdown-menu">
+              <a href="index.html">Home 1</a>
+              <a href="index1.html">Home 2</a>
+            </div>
+          </div>
+          <!-- NAV LINKS -->
+          <a href="service.html" class="nav-link"> Services</a>
+
+          <a href="pricing.html" class="nav-link">Pricing</a>
+
+          <a href="service area.html" class="nav-link">Service Area</a>
+
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="dashboard.html" class="nav-link">Dashboard</a>
+
+          <!-- MOBILE LOGIN -->
+          <a href="login.html" class="mobile-login">Login</a>
+        </nav>
+
+        <!-- ================= HEADER ACTIONS ================= -->
+
+        <div class="header-actions">
+          <!-- RTL / LTR -->
+
+          <button
+            type="button"
+            class="rtl-button"
+            id="rtlToggle"
+            aria-label="Switch to RTL"
+            title="Switch to RTL"
+          >
+            <span>RTL</span>
+          </button>
+
+          <!-- DARK / LIGHT -->
+
+          <button
+            type="button"
+            class="icon-button"
+            id="darkToggle"
+            aria-label="Dark Mode"
+            title="Dark Mode"
+          >
+            <i data-lucide="moon"></i>
+          </button>
+
+          <!-- DESKTOP LOGIN -->
+
+          <a href="login.html" class="login-button">
+            <span>Login</span>
+          </a>
+
+          <!-- HAMBURGER -->
+
+          <button
+            type="button"
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open Menu"
+            title="Menu"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- =========================================================
+     SERVICE AREA HERO
+========================================================= -->
+
+    <section class="service-area-hero">
+      <div class="service-area-hero-overlay"></div>
+
+      <div class="service-area-hero-container">
+        <div class="service-area-hero-content">
+          <span class="service-area-hero-label"> SERVICE AREA </span>
+
+          <h1>
+            Detailing That
+            <span>Comes to You</span>
+          </h1>
+
+          <p>
+            Professional vehicle detailing brought directly to your home,
+            office, or preferred location.
+          </p>
+
+          <div class="service-area-hero-actions">
+            <a href="contact.html" class="hero-btn-primary">
+              Book a Service
+              <i data-lucide="arrow-right"></i>
+            </a>
+
+            <a href="#service-locations" class="hero-btn-secondary">
+              View Service Areas
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =========================================================
+     SERVICE COVERAGE INFORMATION
+========================================================= -->
+
+    <section class="service-coverage-section">
+      <div class="service-coverage-container">
+        <!-- HEADER -->
+        <div class="service-coverage-header">
+          <span class="service-coverage-label">
+            SERVICE COVERAGE INFORMATION
+          </span>
+
+          <h2>
+            Know Where We
+            <span>Come To You</span>
+          </h2>
+
+          <div class="coverage-heading-line"></div>
+
+          <p>
+            carShine brings professional vehicle detailing directly to your
+            preferred location.
+          </p>
+        </div>
+
+        <!-- REGULAR SERVICE ZONES -->
+        <div class="coverage-zone coverage-zone-regular">
+          <div class="coverage-zone-heading">
+            <span>REGULAR SERVICE ZONES</span>
+            <div></div>
+          </div>
+
+          <ul class="coverage-list">
+            <li>Primary coverage</li>
+            <li>Standard booking availability</li>
+            <li>Full range of detailing services</li>
+          </ul>
+        </div>
+
+        <!-- COVERAGE RANGE -->
+        <div class="coverage-range">
+          <div class="coverage-range-heading">
+            <span></span>
+            <h3>COVERAGE RANGE</h3>
+            <span></span>
+          </div>
+
+          <div class="coverage-track">
+            <!-- REGULAR -->
+            <div class="coverage-stage">
+              <div class="coverage-stage-dot"></div>
+
+              <h4>Regular Zone</h4>
+
+              <p>Standard<br />Coverage</p>
+            </div>
+
+            <!-- EXTENDED -->
+            <div class="coverage-stage">
+              <div class="coverage-stage-dot"></div>
+
+              <h4>Extended Zone</h4>
+
+              <p>Selected<br />Locations</p>
+            </div>
+
+            <!-- LOCATION CHECK -->
+            <div class="coverage-stage">
+              <div class="coverage-stage-dot"></div>
+
+              <h4>Location Check</h4>
+
+              <p>Confirm<br />Availability</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- EXTENDED SERVICE ZONES -->
+        <div class="coverage-zone coverage-zone-extended">
+          <div class="coverage-zone-heading">
+            <span>EXTENDED SERVICE ZONES</span>
+            <div></div>
+          </div>
+
+          <ul class="coverage-list">
+            <li>Selected outer locations</li>
+            <li>Availability depends on service area</li>
+            <li>Additional travel conditions may apply</li>
+          </ul>
+        </div>
+
+        <!-- AVAILABILITY -->
+        <div class="coverage-availability">
+          <h3>AVAILABILITY MAY VARY BY LOCATION</h3>
+
+          <p>
+            Enter your location to confirm whether carShine is available for
+            your preferred service and time.
+          </p>
+
+          <a href="service area.html" class="coverage-btn">
+            Check Availability
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     WHERE WE SERVE
+========================================================= -->
+
+    <section class="where-we-serve">
+      <div class="where-we-serve-container">
+        <!-- SECTION HEADER -->
+        <div class="where-we-serve-header">
+          <span class="where-we-serve-label"> Where We Serve </span>
+
+          <h2>
+            Detailing That
+            <span>Comes To You</span>
+          </h2>
+
+          <p>
+            AutoShine brings professional vehicle detailing directly to your
+            home, office, apartment, or preferred location.
+          </p>
+        </div>
+
+        <!-- MAIN SERVICE AREA -->
+        <div class="where-we-serve-main">
+          <!-- MAP VISUAL -->
+          <div class="where-we-serve-map">
+            <div class="map-overlay"></div>
+          </div>
+
+          <!-- SERVICE AREA INFORMATION -->
+          <div class="where-we-serve-info">
+            <span class="info-label"> OUR COVERAGE </span>
+
+            <h3>
+              Professional Care,
+              <span>Where You Need It.</span>
+            </h3>
+
+            <p>
+              From residential driveways to office parking spaces, our mobile
+              detailing team comes directly to you.
+            </p>
+
+            <div class="service-area-list">
+              <div class="service-area-item">
+                <span class="service-area-check"> ✓ </span>
+
+                <span> Residential Areas </span>
+              </div>
+
+              <div class="service-area-item">
+                <span class="service-area-check"> ✓ </span>
+
+                <span> Office Locations </span>
+              </div>
+
+              <div class="service-area-item">
+                <span class="service-area-check"> ✓ </span>
+
+                <span> Apartment Communities </span>
+              </div>
+
+              <div class="service-area-item">
+                <span class="service-area-check"> ✓ </span>
+
+                <span> Commercial Areas </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="where-we-serve-action">
+          <a href="contact.html" class="where-we-serve-btn">
+            Check Service Availability
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- =========================================================
+     SERVICE AVAILABILITY
+========================================================= -->
+
+    <section class="service-availability">
+      <div class="service-availability-container">
+        <!-- HEADER -->
+        <div class="service-availability-header">
+          <span class="service-availability-label"> Service Availability </span>
+
+          <h2>
+            Check Availability
+            <span>In Your Area</span>
+          </h2>
+
+          <p>
+            Enter your location and service details to check whether AutoShine
+            mobile detailing is available in your area.
+          </p>
+        </div>
+
+        <!-- AVAILABILITY FORM -->
+        <div class="service-availability-form-wrapper">
+          <form class="service-availability-form">
+            <!-- LOCATION -->
+            <div class="availability-field">
+              <label for="service-location"> Location </label>
+
+              <div class="availability-input">
+                <i data-lucide="map-pin"></i>
+
+                <input
+                  type="text"
+                  id="service-location"
+                  name="location"
+                  placeholder="Enter your area or locality"
+                />
+              </div>
+            </div>
+
+            <!-- SERVICE -->
+            <div class="availability-field">
+              <label for="service-type"> Service </label>
+
+              <div class="availability-input">
+                <i data-lucide="car"></i>
+
+                <select id="service-type" name="service">
+                  <option value="">Select a service</option>
+
+                  <option value="vehicle-wash">Vehicle Wash</option>
+
+                  <option value="foam-wash">Foam Wash & Deep Cleaning</option>
+
+                  <option value="interior-detailing">Interior Detailing</option>
+
+                  <option value="exterior-detailing">Exterior Detailing</option>
+
+                  <option value="full-detailing">Full Vehicle Detailing</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- DATE -->
+            <div class="availability-field">
+              <label for="service-date"> Date </label>
+
+              <div class="availability-input">
+                <i data-lucide="calendar"></i>
+
+                <input type="date" id="service-date" name="date" />
+              </div>
+            </div>
+
+            <!-- BUTTON -->
+            <button type="submit" class="availability-check-btn">
+              Check Availability
+
+              <i data-lucide="arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- =========================================================
+     SERVICE AREA CTA
+========================================================= -->
+
+    <section class="service-area-cta">
+      <div class="service-area-cta-container">
+        <span class="service-area-cta-label"> Service Area </span>
+
+        <h2>
+          We Come To You.
+          <span>Wherever You Need Us.</span>
+        </h2>
+
+        <p>
+          From your home driveway to your office parking space, AutoShine brings
+          professional vehicle detailing directly to your preferred location.
+        </p>
+
+        <div class="service-area-location">
+          <i data-lucide="map-pin"></i>
+
+          <span> Hyderabad, Telangana </span>
+        </div>
+
+        <div class="service-area-cta-actions">
+          <a href="contact.html" class="service-area-cta-primary">
+            Check Service Availability
+            <i data-lucide="arrow-right"></i>
+          </a>
+
+          <a href="service-area.html" class="service-area-cta-secondary">
+            View Service Areas
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================
+     PREMIUM FOOTER
+======================================== -->
+    <section>
+      <footer class="site-footer">
+        <div class="footer-container">
+          <!-- ================= BRAND ================= -->
+
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <span class="logo-icon">
+                <img
+                  src="images/logo pro2.png"
+                  alt="Mobile Vehicle Detailing Logo"
+                />
+              </span>
+
+              <span class="logo-name"> Car<strong>Shine</strong> </span>
+            </a>
+
+            <p class="footer-description">
+              Professional mobile vehicle detailing brought directly to your
+              doorstep. From premium washes and waxing to deep
+            </p>
+
+            <!-- SOCIAL ICONS -->
+
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">
+                <i data-lucide="users"></i>
+              </a>
+
+              <a href="#" aria-label="Instagram">
+                <i data-lucide="camera"></i>
+              </a>
+
+              <a href="#" aria-label="X">
+                <i data-lucide="send"></i>
+              </a>
+
+              <a href="#" aria-label="YouTube">
+                <i data-lucide="play"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- ================= QUICK LINKS ================= -->
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <a href="index.html"> Home </a>
+
+            <a href="service.html"> Services </a>
+
+            <a href="pricing.html"> Pricing </a>
+            <a href="service area.html"> service area</a>
+
+            <a href="contact.html"> Contact </a>
+            <a href="dashboard.html"> dashboard </a>
+          </div>
+
+          <!-- ================= SERVICES ================= -->
+
+          <div class="footer-column">
+            <h3>Our Services</h3>
+
+            <a href="services.html#wash"> Vehicle Wash </a>
+
+            <a href="services.html#wax"> Wax &amp; Protection </a>
+
+            <a href="services.html#interior"> Interior Detailing </a>
+
+            <a href="services.html#exterior"> Exterior Detailing </a>
+
+            <a href="services.html#full-detailing"> Full Vehicle Detailing </a>
+
+            <a href="services.html#maintenance"> Maintenance Detailing </a>
+          </div>
+
+          <!-- ================= CONTACT ================= -->
+
+          <div class="footer-column footer-contact">
+            <h3>Contact Us</h3>
+
+            <p>
+              <i data-lucide="map-pin"></i>
+
+              <span> Hyderabad, India </span>
+            </p>
+
+            <p>
+              <i data-lucide="phone"></i>
+
+              <span> +91 98765 43210 </span>
+            </p>
+
+            <p>
+              <i data-lucide="mail"></i>
+
+              <span> support@autoshine.com </span>
+            </p>
+
+            <p>
+              <i data-lucide="clock"></i>
+
+              <span> Daily: 8:00 AM – 8:00 PM </span>
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= FOOTER BOTTOM ================= -->
+
+        <div class="footer-bottom">
+          <p>© 2026 AutoShine. All Rights Reserved.</p>
+
+          <div class="footer-bottom-links">
+            <a href=""> Privacy Policy </a>
+
+            <a href=""> Terms &amp; Conditions </a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script src="main .js"></script>
+    <script src="service area.js"></script>
+  </body>
+</html>

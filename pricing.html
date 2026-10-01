@@ -1,0 +1,1156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mobile Vehicle Detailing & Wash Service</title>
+
+    <link rel="stylesheet" href="pricing.css" />
+    <link rel="stylesheet" href="global.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <!-- ==================================================
+     HEADER
+================================================== -->
+
+    <header class="site-header" id="siteHeader">
+      <div class="header-container">
+        <!-- ================= LOGO ================= -->
+
+        <a href="index.html" class="logo">
+          <span class="logo-icon">
+            <img
+              src="images/logo pro2.png"
+              alt="Mobile Vehicle Detailing Logo"
+            />
+          </span>
+
+          <span class="logo-name"> Car<strong>Shine</strong> </span>
+        </a>
+
+        <!-- ================= NAVIGATION ================= -->
+
+        <nav class="main-nav" id="mainNav">
+          <!-- HOME DROPDOWN -->
+          <div class="nav-dropdown">
+            <button
+              class="nav-link dropdown-button"
+              id="homeDropdownButton"
+              type="button"
+              aria-expanded="false"
+            >
+              <span>Home</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+
+            <div class="dropdown-menu">
+              <a href="index.html">Home 1</a>
+              <a href="index1.html">Home 2</a>
+            </div>
+          </div>
+
+          <!-- NAV LINKS -->
+          <a href="service.html" class="nav-link"> Services</a>
+
+          <a href="pricing.html" class="nav-link">Pricing</a>
+
+          <a href="service area.html" class="nav-link">Service Area</a>
+
+          
+
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="dashboard.html" class="nav-link">Dashboard</a>
+
+          <!-- MOBILE LOGIN -->
+          <a href="login.html" class="mobile-login">Login</a>
+        </nav>
+
+        <!-- ================= HEADER ACTIONS ================= -->
+
+        <div class="header-actions">
+          <!-- RTL / LTR -->
+
+          <button
+            type="button"
+            class="rtl-button"
+            id="rtlToggle"
+            aria-label="Switch to RTL"
+            title="Switch to RTL"
+          >
+            <span>RTL</span>
+          </button>
+
+          <!-- DARK / LIGHT -->
+
+          <button
+            type="button"
+            class="icon-button"
+            id="darkToggle"
+            aria-label="Dark Mode"
+            title="Dark Mode"
+          >
+            <i data-lucide="moon"></i>
+          </button>
+
+          <!-- DESKTOP LOGIN -->
+
+          <a href="login.html" class="login-button">
+            <span>Login</span>
+          </a>
+
+          <!-- HAMBURGER -->
+
+          <button
+            type="button"
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open Menu"
+            title="Menu"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- =========================================================
+     PRICING HERO
+========================================================= -->
+    <section class="pricing-hero">
+      <div class="pricing-hero-container">
+        <!-- IMAGE SIDE -->
+        <div class="pricing-hero-image">
+          <img src="images/pricing bg.jpg" alt="AutoShine Vehicle Detailing" />
+
+          <!-- FOUR SIDE TAGS -->
+
+          <div class="pricing-side-tag pricing-tag-right">
+            <i data-lucide="shield-check"></i>
+            <span>Trusted Service</span>
+          </div>
+
+          <div class="pricing-side-tag pricing-tag-left">
+            <i data-lucide="badge-dollar-sign"></i>
+            <span>Clear Pricing</span>
+          </div>
+        </div>
+
+        <!-- CONTENT SIDE -->
+        <div class="pricing-hero-content">
+          <span class="pricing-hero-label">
+            <i data-lucide="badge-dollar-sign"></i>
+            Simple & Transparent Pricing
+          </span>
+
+          <h1>
+            Premium Detailing.
+            <span>Clear Pricing.</span>
+          </h1>
+
+          <p>
+            Choose the detailing package that fits your vehicle. Professional
+            products, skilled technicians, and convenient service delivered
+            directly to your location.
+          </p>
+
+          <div class="pricing-hero-features">
+            <div class="pricing-feature">
+              <i data-lucide="check-circle"></i>
+              <span>No Hidden Charges</span>
+            </div>
+
+            <div class="pricing-feature">
+              <i data-lucide="sparkles"></i>
+              <span>Professional Detailing</span>
+            </div>
+
+            <div class="pricing-feature">
+              <i data-lucide="map-pin"></i>
+              <span>We Come To You</span>
+            </div>
+          </div>
+
+          <div class="pricing-hero-actions">
+            <a href="pricing.html" class="pricing-btn primary">
+              View Pricing
+              <i data-lucide="arrow-right"></i>
+            </a>
+
+            <a href="booking.html" class="pricing-btn secondary">
+              Book a Service
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =========================================================
+     WASH & CLEANING PACKAGES
+========================================================= -->
+    <section class="wash-cleaning-packages" id="wash-packages">
+      <div class="wash-cleaning-container">
+        <!-- SECTION HEADER -->
+        <div class="wash-cleaning-header">
+          <span class="wash-cleaning-label">
+            <i data-lucide="droplets"></i>
+            Essential Vehicle Care
+          </span>
+
+          <h2>
+            Wash & Cleaning
+            <span>Packages.</span>
+          </h2>
+
+          <p>
+            Choose from carefully designed wash and cleaning packages that keep
+            your vehicle fresh, clean, and road-ready.
+          </p>
+        </div>
+
+        <!-- PACKAGES -->
+        <div class="wash-cleaning-grid">
+          <!-- PACKAGE 1 -->
+          <article class="wash-package">
+            <div class="wash-package-image">
+              <img src="images/pricing ess.jpg" alt="Essential Vehicle Wash" />
+              <span class="wash-package-tag">Essential</span>
+            </div>
+
+            <div class="wash-package-content">
+              <div class="wash-package-top">
+                <div>
+                  <span class="wash-package-type">Basic Care</span>
+                  <h3>Essential Wash</h3>
+                </div>
+
+                <div class="wash-package-price">
+                  <small>From</small>
+                  <strong>₹699</strong>
+                </div>
+              </div>
+
+              <p>
+                A quick and professional exterior wash for vehicles that need
+                regular cleaning and maintenance.
+              </p>
+
+              <ul class="wash-package-features">
+                <li>
+                  <i data-lucide="check"></i>
+                  <span>Exterior Foam Wash</span>
+                </li>
+                <li>
+                  <i data-lucide="check"></i>
+                  <span>Wheel & Tyre Cleaning</span>
+                </li>
+                <li>
+                  <i data-lucide="check"></i>
+                  <span>Exterior Drying</span>
+                </li>
+                <li>
+                  <i data-lucide="check"></i>
+                  <span>Glass Cleaning</span>
+                </li>
+              </ul>
+
+              <a href="contact.html" class="wash-package-btn">
+                View Service
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- PACKAGE 2 -->
+          <article class="wash-package featured">
+            <div class="wash-package-image">
+              <img src="images/pricing deep.jpg" alt="Deep Cleaning Vehicle Package" />
+              <span class="wash-package-tag">Popular</span>
+            </div>
+
+            <div class="wash-package-content">
+              <div class="wash-package-top">
+                <div>
+                  <span class="wash-package-type">Complete Cleaning</span>
+                  <h3>Deep Clean</h3>
+                </div>
+
+                <div class="wash-package-price">
+                  <small>From</small>
+                  <strong>₹1,299</strong>
+                </div>
+              </div>
+
+              <p>
+                A deeper cleaning package combining exterior washing with
+                detailed interior cleaning for a refreshed vehicle.
+              </p>
+
+              <ul class="wash-package-features">
+                <li>
+                  <i data-lucide="check"></i>
+                  <span>Premium Foam Wash</span>
+                </li>
+                <li>
+                  <i data-lucide="check"></i>
+                  <span>Interior Vacuuming</span>
+                </li>
+                <li>
+                  <i data-lucide="check"></i>
+                  <span>Dashboard Cleaning</span>
+                </li>
+                <li>
+                  <i data-lucide="check"></i>
+                  <span>Tyre & Wheel Detailing</span>
+                </li>
+                <li>
+                  <i data-lucide="check"></i>
+                  <span>Glass & Surface Cleaning</span>
+                </li>
+              </ul>
+
+              <a href="contact.html" class="wash-package-btn1">
+                View Service
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </article>
+           
+
+          <!-- PACKAGE 3 -->
+          <article class="wash-package">
+            <div class="wash-package-image">
+              <img src="images/pricing clean.jpg" alt="Full Vehicle Cleaning Package" />
+              <span class="wash-package-tag">Complete</span>
+            </div>
+
+            <div class="wash-package-content">
+              <div class="wash-package-top">
+                <div>
+                  <span class="wash-package-type">Full Care</span>
+                  <h3>Full Clean</h3>
+                </div>
+
+                <div class="wash-package-price">
+                  <small>From</small>
+                  <strong>₹1,899</strong>
+                </div>
+              </div>
+
+              <p>
+                Complete interior and exterior cleaning designed for vehicles
+                that need a thorough professional refresh.
+              </p>
+
+              <ul class="wash-package-features">
+                <li>
+                  <i data-lucide="check"></i>
+                  <span>Full Exterior Wash</span>
+                </li>
+                <li>
+                  <i data-lucide="check"></i>
+                  <span>Complete Interior Vacuum</span>
+                </li>
+                <li>
+                  <i data-lucide="check"></i>
+                  <span>Seat & Carpet Cleaning</span>
+                </li>
+                <li>
+                  <i data-lucide="check"></i>
+                  <span>Dashboard & Console Care</span>
+                </li>
+                <li>
+                  <i data-lucide="check"></i>
+                  <span>Wheel, Tyre & Glass Care</span>
+                </li>
+              </ul>
+
+              <a href="contact.html" class="wash-package-btn">
+                View Service
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     PACKAGE COMPARISON
+========================================================= -->
+
+    <section class="package-comparison" id="package-comparison">
+      <div class="package-comparison-container">
+        <!-- =====================================================
+         SECTION HEADER
+    ====================================================== -->
+
+        <div class="package-comparison-header">
+          <span class="package-comparison-label">
+            <i data-lucide="git-compare"></i>
+            Compare Packages
+          </span>
+
+          <h2>
+            Find the Right Package.
+            <span>For Your Vehicle.</span>
+          </h2>
+
+          <p>
+            Compare our detailing packages and choose the level of cleaning and
+            care that best fits your vehicle.
+          </p>
+        </div>
+
+        <!-- =====================================================
+         COMPARISON TABLE
+    ====================================================== -->
+
+        <div class="package-comparison-table-wrap">
+          <table class="package-comparison-table">
+            <!-- =================================================
+             TABLE HEADER
+        ================================================== -->
+
+            <thead>
+              <tr>
+                <th class="comparison-feature-heading">Features</th>
+
+                <!-- ESSENTIAL -->
+
+                <th>
+                  <div class="comparison-package-heading">
+
+
+                    <h3>Essential Wash</h3>
+
+                    <strong> ₹799 </strong>
+                  </div>
+                </th>
+
+                <!-- DEEP CLEAN -->
+
+                <th class="comparison-popular">
+                  <span class="comparison-popular-tag"> Most Popular </span>
+
+                  <div class="comparison-package-heading">
+                
+
+                    <h3>Deep Clean</h3>
+
+                    <strong> ₹1,499 </strong>
+                  </div>
+                </th>
+
+                <!-- FULL CLEAN -->
+
+                <th>
+                  <div class="comparison-package-heading">
+                    
+                    <h3>Full Clean</h3>
+
+                    <strong> ₹2,199 </strong>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+
+            <!-- =================================================
+             TABLE BODY
+        ================================================== -->
+
+            <tbody>
+              <!-- EXTERIOR FOAM WASH -->
+
+              <tr>
+                <td>Exterior Foam Wash</td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+              </tr>
+
+              <!-- WHEEL & TYRE CLEANING -->
+
+              <tr>
+                <td>Wheel & Tyre Cleaning</td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+              </tr>
+
+              <!-- EXTERIOR DRYING -->
+
+              <tr>
+                <td>Exterior Drying</td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+              </tr>
+
+              <!-- INTERIOR VACUUMING -->
+
+              <tr>
+                <td>Interior Vacuuming</td>
+
+                <td>
+                  <i data-lucide="minus" class="comparison-minus"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+              </tr>
+
+              <!-- DASHBOARD CLEANING -->
+
+              <tr>
+                <td>Dashboard Cleaning</td>
+
+                <td>
+                  <i data-lucide="minus" class="comparison-minus"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+              </tr>
+
+              <!-- GLASS CLEANING -->
+
+              <tr>
+                <td>Glass Cleaning</td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+              </tr>
+
+              <!-- SEAT & CARPET CLEANING -->
+
+              <tr>
+                <td>Seat & Carpet Cleaning</td>
+
+                <td>
+                  <i data-lucide="minus" class="comparison-minus"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="minus" class="comparison-minus"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+              </tr>
+
+              <!-- DASHBOARD & CONSOLE CARE -->
+
+              <tr>
+                <td>Dashboard & Console Care</td>
+
+                <td>
+                  <i data-lucide="minus" class="comparison-minus"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+              </tr>
+
+              <!-- PROFESSIONAL PRODUCTS -->
+
+              <tr>
+                <td>Professional Products</td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+              </tr>
+
+              <!-- MOBILE SERVICE -->
+
+              <tr>
+                <td>Mobile Service</td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+              </tr>
+
+              <!-- TYRE DRESSING -->
+
+              <tr>
+                <td>Tyre Dressing</td>
+
+                <td>
+                  <i data-lucide="minus" class="comparison-minus"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+              </tr>
+
+              <!-- INTERIOR SURFACE CLEANING -->
+
+              <tr>
+                <td>Interior Surface Cleaning</td>
+
+                <td>
+                  <i data-lucide="minus" class="comparison-minus"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+              </tr>
+
+              <!-- SEAT & FABRIC CARE -->
+
+              <tr>
+                <td>Seat & Fabric Care</td>
+
+                <td>
+                  <i data-lucide="minus" class="comparison-minus"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="minus" class="comparison-minus"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+              </tr>
+
+              <!-- EXTERIOR SURFACE PROTECTION -->
+
+              <tr>
+                <td>Exterior Surface Protection</td>
+
+                <td>
+                  <i data-lucide="minus" class="comparison-minus"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="minus" class="comparison-minus"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+              </tr>
+
+              <!-- FINAL QUALITY INSPECTION -->
+
+              <tr>
+                <td>Final Quality Inspection</td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+
+                <td>
+                  <i data-lucide="check" class="comparison-check"> </i>
+                </td>
+              </tr>
+
+              <!-- =================================================
+               CTA ROW
+          ================================================== -->
+
+              <tr class="comparison-cta-row">
+                <td>Choose Your Package</td>
+
+                <!-- ESSENTIAL CTA -->
+
+                <td>
+                  <a href="contact.html" class="comparison-btn">
+                    View Service
+                    <i data-lucide="arrow-right"></i>
+                  </a>
+                </td>
+
+                <!-- DEEP CLEAN CTA -->
+
+                <td>
+                  <a
+                    href="contact.html"
+                    class="comparison-btn comparison-btn-featured"
+                  >
+                    View Service
+                    <i data-lucide="arrow-right"></i>
+                  </a>
+                </td>
+
+                <!-- FULL CLEAN CTA -->
+
+                <td>
+                  <a href="contact.html" class="comparison-btn">
+                    View Service
+                    <i data-lucide="arrow-right"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     PRICING HELP & QUESTIONS
+========================================================= -->
+
+    <section class="pricing-faq" id="pricing-faq">
+      <div class="pricing-faq-container">
+        <!-- =====================================================
+         LEFT — SEPARATE HELP BOX
+    ====================================================== -->
+
+        <aside class="pricing-help-box">
+          <span class="pricing-help-label">
+            <i data-lucide="headphones"></i>
+            Need Help?
+          </span>
+
+          <h2>
+            Not Sure Which
+            <span>Package To Choose?</span>
+          </h2>
+
+          <p>
+            Tell us about your vehicle and our team can help you choose the
+            detailing package that fits your needs.
+          </p>
+
+          <div class="pricing-help-points">
+            <span>
+              <i data-lucide="check"></i>
+              Package Guidance
+            </span>
+
+            <span>
+              <i data-lucide="check"></i>
+              Vehicle-Specific Advice
+            </span>
+
+            <span>
+              <i data-lucide="check"></i>
+              Clear Pricing
+            </span>
+          </div>
+
+          <a href="contact.html" class="pricing-help-btn">
+            Contact Us
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </aside>
+
+        <!-- =====================================================
+         RIGHT — PRICING QUESTIONS
+    ====================================================== -->
+
+        <div class="pricing-questions">
+          <div class="pricing-questions-header">
+            <span class="pricing-questions-label">
+              <i data-lucide="circle-help"></i>
+              Pricing Questions
+            </span>
+
+            <h2>
+              Questions About
+              <span>Our Pricing?</span>
+            </h2>
+
+            <p>
+              Find answers to common questions about our packages, pricing,
+              booking, and mobile detailing service.
+            </p>
+          </div>
+
+          <!-- ===================================================
+           FAQ LIST
+      ==================================================== -->
+
+          <div class="pricing-faq-list">
+            <!-- FAQ 01 -->
+
+            <div class="pricing-faq-item">
+              <button
+                type="button"
+                class="pricing-faq-question"
+                aria-expanded="false"
+              >
+                <span> What is included in each detailing package? </span>
+
+                <i data-lucide="plus"></i>
+              </button>
+
+              <div class="pricing-faq-answer">
+                <p>
+                  Each package includes a different combination of exterior
+                  cleaning, interior care, detailing, and protection services.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 02 -->
+
+            <div class="pricing-faq-item">
+              <button
+                type="button"
+                class="pricing-faq-question"
+                aria-expanded="false"
+              >
+                <span> Do your prices include products and materials? </span>
+
+                <i data-lucide="plus"></i>
+              </button>
+
+              <div class="pricing-faq-answer">
+                <p>
+                  Yes. Professional products and standard materials required for
+                  the selected package are included.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 03 -->
+
+            <div class="pricing-faq-item">
+              <button
+                type="button"
+                class="pricing-faq-question"
+                aria-expanded="false"
+              >
+                <span> Is mobile service included in the package price? </span>
+
+                <i data-lucide="plus"></i>
+              </button>
+
+              <div class="pricing-faq-answer">
+                <p>
+                  Mobile detailing is available for eligible service areas. Any
+                  applicable location charges will be communicated before
+                  confirmation.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 04 -->
+
+            <div class="pricing-faq-item">
+              <button
+                type="button"
+                class="pricing-faq-question"
+                aria-expanded="false"
+              >
+                <span> Can I upgrade my package? </span>
+
+                <i data-lucide="plus"></i>
+              </button>
+
+              <div class="pricing-faq-answer">
+                <p>
+                  Package upgrades may be available depending on your vehicle
+                  requirements and technician availability.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 05 -->
+
+            <div class="pricing-faq-item">
+              <button
+                type="button"
+                class="pricing-faq-question"
+                aria-expanded="false"
+              >
+                <span> How long does each detailing package take? </span>
+
+                <i data-lucide="plus"></i>
+              </button>
+
+              <div class="pricing-faq-answer">
+                <p>
+                  Service duration depends on the selected package, vehicle
+                  size, and overall vehicle condition.
+                </p>
+              </div>
+            </div>
+        </div>
+    </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- =========================================================
+     PRICING CTA
+========================================================= -->
+
+<section class="pricing-final-cta">
+
+  <div class="pricing-final-cta-container">
+
+    <div class="pricing-final-cta-content">
+
+      <span class="pricing-final-cta-label">
+        <i data-lucide="sparkles"></i>
+        Ready When You Are
+      </span>
+
+      <h2>
+        Give Your Vehicle
+        <span>The Care It Deserves.</span>
+      </h2>
+
+      <p>
+        Choose the package that fits your vehicle and enjoy
+        professional detailing delivered directly to your location.
+      </p>
+
+      <div class="pricing-final-cta-actions">
+
+        <a
+          href="#package-comparison"
+          class="pricing-final-cta-btn primary"
+        >
+          View Packages
+          <i data-lucide="arrow-right"></i>
+        </a>
+
+        <a
+          href="booking.html"
+          class="pricing-final-cta-btn secondary"
+        >
+          Book a Service
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ========================================
+     PREMIUM FOOTER
+======================================== -->
+    <section>
+      <footer class="site-footer">
+        <div class="footer-container">
+          <!-- ================= BRAND ================= -->
+
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <span class="logo-icon">
+                <img
+                  src="images/logo pro2.png"
+                  alt="Mobile Vehicle Detailing Logo"
+                />
+              </span>
+
+              <span class="logo-name"> Car<strong>Shine</strong> </span>
+            </a>
+
+            <p class="footer-description">
+              Professional mobile vehicle detailing brought directly to your
+              doorstep. From premium washes and waxing to deep 
+             
+            </p>
+
+            <!-- SOCIAL ICONS -->
+
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">
+               <i data-lucide="users"></i>
+              </a>
+
+              <a href="#" aria-label="Instagram">
+                <i data-lucide="camera"></i>
+              </a>
+
+              <a href="#" aria-label="X">
+               <i data-lucide="send"></i>
+              </a>
+
+              <a href="#" aria-label="YouTube">
+                <i data-lucide="play"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- ================= QUICK LINKS ================= -->
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <a href="index.html"> Home </a>
+
+            <a href="services.html">  Services </a>
+
+            <a href="pricing.html"> Pricing </a>
+            <a href="service area.html"> service area</a>
+
+            
+
+            <a href="contact.html"> Contact </a>
+            
+            <a href="dashboard.html"> dashboard </a>
+          </div>
+
+          <!-- ================= SERVICES ================= -->
+
+          <div class="footer-column">
+            <h3>Our Services</h3>
+
+            <a href="services.html#wash"> Vehicle Wash </a>
+
+            <a href="services.html#wax"> Wax &amp; Protection </a>
+
+            <a href="services.html#interior"> Interior Detailing </a>
+
+            <a href="services.html#exterior"> Exterior Detailing </a>
+
+            <a href="services.html#full-detailing"> Full Vehicle Detailing </a>
+
+            <a href="services.html#maintenance"> Maintenance Detailing </a>
+          </div>
+
+          <!-- ================= CONTACT ================= -->
+
+          <div class="footer-column footer-contact">
+            <h3>Contact Us</h3>
+
+            <p>
+              <i data-lucide="map-pin"></i>
+
+              <span> Hyderabad, India </span>
+            </p>
+
+            <p>
+              <i data-lucide="phone"></i>
+
+              <span> +91 98765 43210 </span>
+            </p>
+
+            <p>
+              <i data-lucide="mail"></i>
+
+              <span> support@autoshine.com </span>
+            </p>
+
+            <p>
+              <i data-lucide="clock"></i>
+
+              <span> Daily: 8:00 AM – 8:00 PM </span>
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= FOOTER BOTTOM ================= -->
+
+        <div class="footer-bottom">
+          <p>© 2026 AutoShine. All Rights Reserved.</p>
+
+          <div class="footer-bottom-links">
+            <a href=""> Privacy Policy </a>
+
+            <a href=""> Terms &amp; Conditions </a>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <script src="main .js"></script>
+    <script src="pricing.js"></script>
+  </body>
+</html>

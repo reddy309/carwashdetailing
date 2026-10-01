@@ -1,0 +1,282 @@
+<!doctype html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CarShine | Create Account</title>
+
+    <!-- =====================================================
+       GOOGLE FONTS
+  ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- =====================================================
+       CSS
+  ====================================================== -->
+
+    <link rel="stylesheet" href="signup.css" />
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <div class="header-actions">
+      <!-- RTL -->
+
+      <button
+        type="button"
+        class="rtl-button"
+        id="rtlToggle"
+        aria-label="Switch to RTL"
+        title="Switch to RTL"
+      >
+        RTL
+      </button>
+
+      <!-- DARK / LIGHT -->
+
+      <button
+        type="button"
+        class="icon-button"
+        id="darkToggle"
+        aria-label="Dark Mode"
+        title="Dark Mode"
+      >
+        <i data-lucide="moon"></i>
+      </button>
+    </div>
+
+    <!-- =====================================================
+       BACKGROUND DECORATIONS
+  ====================================================== -->
+
+    <div class="vehicle-line vehicle-line-one"></div>
+
+    <div class="vehicle-line vehicle-line-two"></div>
+
+    <div class="circle circle-one"></div>
+
+    <div class="circle circle-two"></div>
+
+    <div class="dot dot-one"></div>
+
+    <div class="dot dot-two"></div>
+
+    <div class="dot dot-three"></div>
+
+    <!-- =====================================================
+       SIGNUP WRAPPER
+  ====================================================== -->
+
+    <main class="signup-wrapper">
+      ```
+      <section class="signup-card">
+        <!-- =================================================
+       BRAND
+  ================================================== -->
+
+        <div class="brand">
+          <a href="index.html" class="brand-link">
+            <img
+              src="images/logo pro2.png"
+              alt="CarShine Logo"
+              class="brand-logo"
+            />
+
+            <div class="brand-text">
+              <h2 class="brand-name">Car<span>Shine</span></h2>
+
+              <p class="brand-subtitle">DETAILING &amp; WASH</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- =================================================
+       HEADING
+  ================================================== -->
+
+        <div class="signup-heading">
+          <h1>Mobile Vehicle Detailing &amp; Wash Service</h1>
+
+          <p>
+            Create your account and book professional vehicle care at your
+            doorstep.
+          </p>
+        </div>
+
+        <!-- =================================================
+       FORM
+  ================================================== -->
+
+        <form class="signup-form">
+          <!-- ===============================================
+         FIRST + LAST NAME
+    ================================================ -->
+
+          <div class="name-row">
+            <div class="form-group">
+              <label for="firstName"> First Name </label>
+
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="First name"
+                autocomplete="given-name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="lastName"> Last Name </label>
+
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Last name"
+                autocomplete="family-name"
+              />
+            </div>
+          </div>
+
+          <!-- ===============================================
+         EMAIL
+    ================================================ -->
+
+          <div class="form-group">
+            <label for="email"> Email Address </label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              autocomplete="email"
+            />
+          </div>
+
+          <!-- ===============================================
+         PHONE
+    ================================================ -->
+
+          <div class="form-group">
+            <label for="phone"> Phone Number </label>
+
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number"
+              autocomplete="tel"
+            />
+          </div>
+
+          <!-- ===============================================
+         PASSWORD
+    ================================================ -->
+
+          <div class="form-group">
+            <label for="password"> Password </label>
+
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Create a password"
+              autocomplete="new-password"
+            />
+          </div>
+
+          <!-- ===============================================
+         CONFIRM PASSWORD
+    ================================================ -->
+
+          <div class="form-group">
+            <label for="confirmPassword"> Confirm Password </label>
+
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              placeholder="Confirm your password"
+              autocomplete="new-password"
+            />
+          </div>
+
+          <!-- ===============================================
+         TERMS
+    ================================================ -->
+
+          <div class="terms">
+            <input type="checkbox" id="terms" name="terms" />
+
+            <label for="terms">
+              I agree to
+
+              <a href="#"> Terms &amp; Conditions </a>
+
+              and
+
+              <a href="#"> Privacy Policy </a>
+            </label>
+          </div>
+
+          <!-- ===============================================
+         CREATE ACCOUNT
+    ================================================ -->
+
+          <button type="submit" class="create-btn">Create Account</button>
+
+          <!-- ===============================================
+         DIVIDER
+    ================================================ -->
+
+          <div class="divider">
+            <div></div>
+
+            <p>Or continue with</p>
+
+            <div></div>
+          </div>
+
+          <!-- ===============================================
+         SOCIAL BUTTONS
+    ================================================ -->
+
+          <div class="social-row">
+            <button type="button" class="social-btn">
+              <strong class="google"> G </strong>
+
+              Google
+            </button>
+
+            <button type="button" class="social-btn">Apple</button>
+          </div>
+
+          <!-- ===============================================
+         LOGIN
+    ================================================ -->
+
+          <div class="login-text">
+            Already have an account?
+
+            <a href="login.html"> Login </a>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="main .js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>

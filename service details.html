@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mobile Vehicle Detailing & Wash Service</title>
+
+    <link rel="stylesheet" href="service details.css" />
+    <link rel="stylesheet" href="global.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <!-- ==================================================
+     HEADER
+================================================== -->
+
+    <header class="site-header" id="siteHeader">
+      <div class="header-container">
+        <!-- ================= LOGO ================= -->
+
+        <a href="index.html" class="logo">
+          <span class="logo-icon">
+            <img
+              src="images/logo pro2.png"
+              alt="Mobile Vehicle Detailing Logo"
+            />
+          </span>
+
+          <span class="logo-name"> Car<strong>Shine</strong> </span>
+        </a>
+
+        <!-- ================= NAVIGATION ================= -->
+
+        <nav class="main-nav" id="mainNav">
+          <!-- HOME DROPDOWN -->
+          <div class="nav-dropdown">
+            <button
+              class="nav-link dropdown-button"
+              id="homeDropdownButton"
+              type="button"
+              aria-expanded="false"
+            >
+              <span>Home</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+
+            <div class="dropdown-menu">
+              <a href="index.html">Home 1</a>
+              <a href="index1.html">Home 2</a>
+            </div>
+          </div>
+
+          <!-- NAV LINKS -->
+          <a href="service.html" class="nav-link"> Services</a>
+
+          <a href="pricing.html" class="nav-link">Pricing</a>
+
+          <a href="service area.html" class="nav-link">Service Area</a>
+
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="dashboard.html" class="nav-link">Dashboard</a>
+
+          <!-- MOBILE LOGIN -->
+          <a href="login.html" class="mobile-login">Login</a>
+        </nav>
+
+        <!-- ================= HEADER ACTIONS ================= -->
+
+        <div class="header-actions">
+          <!-- RTL / LTR -->
+
+          <button
+            type="button"
+            class="rtl-button"
+            id="rtlToggle"
+            aria-label="Switch to RTL"
+            title="Switch to RTL"
+          >
+            <span>RTL</span>
+          </button>
+
+          <!-- DARK / LIGHT -->
+
+          <button
+            type="button"
+            class="icon-button"
+            id="darkToggle"
+            aria-label="Dark Mode"
+            title="Dark Mode"
+          >
+            <i data-lucide="moon"></i>
+          </button>
+
+          <!-- DESKTOP LOGIN -->
+
+          <a href="login.html" class="login-button">
+            <span>Login</span>
+          </a>
+
+          <!-- HAMBURGER -->
+
+          <button
+            type="button"
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open Menu"
+            title="Menu"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="service-details-hero">
+      <div class="service-details-hero-overlay"></div>
+
+      <div class="service-details-hero-content">
+        <span class="hero-label">SERVICE DETAILS</span>
+
+        <h1>
+          Professional Car
+          <span> Services at your Doorstep</span>
+        </h1>
+
+        <p>
+          Professional vehicle detailing delivered right to your doorstep.
+          Explore everything included in your selected service.
+        </p>
+
+        <a href="booking.html" class="hero-btn">
+          Book This Service
+          <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     SERVICE OVERVIEW
+========================================================= -->
+
+    <section class="service-overview">
+      <div class="service-overview-container">
+        <!-- IMAGE -->
+        <div class="service-overview-image">
+          <img
+            src="images/complete de.jpg"
+            alt="Professional Vehicle Detailing Service"
+          />
+        </div>
+
+        <!-- CONTENT -->
+        <div class="service-overview-content">
+          <span class="section-label"> SERVICE OVERVIEW </span>
+
+          <h2>
+            car
+            <span>details</span>
+          </h2>
+
+          <p>
+            Our professional detailing service is designed to restore, protect,
+            and maintain your vehicle with careful attention to every surface.
+            From deep cleaning to refined finishing, every step is performed
+            with precision and quality products.Our professional detailing
+            service is designed to restore, protect, and maintain your vehicle
+            with careful attention to every surface. From deep cleaning to
+            refined finishing, every step is performed with precision and
+            quality products. We focus on delivering a clean, refreshed, and
+            well-maintained vehicle while making the entire experience simple
+            and convenient for you. Every vehicle receives an approach tailored
+            to its condition, surface type, and care requirements. Our detailing
+            process combines thorough cleaning with careful finishing to bring
+            back a refined appearance without compromising the original
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     PRODUCTS & MATERIALS USED
+========================================================= -->
+
+    <section class="products-materials" id="products-materials">
+      <div class="products-materials-container">
+        <!-- SECTION HEADER -->
+        <div class="products-materials-header">
+          <span class="section-label"> PRODUCTS & MATERIALS </span>
+
+          <h2>Products & <span>Materials Used</span></h2>
+
+          <p>
+            We use carefully selected detailing products and professional-grade
+            materials to clean, protect and enhance every part of your vehicle.
+          </p>
+        </div>
+
+        <!-- PRODUCTS GRID -->
+        <div class="products-materials-grid">
+          <!-- CARD 01 -->
+          <article class="product-material-card">
+            <div class="product-material-icon">
+              <i data-lucide="droplets"></i>
+            </div>
+
+            <span class="product-material-number"> 01 </span>
+
+            <h3>pH-Neutral Car Shampoo</h3>
+
+            <p>
+              A gentle yet effective shampoo designed to remove dirt and road
+              contaminants while maintaining the vehicle's exterior finish. and
+              detaling Car service is simply a check-up
+            </p>
+
+            <span class="product-material-focus"> Safe Wash · Paint Care </span>
+          </article>
+
+          <!-- CARD 02 -->
+          <article class="product-material-card">
+            <div class="product-material-icon">
+              <i data-lucide="spray-can"></i>
+            </div>
+
+            <span class="product-material-number"> 02 </span>
+
+            <h3>Premium Interior</h3>
+
+            <p>
+              Professional cleaning products selected for dashboards, seats,
+              carpets, trims and other interior surfaces. It assists in
+              maintaining the smooth, safe and
+            </p>
+
+            <span class="product-material-focus">
+              Seats · Dashboard · Trim
+            </span>
+          </article>
+
+          <!-- CARD 03 -->
+          <article class="product-material-card">
+            <div class="product-material-icon">
+              <i data-lucide="layers"></i>
+            </div>
+
+            <span class="product-material-number"> 03 </span>
+
+            <h3>Microfiber Towels</h3>
+
+            <p>
+              Soft, high-quality microfiber materials are used for cleaning,
+              drying and finishing while helping reduce surface marks.detaling
+              car and products
+            </p>
+
+            <span class="product-material-focus">
+              Cleaning · Drying · Finishing
+            </span>
+          </article>
+
+          <!-- CARD 04 -->
+          <article class="product-material-card">
+            <div class="product-material-icon">
+              <i data-lucide="circle-gauge"></i>
+            </div>
+
+            <span class="product-material-number"> 04 </span>
+
+            <h3>Wheel & Tyre Care</h3>
+
+            <p>
+              Dedicated wheel and tyre products help remove brake dust, road
+              grime and buildup while refreshing the overall appearance.
+            </p>
+
+            <span class="product-material-focus">
+              Wheels · Tyres · Road Grime
+            </span>
+          </article>
+
+          <!-- CARD 05 -->
+          <article class="product-material-card">
+            <div class="product-material-icon">
+              <i data-lucide="sparkles"></i>
+            </div>
+
+            <span class="product-material-number"> 05 </span>
+
+            <h3>Paint Care Products</h3>
+
+            <p>
+              Selected polish, wax and paint-care products help enhance gloss
+              and leave the exterior with a cleaner, refined finish.
+            </p>
+
+            <span class="product-material-focus"> Polish · Wax · Gloss </span>
+          </article>
+
+          <!-- CARD 06 -->
+          <article class="product-material-card">
+            <div class="product-material-icon">
+              <i data-lucide="shield-check"></i>
+            </div>
+
+            <span class="product-material-number"> 06 </span>
+
+            <h3>Glass & Surface</h3>
+
+            <p>
+              Professional surface-care products are used on glass, trim and
+              selected exterior areas for a cleaner appearance and added care.
+            </p>
+
+            <span class="product-material-focus">
+              Glass · Trim · Protection
+            </span>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- =========================================================
+     INTERIOR CARE DETAILS
+========================================================= -->
+
+    <section class="care-details interior-care-details" id="interior-care">
+      <div class="care-details-container">
+        <div class="care-details-image">
+          <img src="images/service d care.jpg" alt="Interior Car Detailing" />
+        </div>
+
+        <div class="care-details-content">
+          <span class="section-label">INTERIOR CARE</span>
+
+          <h2>Interior Care <span>Details</span></h2>
+
+          <p class="care-details-intro">
+            Our interior detailing process focuses on restoring cleanliness,
+            freshness and comfort throughout your vehicle's cabin.
+          </p>
+
+          <div class="care-details-list">
+            <div class="care-detail-item">
+              <i data-lucide="sparkles"></i>
+              <div>
+                <h3>Interior Deep Cleaning</h3>
+                <p>
+                  Thorough cleaning of the complete cabin to remove dust, dirt
+                  and everyday buildup.
+                </p>
+              </div>
+            </div>
+
+            <div class="care-detail-item">
+              <i data-lucide="armchair"></i>
+              <div>
+                <h3>Seat & Upholstery Care</h3>
+                <p>
+                  Seats and upholstery are carefully cleaned according to their
+                  material and condition.
+                </p>
+              </div>
+            </div>
+
+            <div class="care-detail-item">
+              <i data-lucide="layout-dashboard"></i>
+              <div>
+                <h3>Dashboard & Console Cleaning</h3>
+                <p>
+                  Dashboard, console and interior surfaces are cleaned and
+                  finished for a neat appearance.
+                </p>
+              </div>
+            </div>
+
+            <div class="care-detail-item">
+              <i data-lucide="brush-cleaning"></i>
+              <div>
+                <h3>Carpet & Floor Mat Cleaning</h3>
+                <p>
+                  Floor areas and mats are cleaned to remove dust, stains and
+                  accumulated debris.
+                </p>
+              </div>
+            </div>
+
+            <div class="care-detail-item">
+              <i data-lucide="door-open"></i>
+              <div>
+                <h3>Door Panel & Trim Care</h3>
+                <p>
+                  Door panels, trims and interior edges receive detailed
+                  cleaning for a refined finish.
+                </p>
+              </div>
+            </div>
+
+            <div class="care-detail-item">
+              <i data-lucide="wind"></i>
+              <div>
+                <h3>Air Vent & Hard-to-Reach Areas</h3>
+                <p>
+                  Vents, gaps and difficult areas are carefully cleaned to
+                  remove hidden dust and buildup.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     EXTERIOR CARE DETAILS
+========================================================= -->
+
+    <section class="care-details exterior-care-details" id="exterior-care">
+      <div class="care-details-container">
+        <div class="care-details-content">
+          <span class="section-label">EXTERIOR CARE</span>
+
+          <h2>Exterior Care <span>Details</span></h2>
+
+          <p class="care-details-intro">
+            Our exterior detailing process carefully cleans, treats and enhances
+            every visible surface of your vehicle.
+          </p>
+
+          <div class="care-details-list">
+            <div class="care-detail-item">
+              <i data-lucide="waves"></i>
+              <div>
+                <h3>Pre-Wash & Foam Cleaning</h3>
+                <p>
+                  Loose dirt and surface contaminants are safely removed before
+                  the main wash begins.
+                </p>
+              </div>
+            </div>
+
+            <div class="care-detail-item">
+              <i data-lucide="car-front"></i>
+              <div>
+                <h3>Hand Wash & Surface Cleaning</h3>
+                <p>
+                  Exterior panels are carefully hand washed using suitable
+                  professional detailing products.
+                </p>
+              </div>
+            </div>
+
+            <div class="care-detail-item">
+              <i data-lucide="circle-gauge"></i>
+              <div>
+                <h3>Wheel & Tyre Cleaning</h3>
+                <p>
+                  Wheels and tyres are cleaned to remove brake dust, road grime
+                  and surface buildup.
+                </p>
+              </div>
+            </div>
+
+            <div class="care-detail-item">
+              <i data-lucide="sparkles"></i>
+              <div>
+                <h3>Paint Decontamination</h3>
+                <p>
+                  Surface contaminants are carefully treated to leave the
+                  paintwork cleaner and smoother.
+                </p>
+              </div>
+            </div>
+
+            <div class="care-detail-item">
+              <i data-lucide="wand-sparkles"></i>
+              <div>
+                <h3>Paint Polishing & Gloss Enhancement</h3>
+                <p>
+                  Paint surfaces can be refined and enhanced to improve clarity,
+                  smoothness and overall gloss.
+                </p>
+              </div>
+            </div>
+
+            <div class="care-detail-item">
+              <i data-lucide="shield-check"></i>
+              <div>
+                <h3>Glass, Trim & Final Finish</h3>
+                <p>
+                  Glass, exterior trims and tyres receive their final treatment
+                  for a clean and finished appearance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="care-details-image">
+          <img src="images/exter c.jpg" alt="Exterior Car Detailing" />
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     SERVICE DURATION
+========================================================= -->
+
+    <section class="service-duration" id="service-duration">
+      <div class="service-duration-container">
+        <!-- SECTION HEADER -->
+        <div class="service-duration-header">
+          <span class="section-label">SERVICE DURATION</span>
+
+          <h2>Service Duration <span>& Process</span></h2>
+
+          <p>
+            Every vehicle receives the time and attention it needs. Service
+            duration may vary depending on vehicle size, condition and the
+            detailing package selected.
+          </p>
+        </div>
+
+        <!-- DURATION OVERVIEW -->
+        <div class="duration-overview">
+          <div class="duration-item">
+            <span class="duration-label">ESTIMATED TIME</span>
+            <strong>2–4 Hours</strong>
+            <p>Typical detailing duration</p>
+          </div>
+
+          <div class="duration-item">
+            <span class="duration-label">VEHICLE SIZE</span>
+            <strong>All Sizes</strong>
+            <p>Hatchback to SUV</p>
+          </div>
+
+          <div class="duration-item">
+            <span class="duration-label">SERVICE LEVEL</span>
+            <strong>Package Based</strong>
+            <p>Time varies by service</p>
+          </div>
+        </div>
+
+        <!-- PROCESS TIMELINE -->
+        <div class="duration-process">
+          <div class="duration-process-line"></div>
+
+          <!-- STEP 01 -->
+          <div class="duration-step">
+            <div class="duration-step-marker">
+              <span>01</span>
+            </div>
+
+            <div class="duration-step-content">
+              <span>15–30 MIN</span>
+
+              <h3>Vehicle Preparation</h3>
+
+              <p>
+                Initial inspection, pre-rinse and preparation of the vehicle
+                before detailed cleaning begins.
+              </p>
+            </div>
+          </div>
+
+          <!-- STEP 02 -->
+          <div class="duration-step">
+            <div class="duration-step-marker">
+              <span>02</span>
+            </div>
+
+            <div class="duration-step-content">
+              <span>45–90 MIN</span>
+
+              <h3>Interior Detailing</h3>
+
+              <p>
+                Detailed cleaning of seats, dashboard, carpets, mats, trims and
+                other interior surfaces.
+              </p>
+            </div>
+          </div>
+
+          <!-- STEP 03 -->
+          <div class="duration-step">
+            <div class="duration-step-marker">
+              <span>03</span>
+            </div>
+
+            <div class="duration-step-content">
+              <span>45–90 MIN</span>
+
+              <h3>Exterior Detailing</h3>
+
+              <p>
+                Exterior wash, wheel and tyre care, glass cleaning and surface
+                treatment.
+              </p>
+            </div>
+          </div>
+
+          <!-- STEP 04 -->
+          <div class="duration-step">
+            <div class="duration-step-marker">
+              <span>04</span>
+            </div>
+
+            <div class="duration-step-content">
+              <span>15–30 MIN</span>
+
+              <h3>Final Finishing</h3>
+
+              <p>
+                Final inspection, touch-ups and presentation before the vehicle
+                is handed back.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =========================================================
+     BOOK THIS SERVICE CTA
+========================================================= -->
+
+    <section class="book-service-cta" id="book-service">
+      <div class="book-service-cta-container">
+        <span class="section-label">READY WHEN YOU ARE</span>
+
+        <h2>Book This <span>Service</span></h2>
+
+        <p>
+          Give your vehicle the care it deserves. Choose your preferred time and
+          let our professional detailing team take care of the rest.
+        </p>
+
+        <a href="contact.html" class="book-service-btn">
+          Book This Service
+          <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+    </section>
+    <!-- ========================================
+     PREMIUM FOOTER
+======================================== -->
+    <section>
+      <footer class="site-footer">
+        <div class="footer-container">
+          <!-- ================= BRAND ================= -->
+
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <span class="logo-icon">
+                <img
+                  src="images/logo pro2.png"
+                  alt="Mobile Vehicle Detailing Logo"
+                />
+              </span>
+
+              <span class="logo-name"> Car<strong>Shine</strong> </span>
+            </a>
+
+            <p class="footer-description">
+              Professional mobile vehicle detailing brought directly to your
+              doorstep. From premium washes and waxing to deep
+            </p>
+
+            <!-- SOCIAL ICONS -->
+
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">
+                <i data-lucide="users"></i>
+              </a>
+
+              <a href="#" aria-label="Instagram">
+                <i data-lucide="camera"></i>
+              </a>
+
+              <a href="#" aria-label="X">
+                <i data-lucide="send"></i>
+              </a>
+
+              <a href="#" aria-label="YouTube">
+                <i data-lucide="play"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- ================= QUICK LINKS ================= -->
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <a href="index.html"> Home </a>
+
+            <a href="services.html"> Services </a>
+
+            <a href="pricing.html"> Pricing </a>
+            <a href="service area.html"> service area</a>
+
+            <a href="contact.html"> Contact </a>
+            <a href="dashboard.html"> dashboard </a>
+          </div>
+
+          <!-- ================= SERVICES ================= -->
+
+          <div class="footer-column">
+            <h3>Our Services</h3>
+
+            <a href="services.html#wash"> Vehicle Wash </a>
+
+            <a href="services.html#wax"> Wax &amp; Protection </a>
+
+            <a href="services.html#interior"> Interior Detailing </a>
+
+            <a href="services.html#exterior"> Exterior Detailing </a>
+
+            <a href="services.html#full-detailing"> Full Vehicle Detailing </a>
+
+            <a href="services.html#maintenance"> Maintenance Detailing </a>
+          </div>
+
+          <!-- ================= CONTACT ================= -->
+
+          <div class="footer-column footer-contact">
+            <h3>Contact Us</h3>
+
+            <p>
+              <i data-lucide="map-pin"></i>
+
+              <span> Hyderabad, India </span>
+            </p>
+
+            <p>
+              <i data-lucide="phone"></i>
+
+              <span> +91 98765 43210 </span>
+            </p>
+
+            <p>
+              <i data-lucide="mail"></i>
+
+              <span> support@autoshine.com </span>
+            </p>
+
+            <p>
+              <i data-lucide="clock"></i>
+
+              <span> Daily: 8:00 AM – 8:00 PM </span>
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= FOOTER BOTTOM ================= -->
+
+        <div class="footer-bottom">
+          <p>© 2026 AutoShine. All Rights Reserved.</p>
+
+          <div class="footer-bottom-links">
+            <a href=""> Privacy Policy </a>
+
+            <a href=""> Terms &amp; Conditions </a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script src="main .js"></script>
+    <script src="service details.js"></script>
+  </body>
+</html>
