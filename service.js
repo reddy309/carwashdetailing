@@ -145,23 +145,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const linkPage = href.split("/").pop().split("#")[0].toLowerCase();
 
-      /* =====================================================
-         SERVICES + SERVICE DETAILS
-
-         Services remains active on:
-
-         services.html
-         service-details.html
-         service-details-anything.html
-      ===================================================== */
-
-      if (
-        linkPage === "services.html" &&
-        (currentPage === "services.html" ||
+      if (linkPage === "service.html") {
+        const isServicePage =
+          currentPage === "service.html" ||
+          currentPage === "services.html" ||
           currentPage === "service-details.html" ||
-          currentPage.startsWith("service-details-"))
-      ) {
-        link.classList.add("active");
+          currentPage.startsWith("service-details-");
+
+        if (isServicePage) {
+          link.classList.add("active");
+        }
 
         return;
       }

@@ -74,68 +74,82 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   /* =========================================================
-     ACTIVE NAVIGATION
-  ========================================================= */
+   ACTIVE NAVIGATION
+========================================================= */
 
   const setActiveNav = () => {
     if (!mainNav) return;
 
-    let currentPage = window.location.pathname.split("/").pop().toLowerCase();
+    /* ---------------------------------------------------------
+     NORMALIZE PAGE NAME
+  --------------------------------------------------------- */
+
+    const normalizePage = (value) => {
+      return decodeURIComponent(value || "")
+        .split("?")[0]
+        .split("#")[0]
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, "-");
+    };
+
+    /* ---------------------------------------------------------
+     GET CURRENT PAGE
+  --------------------------------------------------------- */
+
+    let currentPage = normalizePage(window.location.pathname.split("/").pop());
 
     if (!currentPage) {
       currentPage = "index.html";
     }
 
     /* ---------------------------------------------------------
-       REMOVE OLD ACTIVE STATES
-    --------------------------------------------------------- */
+     REMOVE OLD ACTIVE STATES
+  --------------------------------------------------------- */
 
-    const allNavItems = mainNav.querySelectorAll("a, button");
-
-    allNavItems.forEach((item) => {
+    mainNav.querySelectorAll(".active").forEach((item) => {
       item.classList.remove("active");
     });
 
     /* ---------------------------------------------------------
-       HOME
-       index.html + index1.html
-    --------------------------------------------------------- */
+     HOME
+  --------------------------------------------------------- */
 
-    if (currentPage === "index.html" || currentPage === "index1.html") {
+    if (
+      currentPage === "index.html" ||
+      currentPage === "index1.html" ||
+      currentPage === "index-1.html"
+    ) {
       if (homeButton) {
         homeButton.classList.add("active");
       }
     }
 
     /* ---------------------------------------------------------
-       NORMAL TOP-LEVEL NAV LINKS
+     NAV LINKS
+  --------------------------------------------------------- */
 
-       Dropdown links are excluded.
-       Mobile Login is excluded.
-    --------------------------------------------------------- */
+    const navLinks = mainNav.querySelectorAll("a.nav-link");
 
-    const normalLinks = mainNav.querySelectorAll(
-      "a:not(.dropdown-menu a):not(.mobile-login)",
-    );
+    navLinks.forEach((link) => {
+      if (link.classList.contains("mobile-login")) {
+        return;
+      }
 
-    normalLinks.forEach((link) => {
       const href = link.getAttribute("href");
 
       if (!href) return;
 
-      const linkPage = href.split("/").pop().split("#")[0].toLowerCase();
+      const linkPage = normalizePage(href.split("/").pop());
 
-      /* -------------------------------------------------------
-         SERVICES
+      /* =====================================================
+       SERVICES
+    ===================================================== */
 
-         service.html
-         service-details.html
-         service-details-*.html
-      ------------------------------------------------------- */
-
-      if (linkPage === "service.html") {
+      if (linkPage === "service.html" || linkPage === "services.html") {
         if (
           currentPage === "service.html" ||
+          currentPage === "services.html" ||
           currentPage === "service-details.html" ||
           currentPage.startsWith("service-details-")
         ) {
@@ -145,25 +159,21 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      /* -------------------------------------------------------
-         SERVICE AREA
+      /* =====================================================
+       SERVICE AREA
+    ===================================================== */
 
-         IMPORTANT:
-         Current file name is:
-         service area.html
-      ------------------------------------------------------- */
-
-      if (linkPage === "service area.html") {
-        if (currentPage === "service area.html") {
+      if (linkPage === "service-area.html") {
+        if (currentPage === "service-area.html") {
           link.classList.add("active");
         }
 
         return;
       }
 
-      /* -------------------------------------------------------
-         PRICING
-      ------------------------------------------------------- */
+      /* =====================================================
+       PRICING
+    ===================================================== */
 
       if (linkPage === "pricing.html") {
         if (currentPage === "pricing.html") {
@@ -173,9 +183,9 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      /* -------------------------------------------------------
-         CONTACT
-      ------------------------------------------------------- */
+      /* =====================================================
+       CONTACT
+    ===================================================== */
 
       if (linkPage === "contact.html") {
         if (currentPage === "contact.html") {
@@ -185,9 +195,9 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      /* -------------------------------------------------------
-         DASHBOARD
-      ------------------------------------------------------- */
+      /* =====================================================
+       DASHBOARD
+    ===================================================== */
 
       if (linkPage === "dashboard.html") {
         if (currentPage === "dashboard.html") {
@@ -197,16 +207,15 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      /* -------------------------------------------------------
-         DEFAULT MATCH
-      ------------------------------------------------------- */
+      /* =====================================================
+       DEFAULT
+    ===================================================== */
 
       if (linkPage === currentPage) {
         link.classList.add("active");
       }
     });
   };
-
   /* =========================================================
      CLOSE MOBILE MENU
   ========================================================= */
@@ -269,7 +278,9 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
       event.stopPropagation();
 
-      /* Open mobile menu first if needed */
+      /*
+        Open mobile menu first if required
+      */
 
       if (
         window.innerWidth <= 820 &&
@@ -367,7 +378,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* =========================================================
-     STICKY HEADER
+     STICKY HEADER SCROLL
   ========================================================= */
 
   const updateHeader = () => {
@@ -380,7 +391,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  window.addEventListener("scroll", updateHeader, { passive: true });
+  window.addEventListener("scroll", updateHeader, {
+    passive: true,
+  });
 
   /* =========================================================
      RESPONSIVE BREAKPOINT
@@ -399,7 +412,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (crossedBreakpoint) {
       closeMenu();
 
-      /* Re-check active page after breakpoint change */
+      /*
+        Re-check active navigation
+      */
+
       setActiveNav();
     }
 
@@ -442,7 +458,9 @@ document.addEventListener("DOMContentLoaded", () => {
     question.addEventListener("click", () => {
       const isOpen = item.classList.contains("active");
 
-      /* Close all FAQ items */
+      /* -----------------------------------------------------
+         CLOSE ALL FAQ ITEMS
+      ----------------------------------------------------- */
 
       faqItems.forEach((otherItem) => {
         otherItem.classList.remove("active");
@@ -468,7 +486,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
-      /* Open selected FAQ */
+      /* -----------------------------------------------------
+         OPEN SELECTED FAQ
+      ----------------------------------------------------- */
 
       if (!isOpen) {
         item.classList.add("active");

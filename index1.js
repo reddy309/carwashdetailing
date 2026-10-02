@@ -14,13 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
   ========================================================= */
 
   const menuToggle = document.getElementById("menuToggle");
-
   const mainNav = document.getElementById("mainNav");
-
   const homeButton = document.getElementById("homeDropdownButton");
-
   const dropdown = document.querySelector(".nav-dropdown");
-
   const header = document.getElementById("siteHeader");
 
   /* =========================================================
@@ -48,11 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
   ========================================================= */
 
   const closeDropdown = () => {
-    if (!dropdown) {
-      return;
+    if (dropdown) {
+      dropdown.classList.remove("active");
     }
-
-    dropdown.classList.remove("active");
 
     if (homeButton) {
       homeButton.setAttribute("aria-expanded", "false");
@@ -70,76 +64,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const isOpen = dropdown.classList.contains("active");
 
-    if (isOpen) {
-      dropdown.classList.remove("active");
+    dropdown.classList.toggle("active", !isOpen);
 
-      if (homeButton) {
-        homeButton.setAttribute("aria-expanded", "false");
-      }
-    } else {
-      dropdown.classList.add("active");
-
-      if (homeButton) {
-        homeButton.setAttribute("aria-expanded", "true");
-      }
+    if (homeButton) {
+      homeButton.setAttribute("aria-expanded", String(!isOpen));
     }
 
     refreshIcons();
-  };
-
-  /* =========================================================
-     ACTIVE NAVIGATION LINK
-     
-     - Current page gets active underline
-     - Home 1 / Home 2 keep Home active
-     - Dropdown links do not get separate active line
-  ========================================================= */
-
-  const setActiveNav = () => {
-    if (!mainNav) {
-      return;
-    }
-
-    let currentPage = window.location.pathname.split("/").pop().toLowerCase();
-
-    /* Root URL */
-
-    if (!currentPage) {
-      currentPage = "index.html";
-    }
-
-    /* =======================================================
-       TOP-LEVEL NAVIGATION LINKS ONLY
-    ======================================================= */
-
-    const topLevelLinks = mainNav.querySelectorAll(
-      "a.nav-link:not(.mobile-login):not(.dropdown-menu a)",
-    );
-
-    topLevelLinks.forEach((link) => {
-      const href = link.getAttribute("href");
-
-      if (!href) {
-        return;
-      }
-
-      const linkPage = href.split("/").pop().split("#")[0].toLowerCase();
-
-      link.classList.toggle("active", linkPage === currentPage);
-    });
-
-    /* =======================================================
-       HOME PARENT ACTIVE
-       
-       Home 1 + Home 2
-       both keep Home active
-    ======================================================= */
-
-    if (homeButton) {
-      const homePages = ["", "index.html", "index1.html"];
-
-      homeButton.classList.toggle("active", homePages.includes(currentPage));
-    }
   };
 
   /* =========================================================
@@ -195,7 +126,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (menuToggle) {
     menuToggle.addEventListener("click", (event) => {
       event.preventDefault();
-
       event.stopPropagation();
 
       toggleMenu();
@@ -203,13 +133,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* =========================================================
-     HOME DROPDOWN CLICK
+     HOME DROPDOWN BUTTON CLICK
   ========================================================= */
 
   if (homeButton && dropdown) {
     homeButton.addEventListener("click", (event) => {
       event.preventDefault();
-
       event.stopPropagation();
 
       toggleDropdown();
@@ -217,20 +146,219 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* =========================================================
-     NAVIGATION LINKS
+     GET CURRENT PAGE
+  ========================================================= */
+
+  const getCurrentPage = () => {
+    let currentPage = window.location.pathname
+      .split("/")
+      .pop()
+      .split("?")[0]
+      .split("#")[0]
+      .toLowerCase()
+      .trim();
+
+    /*
+      Root URL becomes index.html
+    */
+
+    if (!currentPage) {
+      currentPage = "index.html";
+    }
+
+    return currentPage;
+  };
+
+  /* =========================================================
+     GET LINK PAGE
+  ========================================================= */
+
+  const getLinkPage = (link) => {
+    if (!link) {
+      return "";
+    }
+
+    const href = link.getAttribute("href");
+
+    if (!href || href === "#" || href.startsWith("javascript:")) {
+      return "";
+    }
+
+    return href
+      .split("?")[0]
+      .split("#")[0]
+      .split("/")
+      .pop()
+      .toLowerCase()
+      .trim();
+  };
+
+  /* =========================================================
+     ACTIVE NAVIGATION
+     
+     HOME PARENT:
+       index.html
+       index1.html
+       home.html
+       home1.html
+       home2.html
+
+     HOME DROPDOWN:
+       Home 1
+       Home 2
+
+     CURRENT PAGE:
+       Gets .active
+  ========================================================= */
+
+  const setActiveNav = () => {
+    if (!mainNav) {
+      return;
+    }
+
+    const currentPage = getCurrentPage();
+
+    /* =======================================================
+       REMOVE ACTIVE FROM ALL NAV LINKS
+    ======================================================= */
+
+    const allLinks = mainNav.querySelectorAll("a.nav-link, button.nav-link");
+
+    allLinks.forEach((link) => {
+      link.classList.remove("active");
+    });
+
+    /* =======================================================
+       HOME DROPDOWN LINKS
+       
+       Home 1 / Home 2 are checked separately.
+    ======================================================= */
+
+    const homeLinks = mainNav.querySelectorAll(
+      ".dropdown-menu a, .nav-dropdown a",
+    );
+
+    let homeChildActive = false;
+
+    homeLinks.forEach((link) => {
+      const linkPage = getLinkPage(link);
+
+      if (linkPage && linkPage === currentPage) {
+        link.classList.add("active");
+
+        homeChildActive = true;
+      }
+    });
+
+    /* =======================================================
+       HOME PARENT ACTIVE
+    ======================================================= */
+
+    const homePages = [
+      "",
+      "index.html",
+      "index1.html",
+      "home.html",
+      "home1.html",
+      "home2.html",
+    ];
+
+    if (homeButton) {
+      homeButton.classList.toggle(
+        "active",
+        homeChildActive || homePages.includes(currentPage),
+      );
+    }
+
+    /* =======================================================
+       NORMAL TOP LEVEL NAVIGATION
+    ======================================================= */
+
+    const topLevelLinks = mainNav.querySelectorAll(
+      "a.nav-link:not(.mobile-login)",
+    );
+
+    topLevelLinks.forEach((link) => {
+      /*
+        Skip Home dropdown links
+      */
+
+      if (link.closest(".dropdown-menu") || link.closest(".nav-dropdown")) {
+        return;
+      }
+
+      /*
+        Skip Home parent
+      */
+
+      if (link === homeButton) {
+        return;
+      }
+
+      const linkPage = getLinkPage(link);
+
+      if (linkPage && linkPage === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  };
+
+  /* =========================================================
+     SET ACTIVE NAV ON PAGE LOAD
+  ========================================================= */
+
+  setActiveNav();
+
+  /* =========================================================
+     NORMAL NAVIGATION LINKS
   ========================================================= */
 
   if (mainNav) {
-    /* =======================================================
-       TOP-LEVEL LINKS
-    ======================================================= */
-
     const navigationLinks = mainNav.querySelectorAll(
-      "a.nav-link:not(.mobile-login):not(.dropdown-menu a)",
+      "a.nav-link:not(.mobile-login)",
     );
 
     navigationLinks.forEach((link) => {
+      /*
+        Skip Home dropdown links.
+      */
+
+      if (link.closest(".dropdown-menu") || link.closest(".nav-dropdown")) {
+        return;
+      }
+
+      /*
+        Skip Home parent.
+      */
+
+      if (link === homeButton) {
+        return;
+      }
+
       link.addEventListener("click", () => {
+        /*
+          Remove active from normal links.
+        */
+
+        navigationLinks.forEach((navLink) => {
+          if (
+            !navLink.closest(".dropdown-menu") &&
+            !navLink.closest(".nav-dropdown")
+          ) {
+            navLink.classList.remove("active");
+          }
+        });
+
+        /*
+          Add active to clicked link.
+        */
+
+        link.classList.add("active");
+
+        /*
+          Close mobile menu.
+        */
+
         if (window.innerWidth <= 820) {
           closeMenu();
         }
@@ -240,15 +368,46 @@ document.addEventListener("DOMContentLoaded", () => {
     /* =======================================================
        HOME 1 / HOME 2
        
-       Navigate normally.
-       Home remains active on destination page.
+       Normal browser navigation.
     ======================================================= */
 
-    const homeLinks = mainNav.querySelectorAll(".dropdown-menu a");
+    const homeLinks = mainNav.querySelectorAll(
+      ".dropdown-menu a, .nav-dropdown a",
+    );
 
     homeLinks.forEach((link) => {
       link.addEventListener("click", (event) => {
+        /*
+          Allow normal navigation.
+        */
+
         event.stopPropagation();
+
+        /*
+          Remove active from Home links.
+        */
+
+        homeLinks.forEach((homeLink) => {
+          homeLink.classList.remove("active");
+        });
+
+        /*
+          Add active to clicked Home link.
+        */
+
+        link.classList.add("active");
+
+        /*
+          Home parent remains active.
+        */
+
+        if (homeButton) {
+          homeButton.classList.add("active");
+        }
+
+        /*
+          Mobile menu close.
+        */
 
         if (window.innerWidth <= 820) {
           closeDropdown();
@@ -257,6 +416,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
           setMenuIcon(false);
         }
+
+        /*
+          No preventDefault().
+          Browser navigates normally.
+        */
       });
     });
 
@@ -283,6 +447,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!mainNav || !menuToggle) {
       return;
     }
+
+    /*
+      Only mobile/tablet.
+    */
 
     if (window.innerWidth > 820) {
       return;
@@ -331,11 +499,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  window.addEventListener("scroll", updateHeader, { passive: true });
+  window.addEventListener("scroll", updateHeader, {
+    passive: true,
+  });
 
   /* =========================================================
      RESPONSIVE RESET
-
+     
      <= 820px = Mobile / Tablet
      > 820px  = Desktop
   ========================================================= */
@@ -351,6 +521,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (crossedBreakpoint) {
       closeMenu();
+
+      /*
+          Recalculate active navigation.
+        */
+
+      setActiveNav();
     }
 
     previousWidth = currentWidth;
@@ -360,9 +536,9 @@ document.addEventListener("DOMContentLoaded", () => {
      INITIAL HEADER STATE
   ========================================================= */
 
-  setActiveNav();
-
   closeMenu();
+
+  setActiveNav();
 
   updateHeader();
 

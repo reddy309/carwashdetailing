@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
      SERVICES:
      services.html
      service-details.html
-     service-details-*.html
+     service-details.html
 
      PRICING:
      pricing.html

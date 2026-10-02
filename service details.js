@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
      SERVICES
      services.html
      service-details.html
-     service-details-*.html
+     service-details.html
 
      SERVICE AREA
      service-area.html
@@ -166,20 +166,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const linkPage = href.split("/").pop().split("#")[0].toLowerCase();
 
       /* =====================================================
-         SERVICES
-         
-         Services stays ACTIVE on:
-         
-         services.html
-         service-details.html
-         service-details-wash.html
-         service-details-interior.html
-         service-details-exterior.html
-         etc.
-      ===================================================== */
+   SERVICES
+===================================================== */
 
-      if (linkPage === "services.html") {
+      if (linkPage === "service.html") {
         const isServicePage =
+          currentPage === "service.html" ||
           currentPage === "services.html" ||
           currentPage === "service-details.html" ||
           currentPage.startsWith("service-details-");
@@ -190,7 +182,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         return;
       }
-
       /* =====================================================
          SERVICE AREA
       ===================================================== */
