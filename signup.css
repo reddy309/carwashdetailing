@@ -436,8 +436,8 @@ html.dark body::before {
 ========================================================= */
 
 .brand-logo {
-  width: 50px;
-  height: 50px;
+  width: 65px;
+  height: 65px;
 
   object-fit: contain;
 
@@ -462,8 +462,8 @@ html.dark body::before {
 
   font-family: var(--font-heading);
 
-  font-size: 23px;
-  font-weight: 800;
+  font-size: 21px;
+  font-weight: 700;
 
   letter-spacing: -0.5px;
 }
@@ -665,11 +665,11 @@ html.dark body::before {
   border: none;
   border-radius: 8px;
 
-  background: var(--primary);
-  color: var(--white);
+  background: transparent;
 
-  font-family: var(--font-body);
+  color: var(--text);
 
+  border: 1px solid var(--primary);
   font-size: 12px;
   font-weight: 700;
 
@@ -681,9 +681,9 @@ html.dark body::before {
 }
 
 .create-btn:hover {
-  background: var(--primary-dark);
+  background: var(--primary);
 
-  transform: translateY(-1px);
+  color: var(--bg);
 }
 
 /* =========================================================
@@ -787,7 +787,7 @@ html.dark .apple {
 .login-text {
   text-align: center;
 
-  color: var(--muted);
+  color: var(--text);
 
   font-size: 11px;
 
@@ -808,39 +808,6 @@ html.dark .apple {
   text-decoration: underline;
 }
 
-/* =========================================================
-   POWERED
-========================================================= */
-
-.powered {
-  position: fixed;
-
-  right: 18px;
-  bottom: 18px;
-
-  background: var(--secondary);
-  color: var(--white);
-
-  padding: 9px 16px;
-
-  border-radius: 30px;
-
-  font-size: 10px;
-  font-weight: 700;
-
-  display: flex;
-  align-items: center;
-
-  gap: 6px;
-
-  z-index: 20;
-}
-
-.powered span {
-  color: var(--primary);
-
-  font-size: 12px;
-}
 /* =========================================================
    SAMSUNG GALAXY S8+ / MOBILE
    360px - 480px

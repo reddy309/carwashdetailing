@@ -206,8 +206,8 @@ svg {
 }
 
 .logo-icon {
-  width: 65px;
-  height: 65px;
+  width: 50px;
+  height: 50px;
 
   display: flex;
   align-items: center;
@@ -217,8 +217,8 @@ svg {
 }
 
 .logo-icon img {
-  width: 90px;
-  height: 90px;
+  width: 65px;
+  height: 65px;
   font-weight: 600;
 
   object-fit: contain;
@@ -230,8 +230,9 @@ svg {
 
   font-family: var(--font-heading);
 
-  font-size: 29px;
+  font-size: 21px;
   line-height: 1;
+  font-weight: 700;
 
   white-space: nowrap;
 }

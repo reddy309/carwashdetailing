@@ -436,9 +436,9 @@ body {
 ========================================================= */
 
 .brand-logo {
-  width: 50px;
+  width: 65px;
 
-  height: 50px;
+  height: 65px;
 
   object-fit: contain;
 
@@ -470,19 +470,6 @@ body {
 .brand-name span {
   color: var(--secondary);
 }
-
-/* =========================================================
-   DARK MODE LOGO NAME
-========================================================= */
-
-html.dark .brand-name {
-  color: var(--bg);
-}
-
-html.dark .brand-name span {
-  color: var(--secondary);
-}
-
 /* =========================================================
    LOGIN TITLE
 ========================================================= */
