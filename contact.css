@@ -29,7 +29,7 @@
   position: absolute;
   inset: 0;
 
-  background-image: url("images/customer ser.jpg");
+  background-image: url("images/cntact\ bg.jpg");
   background-size: cover;
   background-position: center;
 
@@ -46,7 +46,7 @@
   position: absolute;
   inset: 0;
 
-  background: rgba(0, 0, 0, 0.62);
+  background: rgba(0, 0, 0, 0.85);
 
   z-index: 1;
 }

@@ -105,7 +105,7 @@
   font-weight: 700;
   line-height: 0.98;
 
-  color: #ffffff;
+  color: var(--primary);
 
   box-sizing: border-box;
 }
@@ -255,12 +255,7 @@ html.rtl .about-hero-btn svg {
 
 html.dark .about-hero-overlay,
 body.dark .about-hero-overlay {
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.76) 0%,
-    rgba(0, 0, 0, 0.56) 50%,
-    rgba(0, 0, 0, 0.3) 100%
-  );
+  background: rgba(0, 0, 0, 0.78);
 }
 
 /* =========================================================
