@@ -1400,137 +1400,6 @@ body.dark .booking-field textarea {
 }
 
 /* =========================================================
-   LARGE DESKTOP
-   1440px+
-========================================================= */
-
-@media (min-width: 1440px) {
-  .book-service {
-    padding: 120px 30px;
-  }
-
-  .book-service-container {
-    width: min(1240px, 100%);
-  }
-
-  .book-service-header {
-    margin-bottom: 75px;
-  }
-
-  .book-service-header h2 {
-    font-size: 68px;
-  }
-
-  .booking-step {
-    padding: 42px 36px;
-  }
-}
-
-/* =========================================================
-   1920px+
-========================================================= */
-
-@media (min-width: 1920px) {
-  .book-service-container {
-    width: 1280px;
-  }
-
-  .book-service-header h2 {
-    font-size: 72px;
-  }
-
-  .booking-step {
-    padding: 45px 40px;
-  }
-}
-
-.booking-section-label,
-.enquiry-label {
-  font-size: 8px;
-  letter-spacing: 1.5px;
-}
-
-.booking-section-header h2,
-.enquiry-header h2 {
-  font-size: 36px;
-}
-
-.booking-section-header p,
-.enquiry-header p {
-  font-size: 10px;
-  line-height: 1.7;
-}
-
-.schedule-box {
-  padding: 17px;
-
-  margin-bottom: 13px;
-}
-
-.schedule-box-title {
-  gap: 9px;
-
-  margin-bottom: 17px;
-}
-
-.schedule-box-title > span,
-.enquiry-section-title > span {
-  font-size: 17px;
-}
-
-.schedule-box-title small,
-.enquiry-section-title small {
-  font-size: 7px;
-  letter-spacing: 1.3px;
-}
-
-.schedule-box-title h3,
-.enquiry-section-title h3 {
-  font-size: 19px;
-}
-
-.schedule-fields,
-.schedule-location-fields,
-.enquiry-fields {
-  grid-template-columns: 1fr;
-
-  gap: 12px;
-}
-
-.enquiry-field-full {
-  grid-column: auto;
-}
-
-.schedule-field label,
-.enquiry-field label {
-  font-size: 9px;
-}
-
-.schedule-field input,
-.schedule-field select,
-.enquiry-field input {
-  min-height: 42px;
-
-  font-size: 10px;
-}
-
-.schedule-field textarea,
-.enquiry-field textarea {
-  font-size: 10px;
-}
-
-.enquiry-action {
-  padding-top: 24px;
-}
-
-.enquiry-btn {
-  width: 100%;
-
-  min-height: 45px;
-
-  font-size: 10px;
-}
-/* =========================================================
    SERVICE COVERAGE INFORMATION
 ========================================================= */
 
@@ -1542,7 +1411,7 @@ body.dark .booking-field textarea {
 
 .service-coverage-container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1100px;
   min-height: 680px;
   margin: 0 auto;
 

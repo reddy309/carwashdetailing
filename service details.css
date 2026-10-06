@@ -343,7 +343,7 @@ html.dark .service-details-hero-overlay {
 }
 
 .products-materials-header h2 span {
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 .products-materials-header p {
@@ -525,7 +525,7 @@ body.dark .product-material-card:hover {
 }
 
 .care-details-content h2 span {
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 .care-details-intro {
@@ -1683,7 +1683,7 @@ html.rtl .service-feature-text {
 }
 
 .service-details-content h1 span {
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 /* =========================================================
@@ -2044,228 +2044,6 @@ html.rtl .service-feature-text {
 }
 
 /* =========================================================
-   SERVICE DURATION
-========================================================= */
-
-.service-duration {
-  width: 100%;
-  padding: 90px 0px;
-  background: var(--bg);
-  color: var(--text);
-  overflow: hidden;
-  box-sizing: border-box;
-  margin-top: -80px;
-}
-
-.service-duration-container {
-  width: min(1100px, 100%);
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-.service-duration-header {
-  width: min(760px, 100%);
-  margin: 0 auto 70px;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.service-duration-header .section-label {
-  display: inline-block;
-  padding: 7px 18px;
-  margin-bottom: 18px;
-  border: 1px solid var(--primary);
-  border-radius: 30px;
-  color: var(--primary);
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  box-sizing: border-box;
-}
-
-.service-duration-header h2 {
-  margin: 0 0 18px;
-  font-family: var(--font-heading);
-  font-size: clamp(45px, 6vw, 60px);
-  font-weight: 600;
-  line-height: 1.05;
-  color: var(--text);
-}
-
-.service-duration-header h2 span {
-  color: var(--secondary);
-}
-
-.service-duration-header p {
-  width: min(680px, 100%);
-  margin: 0 auto;
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.8;
-  color: var(--text);
-}
-
-/* =========================================================
-   DURATION OVERVIEW
-========================================================= */
-
-.duration-overview {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  width: 100%;
-  margin-bottom: 85px;
-  border-top: 1px solid var(--text);
-  border-bottom: 1px solid var(--text);
-  box-sizing: border-box;
-}
-
-.duration-item {
-  min-width: 0;
-  padding: 30px 35px;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.duration-item + .duration-item {
-  border-left: 1px solid var(--text);
-}
-
-.duration-label {
-  display: block;
-  margin-bottom: 9px;
-  font-family: var(--font-body);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: var(--primary);
-}
-
-.duration-item strong {
-  display: block;
-  margin-bottom: 7px;
-  font-family: var(--font-heading);
-  font-size: 31px;
-  font-weight: 600;
-  line-height: 1.1;
-  color: var(--text);
-}
-
-.duration-item p {
-  margin: 0;
-  font-family: var(--font-body);
-  font-size: 13px;
-  line-height: 1.6;
-  color: var(--text);
-}
-
-/* =========================================================
-   DURATION PROCESS
-========================================================= */
-
-.duration-process {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 25px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.duration-process-line {
-  position: absolute;
-  top: 25px;
-  left: 12.5%;
-  right: 12.5%;
-  height: 1px;
-  background: var(--text);
-  z-index: 0;
-}
-
-.duration-step {
-  position: relative;
-  min-width: 0;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.duration-step-marker {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  margin: 0 auto 25px;
-  border: 1px solid var(--primary);
-  background: var(--bg);
-  box-sizing: border-box;
-}
-
-.duration-step-marker span {
-  font-family: var(--font-heading);
-  font-size: 17px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: var(--primary);
-}
-
-.duration-step-content {
-  width: 100%;
-}
-
-.duration-step-content > span {
-  display: block;
-  margin-bottom: 10px;
-  font-family: var(--font-body);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: var(--secondary);
-}
-
-.duration-step-content h3 {
-  margin: 0 0 10px;
-  font-family: var(--font-heading);
-  font-size: 27px;
-  font-weight: 600;
-  line-height: 1.1;
-  color: var(--text);
-}
-
-.duration-step-content p {
-  margin: 0;
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.75;
-  color: var(--text);
-}
-
-/* =========================================================
-   DURATION RTL
-========================================================= */
-
-body.rtl .duration-overview {
-  direction: rtl;
-}
-
-body.rtl .duration-item + .duration-item {
-  border-left: 0;
-  border-right: 1px solid var(--border);
-}
-
-body.rtl .duration-process {
-  direction: rtl;
-}
-
-body.rtl .duration-note {
-  direction: rtl;
-}
-
-/* =========================================================
    RESPONSIVE CSS ONLY
    WIDTH REDUCED
    HEADER / STICKY / HAMBURGER UNTOUCHED
@@ -2534,129 +2312,7 @@ body.rtl .duration-note {
   .care-details-image:hover img {
     transform: none;
   }
-
-  /* DURATION */
-
-  .service-duration {
-    padding: 65px 15px;
-  }
-
-  .service-duration-container {
-    width: min(350px, 100%);
-  }
-
-  .service-duration-header {
-    width: min(330px, 100%);
-    margin: 0 auto 36px;
-  }
-
-  .service-duration-header .section-label {
-    padding: 6px 11px;
-    margin-bottom: 10px;
-    font-size: 8.5px;
-    letter-spacing: 1.5px;
-  }
-
-  .service-duration-header h2 {
-    width: 100%;
-    margin-bottom: 13px;
-    font-size: 33px;
-    line-height: 1.08;
-  }
-
-  .service-duration-header p {
-    width: 100%;
-    font-size: 10.5px;
-    line-height: 1.7;
-  }
-
-  .duration-overview {
-    width: min(330px, 100%);
-    margin: 0 auto 45px;
-    grid-template-columns: 1fr;
-  }
-
-  .duration-item {
-    width: 100%;
-    padding: 20px 16px;
-  }
-
-  .duration-item + .duration-item {
-    border-left: 0;
-    border-top: 1px solid var(--border);
-  }
-
-  .duration-item strong {
-    font-size: 26px;
-  }
-
-  .duration-process {
-    width: min(330px, 100%);
-    margin: 0 auto;
-    grid-template-columns: 1fr;
-    gap: 0;
-    padding-left: 30px;
-  }
-
-  .duration-process-line {
-    display: block;
-    top: 0;
-    bottom: 0;
-    left: 7px;
-    right: auto;
-    width: 1px;
-    height: auto;
-  }
-
-  .duration-step {
-    width: 100%;
-    padding-bottom: 28px;
-    text-align: left;
-  }
-
-  .duration-step:last-child {
-    padding-bottom: 0;
-  }
-
-  .duration-step-marker {
-    position: absolute;
-    top: 0;
-    left: -30px;
-    width: 30px;
-    height: 30px;
-    margin: 0;
-  }
-
-  .duration-step-marker span {
-    font-size: 7px;
-  }
-
-  .duration-step-content {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid var(--border);
-    background: var(--bg);
-  }
-
-  .duration-step-content > span {
-    margin-bottom: 7px;
-    font-size: 7px;
-    letter-spacing: 1.1px;
-  }
-
-  .duration-step-content h3 {
-    width: 100%;
-    margin-bottom: 7px;
-    font-size: 21px;
-  }
-
-  .duration-step-content p {
-    width: 100%;
-    font-size: 9.5px;
-    line-height: 1.7;
-  }
 }
-
 /* =========================================================
    SMALL SAMSUNG
    360px — 380px
@@ -2674,21 +2330,18 @@ body.rtl .duration-note {
   .service-overview-container,
   .products-materials-container,
   .care-details-container,
-  .exterior-care-details .care-details-container,
-  .service-duration-container {
+  .exterior-care-details .care-details-container {
     width: min(320px, 100%);
   }
 
   .service-overview-content,
   .products-materials-header,
-  .care-details-content,
-  .service-duration-header {
+  .care-details-content {
     max-width: 310px;
   }
 
   .service-overview-content h2,
   .care-details-content h2,
-  .service-duration-header h2,
   .products-materials-header h2 {
     font-size: 30px;
   }
@@ -2710,39 +2363,7 @@ body.rtl .duration-note {
   .product-material-card h3 {
     font-size: 22px;
   }
-
-  .duration-overview {
-    width: min(305px, 100%);
-  }
-
-  .duration-process {
-    width: min(305px, 100%);
-    padding-left: 28px;
-  }
-
-  .duration-process-line {
-    left: 7px;
-  }
-
-  .duration-step-marker {
-    left: -28px;
-    width: 29px;
-    height: 29px;
-  }
-
-  .duration-step-content {
-    padding: 14px;
-  }
-
-  .duration-step-content h3 {
-    font-size: 20px;
-  }
-
-  .duration-step-content p {
-    font-size: 9px;
-  }
 }
-
 /* =========================================================
    IPAD MINI
    601px — 768px
@@ -2863,66 +2484,6 @@ body.rtl .duration-note {
   }
 
   .care-detail-item p {
-    font-size: 10px;
-  }
-
-  .service-duration {
-    padding: 75px 25px;
-  }
-
-  .service-duration-container {
-    width: min(680px, 100%);
-  }
-
-  .service-duration-header {
-    max-width: 600px;
-    margin-bottom: 45px;
-  }
-
-  .service-duration-header h2 {
-    font-size: 40px;
-  }
-
-  .service-duration-header p {
-    font-size: 11.5px;
-  }
-
-  .duration-overview {
-    margin-bottom: 50px;
-  }
-
-  .duration-item {
-    padding: 22px 15px;
-  }
-
-  .duration-item strong {
-    font-size: 25px;
-  }
-
-  .duration-item p {
-    font-size: 11px;
-  }
-
-  .duration-process {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 35px 20px;
-  }
-
-  .duration-process-line {
-    display: none;
-  }
-
-  .duration-step-marker {
-    width: 42px;
-    height: 42px;
-    margin-bottom: 17px;
-  }
-
-  .duration-step-content h3 {
-    font-size: 22px;
-  }
-
-  .duration-step-content p {
     font-size: 10px;
   }
 }
@@ -3051,47 +2612,6 @@ body.rtl .duration-note {
   .care-detail-item p {
     font-size: 10px;
   }
-
-  .service-duration {
-    padding: 85px 30px;
-  }
-
-  .service-duration-container {
-    width: min(900px, 100%);
-  }
-
-  .service-duration-header {
-    max-width: 650px;
-    margin-bottom: 55px;
-  }
-
-  .service-duration-header h2 {
-    font-size: 48px;
-  }
-
-  .duration-overview {
-    margin-bottom: 60px;
-  }
-
-  .duration-item {
-    padding: 25px 20px;
-  }
-
-  .duration-item strong {
-    font-size: 27px;
-  }
-
-  .duration-process {
-    gap: 15px;
-  }
-
-  .duration-step-content h3 {
-    font-size: 22px;
-  }
-
-  .duration-step-content p {
-    font-size: 11px;
-  }
 }
 
 /* =========================================================
@@ -3107,62 +2627,6 @@ body.rtl .duration-note {
 }
 
 /* =========================================================
-   MOBILE RTL — DURATION
-========================================================= */
-
-@media (max-width: 599px) {
-  body.rtl .duration-item + .duration-item {
-    border-left: 0;
-    border-right: 0;
-    border-top: 1px solid var(--border);
-  }
-
-  body.rtl .duration-process {
-    padding-left: 0;
-    padding-right: 30px;
-  }
-
-  body.rtl .duration-process-line {
-    left: auto;
-    right: 7px;
-  }
-
-  body.rtl .duration-step {
-    text-align: right;
-  }
-
-  body.rtl .duration-step-marker {
-    left: auto;
-    right: -30px;
-  }
-
-  body.rtl .duration-note {
-    text-align: right;
-  }
-}
-
-/* =========================================================
-   SMALL MOBILE RTL
-========================================================= */
-
-@media (min-width: 360px) and (max-width: 380px) {
-  body.rtl .duration-process {
-    padding-left: 0;
-    padding-right: 28px;
-  }
-
-  body.rtl .duration-process-line {
-    left: auto;
-    right: 7px;
-  }
-
-  body.rtl .duration-step-marker {
-    left: auto;
-    right: -28px;
-  }
-}
-
-/* =========================================================
    RESPONSIVE WIDTH SAFETY
    ONLY THESE SECTIONS
 ========================================================= */
@@ -3172,8 +2636,7 @@ body.rtl .duration-note {
   .service-overview,
   .detailing-process,
   .products-materials,
-  .care-details,
-  .service-duration {
+  .care-details {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
@@ -3183,8 +2646,7 @@ body.rtl .duration-note {
   .service-overview-container,
   .detailing-process-container,
   .products-materials-container,
-  .care-details-container,
-  .service-duration-container {
+  .care-details-container {
     min-width: 0;
     box-sizing: border-box;
   }
@@ -3194,12 +2656,10 @@ body.rtl .duration-note {
   .detailing-process-header h2,
   .products-materials-header h2,
   .care-details-content h2,
-  .service-duration-header h2,
   .book-service-cta h2,
   .timeline-card h3,
   .product-material-card h3,
-  .care-detail-item h3,
-  .duration-step-content h3 {
+  .care-detail-item h3 {
     max-width: 100%;
     overflow-wrap: break-word;
     word-break: normal;
@@ -3245,9 +2705,7 @@ body.rtl .duration-note {
   .service-details-hero-content h1,
   .service-overview-content h2,
   .detailing-process-header h2,
-  .products-materials-header h2,
-  .care-details-content h2,
-  .service-duration-header h2 {
+  .products-materials-header h2 {
     max-width: 100%;
   }
 
@@ -3262,8 +2720,7 @@ body.rtl .duration-note {
   /* REDUCED CARD WIDTH */
 
   .timeline-card,
-  .product-material-card,
-  .duration-step-content {
+  .product-material-card {
     margin-left: 0;
     margin-right: auto;
   }
@@ -3272,10 +2729,631 @@ body.rtl .duration-note {
 
   .service-overview-container,
   .products-materials-container,
-  .care-details-container,
-  .service-duration-container {
+  .care-details-container {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+/* =========================================================
+   SERVICE DURATION
+========================================================= */
+
+.service-duration {
+  width: 100%;
+  padding: 90px 24px;
+  margin-top: -80px;
+
+  background: var(--bg);
+  color: var(--text);
+
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.service-duration-container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.service-duration-header {
+  width: min(760px, 100%);
+  margin: 0 auto 70px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.service-duration-header .section-label {
+  display: inline-block;
+
+  padding: 7px 18px;
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+  border-radius: 30px;
+
+  color: var(--primary);
+
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+}
+
+.service-duration-header h2 {
+  margin: 0 0 18px;
+
+  font-family: var(--font-heading);
+  font-size: clamp(45px, 6vw, 60px);
+  font-weight: 600;
+  line-height: 1.05;
+
+  color: var(--text);
+}
+
+.service-duration-header h2 span {
+  color: var(--primary);
+}
+
+.service-duration-header p {
+  width: min(680px, 100%);
+  margin: 0 auto;
+
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+
+  color: var(--text);
+}
+
+/* =========================================================
+   DURATION OVERVIEW
+========================================================= */
+
+.duration-overview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  width: 100%;
+  margin: 0 0 85px;
+
+  border-top: 1px solid var(--text);
+  border-bottom: 1px solid var(--text);
+
+  box-sizing: border-box;
+}
+
+.duration-item {
+  min-width: 0;
+  min-height: 135px;
+
+  padding: 30px 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+.duration-item + .duration-item {
+  border-left: 1px solid var(--text);
+}
+
+.duration-label {
+  display: block;
+  margin-bottom: 9px;
+
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: var(--primary);
+}
+
+.duration-item strong {
+  display: block;
+  margin-bottom: 7px;
+
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.1;
+
+  color: var(--text);
+}
+
+.duration-item p {
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.6;
+
+  color: var(--text);
+}
+
+/* =========================================================
+   DURATION PROCESS
+========================================================= */
+
+.duration-process {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+.duration-process-line {
+  position: absolute;
+
+  top: 25px;
+  left: 12.5%;
+  right: 12.5%;
+
+  height: 1px;
+
+  background: var(--text);
+
+  z-index: 0;
+}
+
+.duration-step {
+  position: relative;
+
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+.duration-step-marker {
+  position: relative;
+  z-index: 2;
+
+  width: 50px;
+  height: 50px;
+  flex: 0 0 50px;
+
+  margin: 0 auto 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--primary);
+  background: var(--bg);
+
+  box-sizing: border-box;
+}
+
+.duration-step-marker span {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  color: var(--primary);
+}
+
+.duration-step-content {
+  width: 100%;
+  max-width: 230px;
+
+  margin: 0 auto;
+
+  box-sizing: border-box;
+}
+
+.duration-step-content > span {
+  display: block;
+  margin-bottom: 10px;
+
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+  color: var(--secondary);
+}
+
+.duration-step-content h3 {
+  margin: 0 0 10px;
+
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.1;
+
+  color: var(--text);
+}
+
+.duration-step-content p {
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.75;
+
+  color: var(--text);
+}
+
+/* =========================================================
+   RTL
+========================================================= */
+
+body.rtl .duration-overview {
+  direction: rtl;
+}
+
+body.rtl .duration-item + .duration-item {
+  border-left: 0;
+  border-right: 1px solid var(--text);
+}
+
+body.rtl .duration-process {
+  direction: rtl;
+}
+
+body.rtl .duration-note {
+  direction: rtl;
+}
+
+/* =========================================================
+   NETBOOK / SMALL LAPTOP
+   992px – 1024px
+========================================================= */
+
+@media (min-width: 821px) and (max-width: 1100px) {
+  .service-duration {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .service-duration-container {
+    width: 100%;
+  }
+
+  .duration-process {
+    gap: 20px;
+  }
+
+  .duration-step-content {
+    max-width: 205px;
+  }
+
+  .duration-step-content h3 {
+    font-size: 25px;
+  }
+}
+
+/* =========================================================
+   IPAD MINI
+   768px – 820px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 820px) {
+  .service-duration {
+    padding: 80px 24px;
+  }
+
+  .service-duration-header {
+    margin-bottom: 60px;
+  }
+
+  .duration-overview {
+    margin-bottom: 70px;
+  }
+
+  .duration-item {
+    padding: 28px 15px;
+  }
+
+  .duration-item strong {
+    font-size: 28px;
+  }
+
+  .duration-item p {
+    font-size: 12px;
+  }
+
+  .duration-process {
+    gap: 14px;
+  }
+
+  .duration-step-marker {
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
+  }
+
+  .duration-step-content {
+    max-width: 165px;
+  }
+
+  .duration-step-content h3 {
+    font-size: 23px;
+  }
+
+  .duration-step-content p {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+ / SMALL TABLET
+   481px – 767px
+========================================================= */
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .service-duration {
+    padding: 70px 20px;
+  }
+
+  .service-duration-header {
+    width: min(680px, 100%);
+    margin-bottom: 50px;
+  }
+
+  .service-duration-header h2 {
+    font-size: clamp(40px, 8vw, 50px);
+  }
+
+  .service-duration-header p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* -----------------------------------------
+     OVERVIEW
+  ----------------------------------------- */
+
+  .duration-overview {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 65px;
+  }
+
+  .duration-item {
+    min-height: 125px;
+    padding: 24px 12px;
+  }
+
+  .duration-label {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+
+  .duration-item strong {
+    font-size: 26px;
+  }
+
+  .duration-item p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  /* -----------------------------------------
+     PROCESS
+  ----------------------------------------- */
+
+  .duration-process {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 45px 20px;
+  }
+
+  .duration-process-line {
+    display: none;
+  }
+
+  .duration-step {
+    width: 100%;
+  }
+
+  .duration-step-marker {
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
+    margin-bottom: 20px;
+  }
+
+  .duration-step-content {
+    max-width: 250px;
+  }
+
+  .duration-step-content h3 {
+    font-size: 24px;
+  }
+
+  .duration-step-content p {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+
+   360px – 480px
+========================================================= */
+
+@media (max-width: 480px) {
+  .service-duration {
+    padding: 65px 16px;
+  }
+
+  .service-duration-container {
+    width: 100%;
+  }
+
+  /* -----------------------------------------
+     HEADER
+  ----------------------------------------- */
+
+  .service-duration-header {
+    width: 100%;
+    margin-bottom: 42px;
+  }
+
+  .service-duration-header .section-label {
+    padding: 6px 15px;
+    margin-bottom: 15px;
+
+    font-size: 9px;
+    letter-spacing: 1.6px;
+  }
+
+  .service-duration-header h2 {
+    margin-bottom: 15px;
+
+    font-size: clamp(36px, 11vw, 46px);
+    line-height: 1.05;
+  }
+
+  .service-duration-header p {
+    width: 100%;
+
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  /* -----------------------------------------
+     OVERVIEW
+  ----------------------------------------- */
+
+  .duration-overview {
+    grid-template-columns: 1fr;
+    margin-bottom: 55px;
+  }
+
+  .duration-item {
+    min-height: auto;
+    padding: 23px 15px;
+  }
+
+  .duration-item + .duration-item {
+    border-left: 0;
+    border-top: 1px solid var(--text);
+  }
+
+  .duration-label {
+    margin-bottom: 7px;
+    font-size: 8px;
+    letter-spacing: 1.6px;
+  }
+
+  .duration-item strong {
+    margin-bottom: 5px;
+    font-size: 27px;
+  }
+
+  .duration-item p {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  /* -----------------------------------------
+     PROCESS
+  ----------------------------------------- */
+
+  .duration-process {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .duration-process-line {
+    top: 25px;
+    bottom: 25px;
+
+    left: 50%;
+    right: auto;
+
+    width: 1px;
+    height: auto;
+
+    transform: translateX(-50%);
+  }
+
+  .duration-step {
+    width: 100%;
+  }
+
+  .duration-step-marker {
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
+
+    margin-bottom: 20px;
+  }
+
+  .duration-step-content {
+    width: min(100%, 290px);
+    max-width: 290px;
+  }
+
+  .duration-step-content > span {
+    margin-bottom: 8px;
+    font-size: 8px;
+    letter-spacing: 1.4px;
+  }
+
+  .duration-step-content h3 {
+    margin-bottom: 8px;
+    font-size: 24px;
+  }
+
+  .duration-step-content p {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+   320px – 359px
+========================================================= */
+
+@media (max-width: 359px) {
+  .service-duration {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .service-duration-header h2 {
+    font-size: 34px;
+  }
+
+  .duration-item strong {
+    font-size: 25px;
+  }
+
+  .duration-step-content {
+    max-width: 270px;
+  }
+
+  .duration-step-content h3 {
+    font-size: 22px;
   }
 }
 /* =========================================================

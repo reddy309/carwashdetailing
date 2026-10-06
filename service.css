@@ -1387,7 +1387,7 @@ body.dark .foam-deep-card:hover {
 ========================================================= */
 
 .detail-service-container {
-  width: min(1180px, 100%);
+  width: min(1100px, 100%);
   margin: 0 auto;
 
   display: grid;
@@ -2206,8 +2206,9 @@ body.dark .foam-deep-card:hover {
   min-height: 46px;
 
   padding: 0 22px;
-  background: transparent;
+  background: var(--primary);
 
+  color: var(--primary);
   color: var(--text);
 
   border: 1px solid var(--primary);
@@ -2246,9 +2247,9 @@ body.dark .foam-deep-card:hover {
 }
 
 .full-vehicle-btn:hover {
-  background: var(--primary);
+  background: var(--bg);
 
-  color: var(--bg);
+  color: var(--text);
 }
 
 .full-vehicle-btn:hover i {
