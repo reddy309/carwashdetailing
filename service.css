@@ -14,6 +14,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -23,7 +24,7 @@
 }
 
 /* =========================================================
-   BACKGROUND IMAGE
+   BACKGROUND IMAGE WRAPPER
 ========================================================= */
 
 .service-details-hero-bg {
@@ -34,33 +35,13 @@
   height: 100%;
 
   overflow: hidden;
-}
-/* =========================================================
-   HERO OVERLAY — LIGHT MODE
-========================================================= */
 
-.service-details-hero-overlay {
-  position: absolute;
-  inset: 0;
-
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
-
-  z-index: 1;
-
-  transition: background 0.4s ease;
+  z-index: 0;
 }
 
 /* =========================================================
-   HERO OVERLAY — DARK MODE
+   BACKGROUND IMAGE
 ========================================================= */
-
-body.dark .service-details-hero-overlay {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.75));
-}
-
-body.dark .service-details-hero {
-  background: #000;
-}
 
 .service-details-hero-bg img {
   display: block;
@@ -88,31 +69,77 @@ body.dark .service-details-hero {
 }
 
 /* =========================================================
-   CONTAINER
+   HERO OVERLAY — LIGHT MODE
 ========================================================= */
 
-.service-details-hero-container {
-  position: relative;
-  z-index: 3;
+.service-details-hero-overlay {
+  position: absolute;
+  inset: 0;
 
-  width: min(1100px, calc(100% - 80px));
-  min-height: 680px;
+  width: 100%;
+  height: 100%;
 
-  margin: 0 auto;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
 
-  display: flex;
-  align-items: center;
+  z-index: 1;
+
+  pointer-events: none;
+
+  transition: background 0.4s ease;
 
   box-sizing: border-box;
 }
 
 /* =========================================================
-   CONTENT
+   HERO OVERLAY — DARK MODE
+========================================================= */
+
+body.dark .service-details-hero-overlay {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.75));
+}
+
+body.dark .service-details-hero {
+  background: #000;
+}
+
+/* =========================================================
+   HERO CONTAINER
+========================================================= */
+
+.service-details-hero-container {
+  position: relative;
+  z-index: 5;
+
+  width: min(850px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HERO CONTENT — CENTER + VISIBLE
 ========================================================= */
 
 .service-details-hero-content {
+  position: relative;
+  z-index: 5;
+
   width: 100%;
-  max-width: 760px;
+  max-width: 850px;
+
+  margin: 0 auto;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
 
   text-align: center;
 
@@ -138,49 +165,34 @@ body.dark .service-details-hero {
 ========================================================= */
 
 .service-details-hero-eyebrow {
-  display: inline-block;
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
 
   padding: 7px 18px;
-  margin-bottom: 18px;
+
+  margin: 0 0 18px;
 
   border: 1px solid var(--primary);
+
   border-radius: 30px;
 
   color: var(--primary);
 
   font-family: var(--font-body);
+
   font-size: 11px;
+
   font-weight: 600;
 
   letter-spacing: 2px;
 
+  line-height: 1;
+
   box-sizing: border-box;
-}
-
-.service-details-hero-eyebrow > span {
-  width: 7px;
-  height: 7px;
-
-  flex-shrink: 0;
-
-  border-radius: 50%;
-
-  background: var(--secondary);
-
-  animation: serviceHeroDot 1.8s ease-in-out infinite;
-}
-
-@keyframes serviceHeroDot {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-
-  50% {
-    transform: scale(1.45);
-    opacity: 0.65;
-  }
 }
 
 /* =========================================================
@@ -188,6 +200,8 @@ body.dark .service-details-hero {
 ========================================================= */
 
 .service-details-hero-content h1 {
+  width: 100%;
+
   margin: 0;
 
   color: var(--primary);
@@ -201,10 +215,19 @@ body.dark .service-details-hero {
   line-height: 0.95;
 
   letter-spacing: -1.5px;
+
+  text-align: center;
+
+  box-sizing: border-box;
 }
+
+/* =========================================================
+   HEADING STRONG
+========================================================= */
 
 .service-details-hero-content h1 strong {
   color: var(--secondary);
+
   font-weight: 600;
 }
 
@@ -213,16 +236,24 @@ body.dark .service-details-hero {
 ========================================================= */
 
 .service-details-hero-content p {
+  width: 100%;
   max-width: 650px;
 
   margin: 24px auto 0;
 
-  font-family: var(--font-body);
   color: #ffffff;
+
+  font-family: var(--font-body);
+
   font-size: 17px;
+
   font-weight: 500;
 
   line-height: 1.8;
+
+  text-align: center;
+
+  box-sizing: border-box;
 }
 
 /* =========================================================
@@ -234,32 +265,39 @@ body.dark .service-details-hero {
 
   padding: 0 22px;
 
+  margin: 15px auto 0;
+
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
 
   gap: 9px;
+
   background: var(--primary);
 
-  color: var(--primary);
   color: var(--text);
 
   border: 1px solid var(--primary);
+
   border-radius: 14px;
-  margin-top: 15px;
 
   font-family: var(--font-body);
+
   font-size: 14px;
+
   font-weight: 700;
 
   line-height: 1;
 
   text-decoration: none;
+
   text-transform: none;
 
   white-space: nowrap;
 
   box-sizing: border-box;
+
   cursor: pointer;
 
   transition:
@@ -288,59 +326,25 @@ body.dark .service-details-hero {
 
   transition: transform 0.3s ease;
 }
+
 /* =========================================================
-   HOVER
+   BUTTON HOVER
 ========================================================= */
 
 .service-details-hero-btn:hover {
   background: var(--bg);
 
   color: var(--text);
+
+  border-color: var(--bg);
 }
 
 .service-details-hero-btn:hover i {
   color: var(--bg);
+
   stroke: var(--bg);
 
   transform: translateX(4px);
-}
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 480px) {
-  .service-details-hero-btn {
-    min-height: 44px;
-    padding: 0 18px;
-    gap: 8px;
-    font-size: 11px;
-  }
-
-  .service-details-hero-btn i {
-    width: 14px;
-    height: 14px;
-    flex-basis: 14px;
-  }
-}
-
-/* =========================================================
-   VERY SMALL MOBILE
-========================================================= */
-
-@media (max-width: 360px) {
-  .service-details-hero-btn {
-    min-height: 42px;
-    padding: 0 16px;
-    gap: 7px;
-    font-size: 10px;
-  }
-
-  .service-details-hero-btn i {
-    width: 13px;
-    height: 13px;
-    flex-basis: 13px;
-  }
 }
 
 /* =========================================================
@@ -356,13 +360,24 @@ body.dark .service-details-hero {
     width: min(850px, calc(100% - 48px));
   }
 
+  .service-details-hero-content {
+    max-width: 760px;
+  }
+
   .service-details-hero-content h1 {
     font-size: 68px;
   }
 
   .service-details-hero-content p {
     max-width: 580px;
+
     font-size: 12px;
+
+    line-height: 1.7;
+  }
+
+  .service-details-hero-btn {
+    margin-top: 20px;
   }
 }
 
@@ -373,14 +388,23 @@ body.dark .service-details-hero {
 @media (min-width: 481px) and (max-width: 768px) {
   .service-details-hero {
     min-height: 520px;
+
+    padding: 30px 20px;
   }
 
   .service-details-hero-container {
-    width: min(650px, calc(100% - 40px));
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .service-details-hero-content {
+    max-width: 650px;
   }
 
   .service-details-hero-content h1 {
     font-size: 58px;
+
+    line-height: 0.98;
   }
 
   .service-details-hero-content p {
@@ -407,20 +431,32 @@ body.dark .service-details-hero {
     min-height: 540px;
 
     padding: 30px 15px;
+
+    margin-top: 70px;
   }
 
   .service-details-hero-container {
     width: 100%;
+
+    max-width: 100%;
   }
 
   .service-details-hero-content {
+    width: 100%;
+
     max-width: 100%;
   }
+
+  /* -----------------------------------------
+     EYEBROW
+  ----------------------------------------- */
 
   .service-details-hero-eyebrow {
     gap: 7px;
 
     margin-bottom: 15px;
+
+    padding: 7px 15px;
 
     font-size: 9px;
 
@@ -430,15 +466,27 @@ body.dark .service-details-hero {
   .service-details-hero-eyebrow > span {
     width: 6px;
     height: 6px;
+
+    flex-basis: 6px;
   }
 
+  /* -----------------------------------------
+     HEADING
+  ----------------------------------------- */
+
   .service-details-hero-content h1 {
+    width: 100%;
+
     font-size: 46px;
 
     line-height: 0.98;
 
     letter-spacing: -0.6px;
   }
+
+  /* -----------------------------------------
+     DESCRIPTION
+  ----------------------------------------- */
 
   .service-details-hero-content p {
     max-width: 330px;
@@ -450,12 +498,18 @@ body.dark .service-details-hero {
     line-height: 1.7;
   }
 
-  .service-details-hero-btn {
-    margin-top: 22px;
+  /* -----------------------------------------
+     BUTTON
+  ----------------------------------------- */
 
+  .service-details-hero-btn {
     min-height: 44px;
 
+    margin-top: 22px;
+
     padding: 11px 17px;
+
+    gap: 8px;
 
     font-size: 9px;
   }
@@ -463,6 +517,8 @@ body.dark .service-details-hero {
   .service-details-hero-btn i {
     width: 14px;
     height: 14px;
+
+    flex-basis: 14px;
   }
 }
 
@@ -478,15 +534,41 @@ body.dark .service-details-hero {
     padding-right: 12px;
   }
 
+  .service-details-hero-container {
+    width: 100%;
+  }
+
   .service-details-hero-content h1 {
     font-size: 41px;
+
+    line-height: 0.98;
   }
 
   .service-details-hero-content p {
+    max-width: 310px;
+
+    font-size: 10px;
+
+    line-height: 1.65;
+  }
+
+  .service-details-hero-btn {
+    min-height: 42px;
+
+    padding: 0 16px;
+
+    gap: 7px;
+
     font-size: 10px;
   }
-}
 
+  .service-details-hero-btn i {
+    width: 13px;
+    height: 13px;
+
+    flex-basis: 13px;
+  }
+}
 /* =========================================================
    VEHICLE WASH
 ========================================================= */

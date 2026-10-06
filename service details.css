@@ -260,6 +260,7 @@ html.dark .service-details-hero-overlay {
   font-weight: 600;
   letter-spacing: 2px;
   box-sizing: border-box;
+  transform: translate(150px);
 }
 
 .service-overview-content h2 {
@@ -501,28 +502,62 @@ body.dark .product-material-card:hover {
   box-sizing: border-box;
 }
 
+.care-details-content {
+  text-align: center;
+}
+
+/* =========================================================
+   SECTION LABEL — CENTER
+========================================================= */
+
 .care-details-content .section-label {
-  display: inline-block;
+  display: block;
+
+  width: fit-content;
+
+  margin: 0 auto;
+
   padding: 7px 18px;
-  margin-bottom: 18px;
+
+  transform: none;
+
   border: 1px solid var(--primary);
   border-radius: 30px;
+
   color: var(--primary);
+
   font-family: "Montserrat", sans-serif;
+
   font-size: 11px;
   font-weight: 600;
+
   letter-spacing: 2px;
+
   box-sizing: border-box;
 }
+/* =========================================================
+   HEADING
+========================================================= */
 
 .care-details-content h2 {
   margin: 0 0 20px;
+
   font-family: var(--font-heading);
+
   font-size: clamp(45px, 6vw, 60px);
+
   font-weight: 600;
+
   line-height: 1.05;
+
   color: var(--text);
+
+  text-align: center;
 }
+
+/* =========================================================
+   HEADING SPAN
+========================================================= */
 
 .care-details-content h2 span {
   color: var(--primary);
@@ -2093,47 +2128,6 @@ html.rtl .service-feature-text {
 
   /* OVERVIEW */
 
-  .service-overview {
-    padding: 60px 15px;
-  }
-
-  .service-overview-container {
-    width: min(340px, 100%);
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .service-overview-image {
-    width: 100%;
-    height: 300px;
-  }
-
-  .service-overview-content {
-    width: 100%;
-    max-width: 330px;
-    margin: 0 auto;
-  }
-
-  .service-overview-content .section-label {
-    padding: 6px 11px;
-    margin-bottom: 13px;
-    font-size: 8.5px;
-    letter-spacing: 1.4px;
-  }
-
-  .service-overview-content h2 {
-    width: 100%;
-    font-size: 34px;
-    line-height: 1.02;
-    margin-bottom: 17px;
-  }
-
-  .service-overview-content p {
-    width: 100%;
-    font-size: 11px;
-    line-height: 1.75;
-  }
-
   /* PRODUCTS */
 
   .products-materials {
@@ -2327,27 +2321,20 @@ html.rtl .service-feature-text {
     font-size: 37px;
   }
 
-  .service-overview-container,
   .products-materials-container,
   .care-details-container,
   .exterior-care-details .care-details-container {
     width: min(320px, 100%);
   }
 
-  .service-overview-content,
   .products-materials-header,
   .care-details-content {
     max-width: 310px;
   }
 
-  .service-overview-content h2,
   .care-details-content h2,
   .products-materials-header h2 {
     font-size: 30px;
-  }
-
-  .service-overview-image {
-    height: 270px;
   }
 
   .care-details-image {
@@ -2386,31 +2373,6 @@ html.rtl .service-feature-text {
   .service-details-hero-content p {
     width: min(540px, 100%);
     font-size: 12px;
-  }
-
-  .service-overview {
-    padding: 75px 25px;
-  }
-
-  .service-overview-container {
-    width: min(680px, 100%);
-    gap: 28px;
-  }
-
-  .service-overview-image {
-    height: 380px;
-  }
-
-  .service-overview-content {
-    max-width: 320px;
-  }
-
-  .service-overview-content h2 {
-    font-size: 43px;
-  }
-
-  .service-overview-content p {
-    font-size: 11.5px;
   }
 
   .products-materials-container {
@@ -2512,31 +2474,6 @@ html.rtl .service-feature-text {
     font-size: 13px;
   }
 
-  .service-overview {
-    padding: 85px 30px;
-  }
-
-  .service-overview-container {
-    width: min(900px, 100%);
-    gap: 40px;
-  }
-
-  .service-overview-image {
-    height: 430px;
-  }
-
-  .service-overview-content {
-    max-width: 390px;
-  }
-
-  .service-overview-content h2 {
-    font-size: 51px;
-  }
-
-  .service-overview-content p {
-    font-size: 12px;
-  }
-
   .products-materials {
     padding: 85px 30px;
   }
@@ -2633,7 +2570,6 @@ html.rtl .service-feature-text {
 
 @media (max-width: 1024px) {
   .service-details-hero,
-  .service-overview,
   .detailing-process,
   .products-materials,
   .care-details {
@@ -2643,7 +2579,6 @@ html.rtl .service-feature-text {
   }
 
   .service-details-hero-content,
-  .service-overview-container,
   .detailing-process-container,
   .products-materials-container,
   .care-details-container {
@@ -2652,7 +2587,6 @@ html.rtl .service-feature-text {
   }
 
   .service-details-hero-content h1,
-  .service-overview-content h2,
   .detailing-process-header h2,
   .products-materials-header h2,
   .care-details-content h2,
@@ -2666,7 +2600,6 @@ html.rtl .service-feature-text {
   }
 
   .service-details-hero-content p,
-  .service-overview-content p,
   .detailing-process-header p,
   .products-materials-header p,
   .care-details-intro,
@@ -2678,7 +2611,6 @@ html.rtl .service-feature-text {
   }
 
   .service-details-hero img,
-  .service-overview img,
   .detailing-process img,
   .products-materials img,
   .care-details img,
@@ -2693,7 +2625,6 @@ html.rtl .service-feature-text {
 
 @media (max-width: 599px) {
   .service-details-hero-content,
-  .service-overview-content,
   .timeline-card,
   .product-material-card,
   .care-details-content,
@@ -2703,7 +2634,6 @@ html.rtl .service-feature-text {
   }
 
   .service-details-hero-content h1,
-  .service-overview-content h2,
   .detailing-process-header h2,
   .products-materials-header h2 {
     max-width: 100%;
@@ -2711,7 +2641,6 @@ html.rtl .service-feature-text {
 
   /* CENTER EVERYTHING */
 
-  .service-overview-content,
   .care-details-content {
     margin-left: auto;
     margin-right: auto;
@@ -2727,7 +2656,6 @@ html.rtl .service-feature-text {
 
   /* PREVENT LARGE INTERNAL WIDTH */
 
-  .service-overview-container,
   .products-materials-container,
   .care-details-container {
     margin-left: auto;

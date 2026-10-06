@@ -1430,7 +1430,7 @@
 
   color: var(--primary);
 
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 700;
   line-height: 20px;
@@ -1500,7 +1500,7 @@
   color: var(--primary);
 
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
 
   line-height: 1;
@@ -3681,15 +3681,16 @@ body.dark .cabin-care-card:hover {
 
   box-sizing: border-box;
 
-  background: transparent;
+  background: var(--primary);
 
+  color: var(--primary);
   color: var(--text);
 
   border: 1px solid var(--primary);
 
   font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 600;
 
   line-height: 1;
   letter-spacing: 1.2px;
@@ -3730,9 +3731,9 @@ body.dark .cabin-care-card:hover {
 ========================================================= */
 
 .quality-care-btn:hover {
-  background: var(--primary);
+  background: var(--bg);
 
-  color: var(--bg);
+  color: var(--text);
 }
 
 .quality-care-btn:hover i {
@@ -4380,7 +4381,7 @@ body.dark .quality-care-card:hover {
 
   border: 1px solid var(--primary);
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.2px;
   line-height: 1;
@@ -5065,85 +5066,105 @@ body.dark .quality-care-card:hover {
   }
 }
 /* =========================================================
-   SCHEDULE SERVICE CTA
-   IMAGE LEFT + CONTENT RIGHT
+   SCHEDULE YOUR SERVICE CTA
 ========================================================= */
 
 .schedule-service-cta {
+  position: relative;
   width: 100%;
-  padding: 50px 20px;
+  padding: 80px 24px;
+
   background: var(--bg);
+  color: var(--text);
+
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* =========================================================
-   MAIN CONTAINER
+   CTA CONTAINER
 ========================================================= */
 
 .schedule-service-container {
-  width: 100%;
-  width: min(1100px, calc(100% - 40px));
+  position: relative;
+
+  width: min(1235px, 100%);
+  min-height: 435px;
 
   margin: 0 auto;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    110deg,
+    rgba(216, 131, 39, 0.1),
+    rgba(45, 108, 133, 0.16)
+  );
+
+  border: 1px solid rgba(45, 108, 133, 0.2);
+  border-radius: 20px;
+
+  box-sizing: border-box;
 
   overflow: hidden;
-
-  border-radius: 24px;
-
-  background: #ffffff;
-
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 /* =========================================================
-   LEFT IMAGE
+   SUBTLE DECORATIVE SHAPE
 ========================================================= */
 
-.schedule-service-image {
-  width: 100%;
-  height: 100%;
-  min-height: 480px;
+.schedule-service-container::before {
+  content: "";
 
-  overflow: hidden;
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  left: -120px;
+  top: -130px;
+
+  border: 1px solid rgba(216, 131, 39, 0.12);
+  border-radius: 50%;
+
+  pointer-events: none;
 }
 
-.schedule-service-image img {
-  width: 100%;
-  height: 100%;
+.schedule-service-container::after {
+  content: "";
 
-  display: block;
+  position: absolute;
 
-  object-fit: cover;
-  object-position: center;
+  width: 180px;
+  height: 180px;
 
-  transition: transform 0.6s ease;
-}
+  right: -80px;
+  bottom: -90px;
 
-/* IMAGE HOVER */
+  border: 1px solid rgba(45, 108, 133, 0.12);
+  border-radius: 50%;
 
-.schedule-service-container:hover .schedule-service-image img {
-  transform: scale(1.04);
+  pointer-events: none;
 }
 
 /* =========================================================
-   RIGHT CONTENT
+   CONTENT
 ========================================================= */
 
 .schedule-service-content {
-  min-height: 480px;
+  position: relative;
+  z-index: 2;
 
-  padding: 60px 65px;
+  width: 100%;
+  max-width: 780px;
 
-  display: flex;
-  flex-direction: column;
+  margin: 0 auto;
 
-  align-items: flex-start;
-  justify-content: center;
+  padding: 70px 30px;
 
-  background: var(--bg);
+  text-align: center;
 
   box-sizing: border-box;
 }
@@ -5177,25 +5198,19 @@ body.dark .quality-care-card:hover {
 ========================================================= */
 
 .schedule-service-content h2 {
-  max-width: 520px;
-
-  margin: 0 0 20px;
+  margin: 0;
 
   color: var(--text);
 
   font-family: var(--font-heading);
-
-  font-size: clamp(45px, 6vw, 60px);
-
+  font-size: clamp(48px, 6vw, 68px);
   font-weight: 500;
-
-  line-height: 1.05;
+  line-height: 0.98;
+  letter-spacing: -1.5px;
 }
+
 .schedule-service-content h2 strong {
-  display: block;
-
   color: var(--primary);
-
   font-weight: 600;
 }
 
@@ -5204,279 +5219,224 @@ body.dark .quality-care-card:hover {
 ========================================================= */
 
 .schedule-service-content p {
-  max-width: 520px;
+  width: 100%;
+  max-width: 680px;
 
-  margin: 0 0 30px;
+  margin: 24px auto 0;
 
   color: var(--text);
+  opacity: 0.72;
 
   font-family: var(--font-body);
-
-  font-size: 14px;
-
-  font-weight: 400;
-
+  font-size: 13px;
+  font-weight: 500;
   line-height: 1.8;
 }
 
 /* =========================================================
-   BUTTON
+   CTA BUTTON
 ========================================================= */
 
 .schedule-service-btn {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
 
   gap: 10px;
-  text-decoration: none;
 
-  min-height: 50px;
+  margin-top: 32px;
+  padding: 15px 27px;
 
-  padding: 0 25px;
-
-  border-radius: 10px;
-
+  color: var(--text);
   background: var(--primary);
 
-  color: var(--primary);
-  color: var(--text);
-
   border: 1px solid var(--primary);
+  border-radius: 9px;
 
-  font-family: var(--font-body, "Montserrat");
-
-  font-size: 13px;
-
+  font-family: var(--font-body);
+  font-size: 11px;
   font-weight: 700;
-
   letter-spacing: 0.4px;
 
+  text-decoration: none;
+  text-transform: capitalize;
+
+  box-sizing: border-box;
+
   transition:
-    background 0.3s ease,
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .schedule-service-btn svg {
-  width: 17px;
-  height: 17px;
+  width: 16px;
+  height: 16px;
 
-  transition: transform 0.3s ease;
+  stroke-width: 2;
 }
 
 .schedule-service-btn:hover {
-  background: var(--bg);
-
-  color: var(--text);
-}
-
-.schedule-service-btn:hover svg {
-  transform: translateX(4px);
+  background: transparent;
+  color: var(--primary);
+  border-color: var(--primary);
 }
 
 /* =========================================================
-   NET HUB
-   769px — 1024px
+   DARK MODE
 ========================================================= */
 
-@media (min-width: 769px) and (max-width: 1024px) {
+html.dark .schedule-service-container {
+  background: linear-gradient(
+    110deg,
+    rgba(216, 131, 39, 0.1),
+    rgba(45, 108, 133, 0.14)
+  );
+
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+html.dark .schedule-service-container::before {
+  border-color: rgba(216, 131, 39, 0.1);
+}
+
+html.dark .schedule-service-container::after {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================================
+   NETBOOK / SMALL DESKTOP
+   821px — 1100px
+========================================================= */
+
+@media (min-width: 821px) and (max-width: 1100px) {
   .schedule-service-cta {
-    padding: 65px 4%;
+    padding: 70px 24px;
   }
 
   .schedule-service-container {
-    min-height: 420px;
-  }
-
-  .schedule-service-image {
-    min-height: 420px;
+    min-height: 400px;
   }
 
   .schedule-service-content {
-    min-height: 420px;
-
-    padding: 45px 40px;
+    max-width: 700px;
   }
 
   .schedule-service-content h2 {
-    font-size: 44px;
-  }
-
-  .schedule-service-content p {
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 58px;
   }
 }
 
 /* =========================================================
-   IPAD MINI
-   481px — 768px
+   iPAD MINI
+   768px — 820px
 ========================================================= */
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 820px) {
   .schedule-service-cta {
-    padding: 55px 25px;
+    padding: 65px 22px;
   }
 
   .schedule-service-container {
-    min-height: 380px;
-
-    border-radius: 20px;
-  }
-
-  .schedule-service-image {
-    min-height: 380px;
-  }
-
-  .schedule-service-content {
-    min-height: 380px;
-
-    padding: 35px 30px;
-  }
-
-  .schedule-service-eyebrow {
-    font-size: 11px;
-    letter-spacing: 1.5px;
-  }
-
-  .schedule-service-content h2 {
-    font-size: 38px;
-  }
-
-  .schedule-service-content p {
-    font-size: 13px;
-    line-height: 1.65;
-
-    margin-bottom: 24px;
-  }
-
-  .schedule-service-btn {
-    min-height: 46px;
-
-    padding: 0 20px;
-
-    font-size: 12px;
-  }
-}
-
-/* =========================================================
-   SAMSUNG S8+
-   360px — 480px
-========================================================= */
-
-@media (min-width: 360px) and (max-width: 480px) {
-  .schedule-service-cta {
-    padding: 45px 15px;
-  }
-
-  .schedule-service-container {
-    grid-template-columns: 1fr;
-
-    min-height: auto;
-
+    min-height: 390px;
     border-radius: 18px;
   }
 
-  /* IMAGE TOP */
-
-  .schedule-service-image {
-    width: 100%;
-    height: 240px;
-
-    min-height: 240px;
-  }
-
-  .schedule-service-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-  }
-
-  /* CONTENT */
-
   .schedule-service-content {
-    min-height: auto;
-
-    padding: 38px 25px 40px;
-
-    align-items: flex-start;
-  }
-
-  .schedule-service-eyebrow {
-    margin-bottom: 14px;
-
-    font-size: 10px;
-
-    letter-spacing: 1.2px;
-  }
-
-  .schedule-service-eyebrow span {
-    width: 7px;
-    height: 7px;
+    max-width: 650px;
+    padding: 60px 25px;
   }
 
   .schedule-service-content h2 {
-    margin-bottom: 16px;
-
-    font-size: 34px;
-
-    line-height: 1.05;
+    font-size: 50px;
   }
 
   .schedule-service-content p {
-    margin-bottom: 24px;
-
-    font-size: 13px;
-
-    line-height: 1.7;
-  }
-
-  .schedule-service-btn {
-    min-height: 46px;
-
-    padding: 0 18px;
-
-    font-size: 11px;
-  }
-
-  .schedule-service-btn svg {
-    width: 15px;
-    height: 15px;
+    max-width: 580px;
+    font-size: 12px;
   }
 }
 
 /* =========================================================
-   BELOW 360px
+   MOBILE
+   UP TO 767px
 ========================================================= */
 
-@media (max-width: 359px) {
+@media (max-width: 767px) {
   .schedule-service-cta {
-    padding: 35px 12px;
+    padding: 55px 16px;
   }
 
   .schedule-service-container {
-    grid-template-columns: 1fr;
-  }
+    min-height: 410px;
 
-  .schedule-service-image {
-    height: 210px;
-    min-height: 210px;
+    border-radius: 16px;
   }
 
   .schedule-service-content {
-    min-height: auto;
+    max-width: 560px;
 
-    padding: 32px 20px;
+    padding: 55px 20px;
+  }
+
+  .schedule-service-eyebrow {
+    gap: 7px;
+
+    margin-bottom: 16px;
+
+    font-size: 8.5px;
+    letter-spacing: 1.5px;
+  }
+
+  .schedule-service-eyebrow span {
+    width: 20px;
   }
 
   .schedule-service-content h2 {
-    font-size: 30px;
+    font-size: 40px;
+    line-height: 1.03;
+    letter-spacing: -0.8px;
   }
 
   .schedule-service-content p {
-    font-size: 12px;
+    max-width: 470px;
+
+    margin-top: 18px;
+
+    font-size: 10.5px;
+    line-height: 1.75;
+  }
+
+  .schedule-service-btn {
+    margin-top: 25px;
+    padding: 13px 21px;
+
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+  .schedule-service-cta {
+    padding: 45px 13px;
+  }
+
+  .schedule-service-container {
+    min-height: 390px;
+  }
+
+  .schedule-service-content {
+    padding: 48px 17px;
+  }
+
+  .schedule-service-content h2 {
+    font-size: 36px;
+  }
+
+  .schedule-service-content p {
+    font-size: 10px;
   }
 }

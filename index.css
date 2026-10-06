@@ -2101,7 +2101,7 @@ html.rtl .doorstep-process-image-badge {
 
 @media (max-width: 768px) {
   .doorstep-process-section {
-    padding: 65px 0;
+    padding: 95px 0 65px;
   }
 
   .doorstep-process-container {
@@ -2273,7 +2273,7 @@ html.rtl .doorstep-process-image-badge {
 
 @media (max-width: 360px) {
   .doorstep-process-section {
-    padding: 42px 0;
+    padding: 72px 0 42px;
   }
 
   .doorstep-process-container {
@@ -2783,7 +2783,7 @@ html.rtl .premium-service-link svg {
 
 @media (max-width: 768px) {
   .premium-services-section {
-    padding: 65px 0;
+    padding: 95px 0 65px;
   }
 
   .premium-services-container {
@@ -2941,6 +2941,7 @@ html.rtl .premium-service-link svg {
 @media (max-width: 390px) {
   .premium-services-container {
     width: calc(100% - 16px);
+    margin-bottom: px;
   }
 
   .premium-services-title {
@@ -2970,7 +2971,7 @@ html.rtl .premium-service-link svg {
 
 @media (max-width: 360px) {
   .premium-services-section {
-    padding: 42px 0;
+    padding: 70px 0 42px;
   }
 
   .premium-services-container {
@@ -4087,7 +4088,7 @@ html.rtl .care-link svg {
 
 @media (max-width: 768px) {
   .care-section {
-    padding: 65px 0;
+    padding: 65px 12px;
   }
 
   .care-container {
@@ -4127,7 +4128,7 @@ html.rtl .care-link svg {
 
 @media (max-width: 576px) {
   .care-section {
-    padding: 55px 0;
+    padding: 65px 20px;
   }
 
   .care-container {
@@ -4287,7 +4288,7 @@ html.rtl .care-link svg {
 
 @media (max-width: 360px) {
   .care-section {
-    padding: 42px 0;
+    padding: 65px 15p;
   }
 
   .care-container {
@@ -4891,8 +4892,9 @@ html.rtl .service-area-location-tag {
 
   border-radius: 15px;
 
-  background: transparent;
+  background: var(--primary);
 
+  color: var(--primary);
   color: var(--text);
 
   border: 1px solid var(--primary);
@@ -4909,9 +4911,9 @@ html.rtl .service-area-location-tag {
 }
 
 .service-area-button:hover {
-  background: var(--primary);
+  background: var(--bg);
 
-  color: var(--bg);
+  color: var(--text);
 }
 
 .service-area-button svg {

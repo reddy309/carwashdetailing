@@ -1,617 +1,128 @@
 /* =========================================================
-   PREMIUM AUTOMOTIVE PRICING HERO
+   PRICING HERO — FULL BACKGROUND
 ========================================================= */
 
 .pricing-hero {
   position: relative;
-
   width: 100%;
-  height: 90vh;
-  min-height: auto;
-
-  /* FIX: fixed header kosam */
+  height: calc(100vh - 70px);
+  min-height: 620px;
   margin-top: 70px;
 
-  padding: 30px 35px;
-
-  background:
-    radial-gradient(
-      circle at 78% 48%,
-      rgba(45, 108, 133, 0.1),
-      transparent 34%
-    ),
-    var(--bg);
-
-  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   overflow: hidden;
   box-sizing: border-box;
 }
 
 /* =========================================================
-   BACKGROUND CIRCLE
+   BACKGROUND IMAGE
 ========================================================= */
 
-.pricing-hero::before {
-  content: "";
-
+.pricing-hero-bg {
   position: absolute;
+  inset: 0;
 
-  width: 650px;
-  height: 650px;
+  width: 100%;
+  height: 100%;
 
-  right: -300px;
-  top: 50%;
-
-  transform: translateY(-50%);
-
-  border: 1px solid rgba(216, 131, 39, 0.13);
-
-  border-radius: 50%;
-
-  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
 }
 
-.pricing-hero::after {
-  content: "";
+.pricing-hero-bg img {
+  display: block;
 
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+
+  transform: scale(1.04);
+
+  animation: pricingHeroImage 10s ease-out forwards;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   BACKGROUND IMAGE ANIMATION
+========================================================= */
+
+@keyframes pricingHeroImage {
+  0% {
+    transform: scale(1.04);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* =========================================================
+   DARK OVERLAY
+========================================================= */
+
+.pricing-hero-overlay {
   position: absolute;
+  inset: 0;
 
-  left: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
 
-  width: 42%;
-  height: 1px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.78));
 
-  background: linear-gradient(90deg, var(--primary), transparent);
-
-  opacity: 0.6;
+  z-index: 1;
 
   pointer-events: none;
 }
 
 /* =========================================================
-   CONTAINER
+   HERO CONTAINER
 ========================================================= */
 
 .pricing-hero-container {
   position: relative;
 
-  z-index: 2;
+  z-index: 5;
 
-  width: min(1100px, 100%);
-  height: 100%;
-  min-height: 0;
+  width: min(1100px, calc(100% - 48px));
 
   margin: 0 auto;
 
-  display: grid;
-
-  grid-template-columns: 0.95fr 1.05fr;
-
-  align-items: center;
-
-  gap: 45px;
-
-  box-sizing: border-box;
-}
-
-/* =========================================================
-   IMAGE SIDE
-========================================================= */
-
-.pricing-hero-image {
-  position: relative;
-
-  width: 100%;
-
-  height: min(540px, calc(100vh - 145px));
-
-  overflow: visible;
-
-  order: 1;
-
-  animation: pricingImageReveal 1s ease forwards;
-
-  box-sizing: border-box;
-  transform: translateY(40px);
-}
-
-/* =========================================================
-   IMAGE BACK FRAME
-========================================================= */
-
-.pricing-hero-image::before {
-  content: "";
-
-  position: absolute;
-
-  top: 22px;
-  left: 22px;
-
-  width: calc(100% - 22px);
-  height: calc(100% - 22px);
-
-  border: 1px solid rgba(216, 131, 39, 0.28);
-
-  border-radius: 3px;
-
-  background: transparent;
-
-  z-index: 0;
-}
-
-/* =========================================================
-   MAIN IMAGE
-========================================================= */
-
-.pricing-hero-image img {
-  position: relative;
-
-  z-index: 2;
-
-  width: calc(100% - 22px);
-  height: calc(100% - 22px);
-
-  display: block;
-
-  object-fit: cover;
-  object-position: center;
-
-  border-radius: 3px;
-
-  transform: scale(1.01);
-
-  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.2);
-
-  animation: pricingImageZoom 10s ease-in-out infinite alternate;
-
-  box-sizing: border-box;
-}
-
-/* =========================================================
-   IMAGE ACCENT
-========================================================= */
-
-.pricing-hero-image::after {
-  content: "";
-
-  position: absolute;
-
-  left: -12px;
-  bottom: 45px;
-
-  width: 85px;
-
-  background: var(--primary);
-
-  z-index: 4;
-}
-
-/* =========================================================
-   SIDE TAGS
-========================================================= */
-
-.pricing-side-tag {
-  position: absolute;
-
-  z-index: 6;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
 
-  gap: 8px;
-
-  min-height: 36px;
-
-  padding: 8px 13px;
-
-  background: var(--bg);
-
-  color: var(--text);
-
-  border: 1px solid rgba(216, 131, 39, 0.35);
-
-  border-radius: 2px;
-
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-
-  font-family: var(--font-body);
-
-  font-size: 8px;
-
-  font-weight: 700;
-
-  letter-spacing: 1.2px;
-
-  line-height: 1;
-
-  text-transform: uppercase;
-
-  white-space: nowrap;
-
   box-sizing: border-box;
 }
 
 /* =========================================================
-   TAG ICON
-========================================================= */
-
-.pricing-side-tag svg {
-  width: 14px;
-  height: 14px;
-
-  color: var(--primary);
-
-  flex-shrink: 0;
-}
-
-/* =========================================================
-   LEFT TAG
-========================================================= */
-
-.pricing-tag-left {
-  left: -20px;
-  top: 48%;
-
-  transform: translateY(-50%);
-
-  animation: pricingTagLeft 4s ease-in-out infinite;
-}
-
-/* =========================================================
-   RIGHT TAG
-========================================================= */
-
-.pricing-tag-right {
-  right: -8px;
-  top: 58%;
-
-  transform: translateY(-50%);
-
-  animation: pricingTagRight 4s ease-in-out infinite;
-}
-
-/* =========================================================
-   TOP TAG
-========================================================= */
-
-.pricing-tag-top {
-  top: 5px;
-  right: 65px;
-
-  transform: translateY(0);
-
-  animation: pricingTagTop 4s ease-in-out infinite;
-}
-
-/* =========================================================
-   BOTTOM TAG
-========================================================= */
-
-.pricing-tag-bottom {
-  bottom: 0;
-  left: 75px;
-
-  transform: translateY(0);
-
-  animation: pricingTagBottom 4s ease-in-out infinite;
-}
-
-/* =========================================================
-   CONTENT SIDE
+   CENTER CONTENT
 ========================================================= */
 
 .pricing-hero-content {
   position: relative;
 
   width: 100%;
+  max-width: 900px;
 
-  max-width: 570px;
+  margin: 0 auto;
 
-  padding-left: 10px;
-
-  order: 2;
-
-  animation: pricingContentReveal 1s ease 0.15s both;
-
-  box-sizing: border-box;
-}
-
-/* =========================================================
-   SMALL NUMBER
-========================================================= */
-
-.pricing-hero-content::before {
-  content: "01";
-
-  display: block;
-
-  margin-bottom: 11px;
-
-  font-family: var(--font-body);
-
-  font-size: 9px;
-
-  font-weight: 700;
-
-  letter-spacing: 3px;
-
-  color: var(--primary);
-
-  opacity: 0.85;
-}
-
-/* =========================================================
-   LABEL
-========================================================= */
-
-.pricing-hero-label {
-  display: inline-block;
-
-  padding: 7px 18px;
-  margin-bottom: 18px;
-
-  border: 1px solid var(--primary);
-  border-radius: 30px;
-
-  color: var(--primary);
-
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 600;
-
-  letter-spacing: 2px;
-
-  box-sizing: border-box;
-}
-
-.pricing-hero-label svg {
-  width: 14px;
-  height: 14px;
-
-  color: var(--primary);
-
-  flex-shrink: 0;
-}
-
-/* =========================================================
-   HEADING
-========================================================= */
-
-.pricing-hero-content h1 {
-  position: relative;
-
-  margin: 0 0 18px;
-
-  font-family: var(--font-heading);
-
-  font-size: clamp(46px, 5vw, 70px);
-
-  font-weight: 500;
-
-  line-height: 0.92;
-
-  letter-spacing: -1.5px;
-
-  color: var(--text);
-
-  overflow-wrap: break-word;
-}
-
-/* =========================================================
-   HEADING ACCENT
-========================================================= */
-
-.pricing-hero-content h1 span {
-  display: block;
-
-  margin-top: 7px;
-
-  color: var(--primary);
-}
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
-
-.pricing-hero-content > p {
-  max-width: 490px;
-
-  margin: 0 0 20px;
-
-  font-family: var(--font-body);
-
-  font-size: 14px;
-
-  line-height: 1.7;
-
-  color: var(--text);
-
-  opacity: 0.68;
-}
-
-/* =========================================================
-   FEATURES
-========================================================= */
-
-.pricing-hero-features {
   display: flex;
-
-  align-items: center;
-
-  flex-wrap: wrap;
-
-  gap: 0;
-
-  margin-bottom: 22px;
-}
-
-.pricing-feature {
-  display: flex;
-
-  align-items: center;
-
-  gap: 6px;
-
-  padding-right: 15px;
-  margin-right: 15px;
-
-  border-right: 1px solid rgba(128, 128, 128, 0.3);
-
-  font-family: var(--font-body);
-
-  font-size: 9px;
-
-  font-weight: 700;
-
-  letter-spacing: 0.5px;
-
-  line-height: 1.4;
-
-  text-transform: uppercase;
-}
-
-.pricing-feature:last-child {
-  padding-right: 0;
-
-  margin-right: 0;
-
-  border-right: 0;
-}
-
-.pricing-feature svg {
-  width: 15px;
-  height: 15px;
-
-  color: var(--primary);
-
-  flex-shrink: 0;
-}
-
-/* =========================================================
-   ACTIONS
-========================================================= */
-
-.pricing-hero-actions {
-  display: flex;
-
-  align-items: center;
-
-  flex-wrap: wrap;
-
-  gap: 10px;
-}
-
-/* =========================================================
-   BUTTON
-========================================================= */
-
-.pricing-btn {
-  min-height: 44px;
-
-  padding: 0 20px;
-
-  display: inline-flex;
+  flex-direction: column;
 
   align-items: center;
   justify-content: center;
 
-  gap: 8px;
-
-  border-radius: 8px;
-
-  font-family: var(--font-body);
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: 1.3px;
-
-  line-height: 1;
-
-  text-transform: uppercase;
-
-  text-decoration: none;
+  text-align: center;
 
   box-sizing: border-box;
 
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease;
-}
-
-.pricing-btn svg {
-  width: 15px;
-  height: 15px;
-
-  transition: transform 0.3s ease;
-}
-
-.pricing-btn:hover {
-  transform: translateY(-3px);
-}
-
-.pricing-btn:hover svg {
-  transform: translateX(4px);
-}
-
-/* =========================================================
-   PRIMARY BUTTON
-========================================================= */
-
-.pricing-btn.primary {
-  background: var(--primary);
-
-  color: var(--primary);
-  color: var(--text);
-
-  border: 1px solid var(--primary);
-}
-
-.pricing-btn.primary:hover {
-  background: var(--bg);
-
-  color: var(--text);
-}
-
-/* =========================================================
-   SECONDARY BUTTON
-========================================================= */
-
-.pricing-btn.secondary {
-  background: transparent;
-
-  color: var(--text);
-
-  border: 1px solid var(--primary);
-}
-
-.pricing-btn.secondary:hover {
-  background: var(--primary);
-
-  color: var(--bg);
-}
-
-/* =========================================================
-   IMAGE REVEAL
-========================================================= */
-
-@keyframes pricingImageReveal {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  animation: pricingContentReveal 1s ease 0.15s both;
 }
 
 /* =========================================================
@@ -621,644 +132,476 @@
 @keyframes pricingContentReveal {
   from {
     opacity: 0;
-    transform: translateX(40px);
+    transform: translateY(35px);
   }
 
   to {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* =========================================================
-   IMAGE ZOOM
-========================================================= */
-
-@keyframes pricingImageZoom {
-  from {
-    transform: scale(1.01);
-  }
-
-  to {
-    transform: scale(1.055);
-  }
-}
-
-/* =========================================================
-   TOP TAG ANIMATION
-========================================================= */
-
-@keyframes pricingTagTop {
-  0%,
-  100% {
     transform: translateY(0);
   }
-
-  50% {
-    transform: translateY(-5px);
-  }
 }
 
 /* =========================================================
-   BOTTOM TAG ANIMATION
+   LABEL
 ========================================================= */
 
-@keyframes pricingTagBottom {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
+.pricing-hero-label {
+  display: inline-flex;
 
-  50% {
-    transform: translateY(5px);
-  }
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 20px;
+
+  margin-bottom: 22px;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 30px;
+
+  color: var(--primary);
+
+  background: rgba(0, 0, 0, 0.25);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  box-sizing: border-box;
 }
 
 /* =========================================================
-   LEFT TAG ANIMATION
+   DARK OVERLAY — IMAGE PAINA
 ========================================================= */
 
-@keyframes pricingTagLeft {
-  0%,
-  100% {
-    transform: translateY(-50%);
-  }
+.pricing-hero-overlay {
+  position: absolute;
 
-  50% {
-    transform: translate(-5px, -50%);
-  }
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.68) 0%,
+    rgba(0, 0, 0, 0.78) 50%,
+    rgba(0, 0, 0, 0.88) 100%
+  );
+
+  z-index: 1;
+
+  pointer-events: none;
 }
 
 /* =========================================================
-   RIGHT TAG ANIMATION
+   HEADING
 ========================================================= */
 
-@keyframes pricingTagRight {
-  0%,
-  100% {
-    transform: translateY(-50%);
-  }
+.pricing-hero-content h1 {
+  width: 100%;
 
-  50% {
-    transform: translate(5px, -50%);
-  }
+  margin: 0;
+
+  color: var(--primary);
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(52px, 6vw, 78px);
+
+  font-weight: 600;
+
+  line-height: 0.98;
+
+  letter-spacing: -2px;
+
+  text-align: center;
+
+  box-sizing: border-box;
 }
 
 /* =========================================================
-   NETBOOK
-   769px - 1100px
+   HEADING ACCENT
 ========================================================= */
 
-@media (min-width: 769px) and (max-width: 1100px) {
+.pricing-hero-content h1 span {
+  display: block;
+
+  color: var(--primary);
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.pricing-hero-content p {
+  width: 100%;
+
+  max-width: 700px;
+
+  margin: 26px auto 0;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-family: var(--font-body);
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  line-height: 1.75;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HERO ACTIONS
+========================================================= */
+
+.pricing-hero-actions {
+  margin-top: 34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   BUTTON BASE
+========================================================= */
+
+.pricing-btn {
+  min-height: 50px;
+
+  padding: 0 25px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border-radius: 8px;
+
+  font-family: var(--font-body);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.pricing-btn.primary {
+  background: var(--primary);
+
+  color: #181b1d;
+
+  border: 1px solid var(--primary);
+}
+
+.pricing-btn.primary:hover {
+  background: #ffffff;
+
+  border-color: #ffffff;
+
+  color: #181b1d;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================================
+   PRIMARY ICON
+========================================================= */
+
+.pricing-btn.primary i {
+  width: 15px;
+  height: 15px;
+
+  transition: transform 0.3s ease;
+}
+
+.pricing-btn.primary:hover i {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.pricing-btn.secondary {
+  background: transparent;
+
+  color: #ffffff;
+
+  border: 1px solid var(--primary);
+}
+
+.pricing-btn.secondary:hover {
+  background: var(--primary);
+
+  border-color: var(--primary);
+
+  color: #181b1d;
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   TABLET / NETBOOK
+   769px — 1024px
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
   .pricing-hero {
-    height: calc(100vh - 80px);
-
-    padding: 25px 25px;
+    min-height: 600px;
   }
 
   .pricing-hero-container {
-    width: 100%;
-
-    height: 100%;
-
-    min-height: 0;
-
-    gap: 30px;
-  }
-
-  .pricing-hero-image {
-    height: min(470px, calc(100vh - 135px));
+    width: min(850px, calc(100% - 50px));
   }
 
   .pricing-hero-content {
-    max-width: 480px;
-
-    padding-left: 5px;
+    max-width: 760px;
   }
 
   .pricing-hero-content h1 {
-    font-size: clamp(42px, 5vw, 60px);
-
-    margin-bottom: 15px;
+    font-size: 62px;
   }
 
-  .pricing-hero-content > p {
-    font-size: 11px;
+  .pricing-hero-content p {
+    max-width: 600px;
 
-    line-height: 1.65;
-
-    margin-bottom: 16px;
+    font-size: 14px;
   }
 
-  .pricing-hero-features {
-    margin-bottom: 18px;
-  }
-
-  .pricing-feature {
-    font-size: 8px;
-
-    padding-right: 11px;
-    margin-right: 11px;
-  }
-
-  .pricing-btn {
-    min-height: 42px;
-
-    padding: 0 16px;
-
-    font-size: 8px;
-  }
-
-  .pricing-side-tag {
-    min-height: 32px;
-
-    padding: 7px 10px;
-
-    font-size: 7px;
-  }
-
-  .pricing-tag-left {
-    left: -5px;
-  }
-
-  .pricing-tag-right {
-    right: 0;
+  .pricing-hero-actions {
+    margin-top: 30px;
   }
 }
 
 /* =========================================================
    IPAD MINI
-   600px - 768px
+   481px — 768px
 ========================================================= */
 
-@media (min-width: 600px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
   .pricing-hero {
-    width: 100%;
+    min-height: 590px;
 
-    height: auto;
-    min-height: 0;
-
-    padding: 45px 22px 65px;
+    padding: 40px 20px;
   }
 
   .pricing-hero-container {
-    width: min(100%, 680px);
-
-    height: auto;
-    min-height: 0;
-
-    grid-template-columns: 1fr;
-
-    gap: 40px;
-  }
-
-  .pricing-hero-image {
     width: 100%;
-
-    height: 400px;
-
-    order: 1;
   }
 
   .pricing-hero-content {
-    width: 100%;
-
     max-width: 650px;
+  }
 
-    margin: 0 auto;
+  .pricing-hero-label {
+    font-size: 10px;
 
-    padding-left: 0;
-
-    order: 2;
+    letter-spacing: 1.7px;
   }
 
   .pricing-hero-content h1 {
     font-size: 55px;
+
+    line-height: 1;
   }
 
-  .pricing-hero-content > p {
-    max-width: 620px;
+  .pricing-hero-content p {
+    max-width: 550px;
 
-    font-size: 13px;
-
-    line-height: 1.75;
-  }
-
-  .pricing-hero-actions {
-    flex-direction: row;
-  }
-
-  .pricing-side-tag {
-    font-size: 7px;
-  }
-
-  .pricing-tag-left {
-    left: 5px;
-  }
-
-  .pricing-tag-right {
-    right: 5px;
-  }
-}
-
-/* =========================================================
-   SAMSUNG GALAXY S8+
-   381px - 599px
-========================================================= */
-
-@media (min-width: 381px) and (max-width: 599px) {
-  .pricing-hero {
-    width: 100%;
-
-    height: auto;
-    min-height: 0;
-
-    padding: 30px 14px 55px;
-  }
-
-  .pricing-hero-container {
-    width: 100%;
-
-    height: auto;
-    min-height: 0;
-
-    grid-template-columns: 1fr;
-
-    gap: 32px;
-  }
-
-  .pricing-hero-image {
-    width: 100%;
-
-    height: 330px;
-
-    order: 1;
-  }
-
-  .pricing-hero-image::before {
-    top: 15px;
-    left: 15px;
-
-    width: calc(100% - 15px);
-    height: calc(100% - 15px);
-  }
-
-  .pricing-hero-image img {
-    width: calc(100% - 15px);
-
-    height: calc(100% - 15px);
-  }
-
-  .pricing-hero-image::after {
-    left: -4px;
-
-    bottom: 35px;
-
-    width: 60px;
-  }
-
-  .pricing-hero-content {
-    width: 100%;
-
-    max-width: none;
-
-    padding-left: 0;
-
-    order: 2;
-  }
-
-  .pricing-hero-content::before {
-    margin-bottom: 10px;
-  }
-
-  .pricing-hero-label {
-    margin-bottom: 15px;
-
-    font-size: 8px;
-
-    letter-spacing: 1.5px;
-  }
-
-  .pricing-hero-content h1 {
-    margin-bottom: 17px;
-
-    font-size: 44px;
-
-    line-height: 0.96;
-
-    letter-spacing: -0.7px;
-  }
-
-  .pricing-hero-content > p {
-    max-width: none;
-
-    margin-bottom: 22px;
+    margin-top: 22px;
 
     font-size: 12px;
 
     line-height: 1.7;
   }
 
-  .pricing-hero-features {
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    gap: 10px;
-
-    margin-bottom: 24px;
-  }
-
-  .pricing-feature {
-    padding: 0;
-
-    margin: 0;
-
-    border: 0;
-
-    font-size: 9px;
-  }
-
   .pricing-hero-actions {
-    width: 100%;
-
-    flex-direction: column;
-
-    align-items: stretch;
-
-    gap: 9px;
+    margin-top: 28px;
   }
 
   .pricing-btn {
-    width: 100%;
+    min-height: 46px;
 
-    min-height: 45px;
-  }
+    padding: 0 21px;
 
-  .pricing-side-tag {
-    min-height: 30px;
-
-    padding: 6px 9px;
-
-    font-size: 6.5px;
-
-    letter-spacing: 0.5px;
-  }
-
-  .pricing-side-tag svg {
-    width: 11px;
-    height: 11px;
-  }
-
-  .pricing-tag-left {
-    left: 0;
-
-    transform: translateY(-50%);
-  }
-
-  .pricing-tag-right {
-    right: 0;
-
-    transform: translateY(-50%);
-  }
-
-  .pricing-tag-top {
-    top: 0;
-  }
-
-  .pricing-tag-bottom {
-    bottom: 0;
+    font-size: 11px;
   }
 }
 
 /* =========================================================
-   SAMSUNG GALAXY S8+
-   360px - 380px
+   MOBILE
+   360px — 480px
 ========================================================= */
 
-@media (max-width: 380px) {
+@media (max-width: 480px) {
   .pricing-hero {
-    width: 100%;
-
     height: auto;
-    min-height: 0;
 
-    padding: 25px 10px 45px;
+    min-height: 650px;
+
+    margin-top: 70px;
+
+    padding: 55px 16px;
+  }
+
+  .pricing-hero-bg img {
+    object-position: center center;
   }
 
   .pricing-hero-container {
     width: 100%;
 
-    height: auto;
-    min-height: 0;
-
-    grid-template-columns: 1fr;
-
-    gap: 28px;
-  }
-
-  .pricing-hero-image {
-    width: 100%;
-
-    height: 285px;
-  }
-
-  .pricing-hero-image::before {
-    top: 10px;
-    left: 10px;
-
-    width: calc(100% - 10px);
-    height: calc(100% - 10px);
-  }
-
-  .pricing-hero-image img {
-    width: calc(100% - 10px);
-
-    height: calc(100% - 10px);
-  }
-
-  .pricing-hero-image::after {
-    left: -3px;
-
-    bottom: 30px;
-
-    width: 50px;
+    max-width: 100%;
   }
 
   .pricing-hero-content {
-    width: 100%;
-
-    max-width: none;
-
-    padding-left: 0;
+    max-width: 100%;
   }
 
-  .pricing-hero-content::before {
-    margin-bottom: 9px;
-
-    font-size: 8px;
-  }
+  /* -----------------------------------------
+     LABEL
+  ----------------------------------------- */
 
   .pricing-hero-label {
-    margin-bottom: 13px;
+    padding: 7px 14px;
 
-    font-size: 7.5px;
+    margin-bottom: 18px;
 
-    letter-spacing: 1px;
+    font-size: 8px;
+
+    letter-spacing: 1.3px;
   }
 
-  .pricing-hero-label svg {
-    width: 12px;
-    height: 12px;
-  }
+  /* -----------------------------------------
+     HEADING
+  ----------------------------------------- */
 
   .pricing-hero-content h1 {
-    margin-bottom: 15px;
-
-    font-size: 38px;
+    font-size: 42px;
 
     line-height: 1;
 
-    letter-spacing: -0.5px;
+    letter-spacing: -0.8px;
   }
 
-  .pricing-hero-content > p {
-    margin-bottom: 20px;
+  /* -----------------------------------------
+     DESCRIPTION
+  ----------------------------------------- */
 
-    font-size: 11px;
+  .pricing-hero-content p {
+    max-width: 330px;
 
-    line-height: 1.65;
+    margin-top: 18px;
+
+    font-size: 10.5px;
+
+    line-height: 1.7;
   }
 
-  .pricing-hero-features {
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    gap: 9px;
-
-    margin-bottom: 22px;
-  }
-
-  .pricing-feature {
-    padding: 0;
-
-    margin: 0;
-
-    border: 0;
-
-    font-size: 8.5px;
-  }
-
-  .pricing-feature svg {
-    width: 14px;
-    height: 14px;
-  }
+  /* -----------------------------------------
+     ACTIONS
+  ----------------------------------------- */
 
   .pricing-hero-actions {
     width: 100%;
 
+    margin-top: 27px;
+
     flex-direction: column;
 
-    align-items: stretch;
-
-    gap: 8px;
+    gap: 11px;
   }
 
   .pricing-btn {
-    width: 100%;
+    width: min(220px, 100%);
 
-    min-height: 43px;
+    min-height: 44px;
 
-    padding: 0 15px;
+    padding: 0 18px;
 
-    font-size: 8.5px;
-  }
-
-  .pricing-side-tag {
-    min-height: 27px;
-
-    padding: 5px 7px;
-
-    font-size: 6px;
-
-    letter-spacing: 0.4px;
-  }
-
-  .pricing-side-tag svg {
-    width: 10px;
-    height: 10px;
-  }
-
-  .pricing-tag-left {
-    left: 0;
-  }
-
-  .pricing-tag-right {
-    right: 0;
+    font-size: 10px;
   }
 }
 
 /* =========================================================
-   EXTRA SMALL DEVICES
+   VERY SMALL MOBILE
+   360px
 ========================================================= */
 
-@media (max-width: 359px) {
+@media (max-width: 360px) {
   .pricing-hero {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
+    min-height: 630px;
 
-  .pricing-hero-image {
-    height: 270px;
+    padding: 48px 12px;
   }
 
   .pricing-hero-content h1 {
-    font-size: 35px;
+    font-size: 38px;
+
+    letter-spacing: -0.5px;
   }
 
-  .pricing-side-tag {
-    font-size: 5.8px;
+  .pricing-hero-content p {
+    max-width: 300px;
 
-    padding-left: 6px;
-    padding-right: 6px;
+    font-size: 10px;
+  }
+
+  .pricing-btn {
+    width: 200px;
+
+    min-height: 42px;
+
+    font-size: 9px;
   }
 }
-
-/* =========================================================
-   DARK MODE
-========================================================= */
-
-html.dark .pricing-hero {
-  background:
-    radial-gradient(
-      circle at 78% 48%,
-      rgba(45, 108, 133, 0.15),
-      transparent 34%
-    ),
-    var(--bg);
-}
-
-html.dark .pricing-hero-image::before {
-  border-color: rgba(216, 131, 39, 0.3);
-}
-
-html.dark .pricing-side-tag {
-  background: #222629;
-
-  color: var(--text);
-
-  border-color: rgba(216, 131, 39, 0.3);
-
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
-}
-
-html.dark .pricing-btn.secondary:hover {
-  background: var(--text);
-
-  color: var(--bg);
-}
-
 /* =========================================================
    WASH & CLEANING PACKAGES
 ========================================================= */
@@ -1781,7 +1124,7 @@ html.dark .pricing-btn.secondary:hover {
 
 @media (max-width: 380px) {
   .wash-cleaning-packages {
-    padding: 65px 12px;
+    padding: 65px 25px;
   }
 
   .wash-cleaning-header {
@@ -2426,7 +1769,498 @@ html.dark .pricing-btn.secondary:hover {
     font-size: 8px;
   }
 }
+/* =========================================================
+   PROTECTION & DETAILING PACKAGES
+========================================================= */
 
+.protection-packages {
+  position: relative;
+
+  width: 100%;
+
+  padding: 100px 24px;
+
+  background: var(--bg);
+  color: var(--text);
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.protection-packages-container {
+  width: min(1100px, 100%);
+
+  margin: 0 auto;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.protection-packages-header {
+  width: 100%;
+  max-width: 760px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.protection-packages-label {
+  display: inline-block;
+
+  padding: 7px 18px;
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+  border-radius: 30px;
+
+  color: var(--primary);
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.protection-packages-header h2 {
+  margin: 0;
+
+  color: var(--text);
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(45px, 6vw, 60px);
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: -1.5px;
+}
+
+.protection-packages-header h2 span {
+  color: var(--primary);
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.protection-packages-header p {
+  max-width: 650px;
+
+  margin: 22px auto 0;
+
+  color: var(--text);
+
+  opacity: 0.72;
+
+  font-family: var(--font-body);
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   PACKAGE GRID
+========================================================= */
+
+.protection-packages-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   PACKAGE CARD
+========================================================= */
+
+.protection-package-card {
+  position: relative;
+
+  min-height: 360px;
+
+  padding: 30px 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background: var(--bg);
+
+  border: 2px solid var(--border);
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  transition: border-color 0.3s ease;
+}
+
+/* =========================================================
+   CARD HOVER
+   ONLY PRIMARY BORDER
+========================================================= */
+
+.protection-package-card:hover {
+  border-color: var(--primary);
+}
+
+/* =========================================================
+   FEATURED CARD
+   NORMAL CARD STYLE
+========================================================= */
+
+.protection-package-card.featured {
+  background: var(--bg);
+
+  border-color: rgba(45, 108, 133, 0.18);
+}
+
+/* =========================================================
+   FEATURED CARD HOVER
+========================================================= */
+
+.protection-package-card.featured:hover {
+  border-color: var(--primary);
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.protection-package-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 28px;
+
+  border: 1px solid var(--primary);
+
+  color: var(--primary);
+
+  box-sizing: border-box;
+}
+
+.protection-package-icon svg {
+  width: 23px;
+  height: 23px;
+
+  stroke-width: 1.6;
+}
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.protection-package-card h3 {
+  margin: 0;
+
+  color: var(--text);
+
+  font-family: var(--font-heading);
+
+  font-size: 27px;
+
+  font-weight: 600;
+
+  line-height: 1.1;
+}
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.protection-package-card p {
+  margin: 16px 0 0;
+
+  color: var(--text);
+
+  opacity: 0.68;
+
+  font-family: var(--font-body);
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  line-height: 1.75;
+}
+
+/* =========================================================
+   CARD BOTTOM
+========================================================= */
+
+.protection-package-bottom {
+  margin-top: auto;
+
+  padding-top: 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+
+  border-top: 1px solid rgba(45, 108, 133, 0.18);
+}
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.protection-package-price {
+  color: var(--secondary);
+
+  font-family: var(--font-body);
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   LINK
+========================================================= */
+
+.protection-package-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  width: fit-content;
+
+  color: var(--primary);
+
+  font-family: var(--font-body);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.protection-package-link:hover {
+  color: var(--secondary);
+
+  gap: 11px;
+}
+
+.protection-package-link svg {
+  width: 14px;
+  height: 14px;
+
+  stroke-width: 2;
+}
+
+/* =========================================================
+   TABLET / NETBOOK
+   769px — 1024px
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .protection-packages {
+    padding: 85px 24px;
+  }
+
+  .protection-packages-header {
+    margin-bottom: 45px;
+  }
+
+  .protection-packages-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+  .protection-package-card {
+    min-height: 330px;
+  }
+}
+
+/* =========================================================
+   IPAD MINI
+   481px — 768px
+========================================================= */
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .protection-packages {
+    padding: 75px 20px;
+  }
+
+  .protection-packages-header {
+    margin-bottom: 40px;
+  }
+
+  .protection-packages-header h2 {
+    font-size: 48px;
+  }
+
+  .protection-packages-header p {
+    max-width: 560px;
+
+    font-size: 12px;
+  }
+
+  .protection-packages-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+  }
+
+  .protection-package-card {
+    min-height: 320px;
+
+    padding: 25px 20px;
+  }
+
+  .protection-package-card h3 {
+    font-size: 24px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   360px — 480px
+========================================================= */
+
+@media (max-width: 480px) {
+  .protection-packages {
+    padding: 65px 16px;
+  }
+
+  .protection-packages-header {
+    margin-bottom: 35px;
+  }
+
+  .protection-packages-label {
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .protection-packages-label span {
+    width: 20px;
+  }
+
+  .protection-packages-header h2 {
+    font-size: 40px;
+
+    line-height: 1.02;
+  }
+
+  .protection-packages-header p {
+    max-width: 330px;
+
+    margin-top: 17px;
+
+    font-size: 10.5px;
+
+    line-height: 1.7;
+  }
+
+  .protection-packages-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .protection-package-card {
+    min-height: 310px;
+
+    padding: 25px 22px;
+  }
+
+  .protection-package-card h3 {
+    font-size: 25px;
+  }
+
+  .protection-package-card p {
+    font-size: 11px;
+  }
+
+  .protection-package-icon {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 23px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+   360px
+========================================================= */
+
+@media (max-width: 360px) {
+  .protection-packages {
+    padding: 55px 12px;
+  }
+
+  .protection-packages-header h2 {
+    font-size: 36px;
+  }
+
+  .protection-packages-header p {
+    font-size: 10px;
+  }
+
+  .protection-package-card {
+    min-height: 300px;
+
+    padding: 23px 19px;
+  }
+
+  .protection-package-card h3 {
+    font-size: 23px;
+  }
+}
 /* =========================================================
    PRICING HELP & QUESTIONS
 ========================================================= */
