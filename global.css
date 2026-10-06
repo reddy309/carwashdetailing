@@ -30,7 +30,9 @@ body {
 
 :root {
   --primary: #d88327;
+
   --secondary: #2d6c85;
+
   --bg: #f8f8f8;
   --text: #181b1d;
 
@@ -46,6 +48,7 @@ body {
 
 html.dark {
   --primary: #d88327;
+
   --secondary: #2d6c85;
 
   --bg: #181b1d;
@@ -55,31 +58,21 @@ html.dark {
 }
 
 /* =========================================================
-   HEADER
+    HEADER
 ========================================================= */
 
 .site-header {
   position: fixed;
-
   top: 0;
   left: 0;
-
   width: 100%;
-  height: var(--header-height);
-
-  background: var(--bg);
-
-  z-index: 9999;
-
-  box-shadow: 0 4px 20px var(--border);
-
+  height: 70px;
+  z-index: 1000;
+  background-color: var(--bg);
   backdrop-filter: blur(12px);
-
-  transition:
-    background 0.3s ease,
-    box-shadow 0.3s ease;
-
-  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  transition: var(--transition-smooth);
 }
 
 /* =========================================================
@@ -89,14 +82,13 @@ html.dark {
 .header-container {
   width: min(1150px, calc(100% - 80px));
 
-  min-height: 78px;
+  height: 68px;
+  min-height: 68px;
 
   margin: 0 auto;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
   position: relative;
@@ -524,11 +516,12 @@ body.rtl .logo-name {
   font-family: var(--font-body);
   border-radius: 13px;
 
-  font-size: 13px;
-  background: transparent;
-  color: var(--text);
-  border: 1px solid var(--primary);
+  background: var(--primary);
 
+  color: var(--primary);
+  color: var(--text);
+
+  border: 1px solid var(--primary);
   font-weight: 600;
 
   letter-spacing: 1px;
@@ -545,11 +538,9 @@ body.rtl .logo-name {
 }
 
 .login-button:hover {
-  background: var(--primary);
+  background: var(--bg);
 
-  color: var(--bg);
-
-  transform: translateY(-2px);
+  color: var(--text);
 }
 
 /* =========================================================
@@ -960,7 +951,7 @@ body.rtl .logo-name {
   }
 
   .header-actions {
-    gap: 2px;
+    gap: 5px;
   }
 
   .menu-toggle {
@@ -1015,11 +1006,11 @@ body.rtl .logo-name {
   }
 
   .header-actions {
-    gap: 2px;
+    gap: 5px;
   }
 
   .menu-toggle {
-    width: 29px;
+    width: 25px;
     height: 29px;
   }
 

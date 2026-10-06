@@ -472,17 +472,6 @@ html.dark body::before {
   color: var(--secondary);
 }
 
-.brand-subtitle {
-  color: var(--secondary);
-
-  font-size: 10px;
-  font-weight: 700;
-
-  letter-spacing: 2.5px;
-
-  margin-top: 5px;
-}
-
 /* =========================================================
    HEADING
 ========================================================= */
@@ -764,20 +753,11 @@ html.dark body::before {
   background: var(--input-bg);
 }
 
-.google {
+.social-btn i {
+  font-size: 18px;
+  line-height: 1;
+  display: block;
   color: var(--secondary);
-
-  font-size: 13px;
-}
-
-.apple {
-  color: var(--text);
-
-  font-size: 13px;
-}
-
-html.dark .apple {
-  color: var(--white);
 }
 
 /* =========================================================

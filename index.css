@@ -1,22 +1,55 @@
 /* =========================================================
-   HERO SECTION
+   HERO SECTION — FULL SCREEN FIT
 ========================================================= */
 
 .hero-section {
   position: relative;
 
   width: 100%;
-  min-height: 680px;
+
+  height: 90vh;
+
+  min-height: 570px;
+
+  margin-top: 70px;
 
   display: flex;
+
   align-items: center;
 
+  justify-content: center;
+
   background-image: url("images/p5.jpg");
+
   background-size: cover;
+
   background-position: center center;
+
   background-repeat: no-repeat;
 
   overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HERO CONTAINER
+========================================================= */
+
+.hero-container {
+  position: relative;
+
+  z-index: 3;
+
+  width: min(1100px, calc(100% - 80px));
+
+  min-height: 680px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
 
   box-sizing: border-box;
 }
@@ -27,6 +60,7 @@
 
 .hero-overlay {
   position: absolute;
+
   inset: 0;
 
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
@@ -42,28 +76,6 @@
 
 html.dark .hero-overlay {
   background: rgba(0, 0, 0, 0.78);
-}
-
-/* =========================================================
-   HERO CONTAINER
-========================================================= */
-
-.hero-container {
-  position: relative;
-
-  z-index: 2;
-
-  width: min(1100px, calc(100% - 80px));
-
-  min-height: 680px;
-
-  margin: 0 auto;
-
-  display: flex;
-
-  align-items: center;
-
-  box-sizing: border-box;
 }
 
 /* =========================================================
@@ -87,9 +99,9 @@ html.dark .hero-overlay {
 .hero-eyebrow {
   display: inline-block;
 
-  margin-bottom: 18px;
-
   padding: 7px 18px;
+
+  margin-bottom: 18px;
 
   border: 1px solid var(--primary);
 
@@ -97,15 +109,13 @@ html.dark .hero-overlay {
 
   color: var(--primary);
 
-  font-family: var(--font-body);
+  font-family: "Montserrat", sans-serif;
 
   font-size: 11px;
 
   font-weight: 600;
 
   letter-spacing: 2px;
-
-  line-height: 1.2;
 
   box-sizing: border-box;
 }
@@ -260,17 +270,15 @@ html.dark .hero-overlay {
 ========================================================= */
 
 .hero-btn-primary {
-  background: transparent;
+  background: var(--primary);
 
-  color: #ffffff;
-
-  border: 1px solid var(--primary);
+  color: var(--text);
 }
 
 .hero-btn-primary:hover {
-  background: var(--primary);
+  background: var(--bg);
 
-  color: var(--bg);
+  color: var(--text);
 }
 
 /* =========================================================
@@ -278,16 +286,17 @@ html.dark .hero-overlay {
 ========================================================= */
 
 .hero-btn-secondary {
-  background: var(--primary);
+  background: transparent;
 
-  color: var(--primary);
-  color: var(--text);
+  color: #ffffff;
+
+  border: 1px solid var(--primary);
 }
 
 .hero-btn-secondary:hover {
-  background: var(--bg);
+  background: var(--primary);
 
-  color: var(--text);
+  color: var(--bg);
 }
 
 /* =========================================================
@@ -333,12 +342,17 @@ html.dark .hero-overlay {
 
   white-space: nowrap;
 }
+
 .hero-info-item i {
   width: 32px;
+
   height: 32px;
+
   color: var(--primary);
+
   stroke-width: 2.3;
 }
+
 /* =========================================================
    HERO INFO ICON
 ========================================================= */
@@ -351,6 +365,7 @@ html.dark .hero-overlay {
   display: block;
 
   flex-shrink: 0;
+
   font-size: 11px;
 
   color: var(--secondary);
@@ -368,7 +383,6 @@ html.dark .hero-overlay {
 
 /* =========================================================
    HERO VISUAL
-   IF IMAGE / VISUAL EXISTS
 ========================================================= */
 
 .hero-visual {
@@ -755,22 +769,25 @@ html.dark .hero-overlay {
 }
 
 /* =========================================================
-   SAMSUNG GALAXY S8+ — 360px
+   MOBILE — 480px
+   RESPONSIVE ONLY
 ========================================================= */
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 480px) {
   .hero-section {
-    min-height: 540px;
+    height: auto;
 
-    padding: 78px 0 35px;
+    min-height: 570px;
+
+    padding: 45px 0 35px;
 
     background-position: center center;
   }
 
   .hero-container {
-    width: calc(100% - 24px);
+    width: calc(100% - 28px);
 
-    min-height: auto;
+    min-height: 570px;
 
     margin: 0 auto;
 
@@ -782,7 +799,7 @@ html.dark .hero-overlay {
 
     justify-content: center;
 
-    gap: 20px;
+    gap: 0;
 
     text-align: center;
   }
@@ -792,73 +809,105 @@ html.dark .hero-overlay {
 
     max-width: 100%;
 
-    padding: 0;
+    padding: 20px 0;
 
     text-align: center;
   }
 
-  .hero-eyebrow {
-    margin-bottom: 11px;
+  /* =======================================================
+     EYEBROW
+  ======================================================= */
 
-    padding: 6px 12px;
+  .hero-eyebrow {
+    max-width: 100%;
+
+    margin-bottom: 13px;
+
+    padding: 6px 13px;
 
     font-size: 8px;
 
-    letter-spacing: 1.2px;
+    letter-spacing: 1.3px;
 
-    border-width: 1px;
+    line-height: 1.2;
   }
+
+  /* =======================================================
+     TITLE
+  ======================================================= */
 
   .hero-title {
-    margin: 0 0 15px;
-
-    font-size: 34px;
-
-    line-height: 1.04;
-
-    letter-spacing: -0.5px;
-  }
-
-  .hero-description {
     width: 100%;
 
-    max-width: 320px;
+    margin: 0 0 17px;
 
-    margin: 0 auto 21px;
+    font-size: clamp(38px, 11vw, 48px);
 
-    font-size: 10px;
+    line-height: 1.02;
+
+    letter-spacing: -0.5px;
+
+    text-align: center;
+  }
+
+  .hero-title span {
+    display: block;
+  }
+
+  /* =======================================================
+     DESCRIPTION
+  ======================================================= */
+
+  .hero-description {
+    width: min(100%, 350px);
+
+    max-width: 350px;
+
+    margin: 0 auto 23px;
+
+    font-size: 10.5px;
 
     line-height: 1.7;
+
+    text-align: center;
   }
+
+  /* =======================================================
+     ACTIONS
+  ======================================================= */
 
   .hero-actions {
     width: 100%;
 
-    margin: 0 0 21px;
+    margin: 0 auto 23px;
 
     display: flex;
 
     flex-direction: column;
 
-    align-items: stretch;
+    align-items: center;
 
     justify-content: center;
 
-    gap: 8px;
+    gap: 9px;
   }
 
+  /* =======================================================
+     BUTTONS
+  ======================================================= */
+
   .hero-btn {
-    width: 100%;
+    width: min(270px, 100%);
 
     min-width: 0;
 
-    min-height: 40px;
+    min-height: 44px;
 
-    padding: 0 12px;
+    padding: 0 15px;
 
-    font-size: 9px;
+    font-size: 10px;
 
-    border-radius: 7px;
+    border-radius: 8px;
   }
 
   .hero-btn svg {
@@ -867,6 +916,10 @@ html.dark .hero-overlay {
     height: 14px;
   }
 
+  /* =======================================================
+     INFO
+  ======================================================= */
+
   .hero-info {
     width: 100%;
 
@@ -874,7 +927,7 @@ html.dark .hero-overlay {
 
     align-items: center;
 
-    gap: 8px;
+    gap: 9px 13px;
 
     flex-wrap: wrap;
   }
@@ -882,13 +935,15 @@ html.dark .hero-overlay {
   .hero-info-item {
     gap: 4px;
 
-    font-size: 7.5px;
+    font-size: 8px;
+
+    white-space: nowrap;
   }
 
   .hero-info-item svg {
-    width: 12px;
+    width: 13px;
 
-    height: 12px;
+    height: 13px;
   }
 
   .hero-visual {
@@ -907,24 +962,28 @@ html.dark .hero-overlay {
     border-radius: 10px;
   }
 
+  /* =======================================================
+     BADGE
+  ======================================================= */
+
   .hero-badge {
-    left: 5px;
+    left: 7px;
 
-    bottom: 5px;
+    bottom: 7px;
 
-    min-width: 125px;
+    min-width: 130px;
 
-    padding: 6px 7px;
+    padding: 7px 8px;
 
     gap: 6px;
 
-    border-radius: 7px;
+    border-radius: 8px;
   }
 
   .hero-badge-icon {
-    width: 24px;
+    width: 25px;
 
-    height: 24px;
+    height: 25px;
 
     border-radius: 5px;
   }
@@ -944,13 +1003,17 @@ html.dark .hero-overlay {
   }
 
   .hero-badge-content span {
-    font-size: 5.5px;
+    font-size: 6px;
   }
+
+  /* =======================================================
+     RTL
+  ======================================================= */
 
   html.rtl .hero-badge {
     left: auto;
 
-    right: 5px;
+    right: 7px;
   }
 
   html.rtl .hero-content {
@@ -963,6 +1026,260 @@ html.dark .hero-overlay {
 
   html.rtl .hero-info {
     justify-content: center;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE — 381px to 430px
+========================================================= */
+
+@media screen and (min-width: 381px) and (max-width: 430px) {
+  .hero-section {
+    min-height: 590px;
+
+    padding: 45px 0 35px;
+  }
+
+  .hero-container {
+    width: calc(100% - 30px);
+
+    min-height: 590px;
+  }
+
+  .hero-content {
+    padding: 22px 0;
+  }
+
+  .hero-eyebrow {
+    font-size: 8.5px;
+
+    padding: 7px 14px;
+
+    letter-spacing: 1.4px;
+  }
+
+  .hero-title {
+    font-size: clamp(40px, 10.8vw, 48px);
+
+    line-height: 1.03;
+  }
+
+  .hero-description {
+    width: min(100%, 355px);
+
+    max-width: 355px;
+
+    font-size: 10.8px;
+
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    gap: 10px;
+  }
+
+  .hero-btn {
+    width: min(275px, 100%);
+
+    min-height: 45px;
+
+    font-size: 10.5px;
+  }
+
+  .hero-info {
+    gap: 9px 14px;
+  }
+
+  .hero-info-item {
+    font-size: 8.2px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE — 360px to 380px
+========================================================= */
+
+@media screen and (max-width: 380px) {
+  .hero-section {
+    min-height: 550px;
+
+    padding: 40px 0 30px;
+  }
+
+  .hero-container {
+    width: calc(100% - 22px);
+
+    min-height: 550px;
+  }
+
+  .hero-content {
+    padding: 17px 0;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 11px;
+
+    padding: 6px 11px;
+
+    font-size: 7.5px;
+
+    letter-spacing: 1.1px;
+  }
+
+  .hero-title {
+    margin-bottom: 14px;
+
+    font-size: 36px;
+
+    line-height: 1.03;
+
+    letter-spacing: -0.4px;
+  }
+
+  .hero-description {
+    width: min(100%, 315px);
+
+    max-width: 315px;
+
+    margin-bottom: 20px;
+
+    font-size: 9.5px;
+
+    line-height: 1.65;
+  }
+
+  .hero-actions {
+    margin-bottom: 20px;
+
+    gap: 8px;
+  }
+
+  .hero-btn {
+    width: min(250px, 100%);
+
+    min-height: 42px;
+
+    padding: 0 12px;
+
+    font-size: 9px;
+
+    border-radius: 7px;
+  }
+
+  .hero-btn svg {
+    width: 13px;
+
+    height: 13px;
+  }
+
+  .hero-info {
+    gap: 7px 9px;
+  }
+
+  .hero-info-item {
+    gap: 3px;
+
+    font-size: 7px;
+  }
+
+  .hero-info-item svg {
+    width: 11px;
+
+    height: 11px;
+  }
+
+  .hero-badge {
+    left: 5px;
+
+    bottom: 5px;
+
+    min-width: 120px;
+
+    padding: 6px 7px;
+
+    gap: 5px;
+
+    border-radius: 7px;
+  }
+
+  .hero-badge-icon {
+    width: 23px;
+
+    height: 23px;
+
+    border-radius: 5px;
+  }
+
+  .hero-badge-icon svg {
+    width: 10px;
+
+    height: 10px;
+  }
+
+  .hero-badge-content strong {
+    font-size: 8px;
+  }
+
+  .hero-badge-content span {
+    font-size: 5.5px;
+  }
+
+  html.rtl .hero-badge {
+    left: auto;
+
+    right: 5px;
+  }
+}
+
+/* =========================================================
+   EXTRA SMALL — BELOW 360px
+========================================================= */
+
+@media screen and (max-width: 359px) {
+  .hero-section {
+    min-height: 530px;
+
+    padding: 35px 0 25px;
+  }
+
+  .hero-container {
+    width: calc(100% - 18px);
+
+    min-height: 530px;
+  }
+
+  .hero-eyebrow {
+    font-size: 7px;
+
+    padding: 5px 9px;
+
+    letter-spacing: 1px;
+  }
+
+  .hero-title {
+    font-size: 33px;
+
+    line-height: 1.03;
+  }
+
+  .hero-description {
+    max-width: 290px;
+
+    font-size: 8.8px;
+
+    line-height: 1.6;
+  }
+
+  .hero-btn {
+    width: min(235px, 100%);
+
+    min-height: 41px;
+
+    font-size: 8.5px;
+  }
+
+  .hero-info-item {
+    font-size: 6.5px;
   }
 }
 
@@ -1007,7 +1324,7 @@ html.dark .hero-overlay {
   display: inline-block;
   padding: 7px 18px;
   margin-bottom: 18px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--primary);
   border-radius: 30px;
   color: var(--primary);
   font-family: var(--font-body);
@@ -1378,9 +1695,9 @@ html.rtl .why-choose-card {
 .doorstep-process-section {
   width: 100%;
 
-  padding: 50px 0;
+  padding: 75px 0px;
 
-  background: var(--bg);
+  background-color: var(--bg);
   color: var(--text);
 
   overflow: hidden;
@@ -2260,9 +2577,9 @@ html.rtl .doorstep-process-image-badge {
 
   color: var(--secondary);
 
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
 
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
 
   letter-spacing: 1.5px;
@@ -2843,7 +3160,7 @@ html.rtl .premium-service-link svg {
 
   background: var(--bg);
 
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   border-radius: 18px;
 
   overflow: hidden;
@@ -2855,6 +3172,7 @@ html.rtl .premium-service-link svg {
 
 .featured-package-card:hover {
   transform: translateY(-6px);
+  border: 2px solid var(--primary);
 
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
 }
@@ -5627,34 +5945,32 @@ html.rtl .customer-review-next {
 
 .cta-section {
   width: 100%;
-
-  padding: 40px 0;
-
+  padding: 50px 20px;
   background: var(--bg);
-
   box-sizing: border-box;
 }
 
 /* =========================================================
-   CTA CONTAINER
-   NORMAL — NO CARD BACKGROUND
+   CTA SQUARE BOX
 ========================================================= */
 
 .cta-container {
   width: 100%;
   max-width: 1000px;
-
   margin: 0 auto;
-  padding: 20px;
+  padding: 50px 30px;
 
   box-sizing: border-box;
-
   text-align: center;
 
-  background: transparent;
+  background: linear-gradient(
+    135deg,
+    rgba(216, 131, 39, 0.14),
+    rgba(45, 108, 133, 0.14)
+  );
 
+  border: 1px solid rgba(45, 108, 133, 0.15);
   border-radius: 0;
-
   box-shadow: none;
 }
 
@@ -5810,9 +6126,9 @@ html.rtl .customer-review-next {
 }
 
 .primary-btn:hover {
-  background: var(--primary);
+  background: var(--bg);
 
-  color: var(--bg);
+  color: var(--text);
 }
 
 /* =========================================================
@@ -5820,18 +6136,17 @@ html.rtl .customer-review-next {
 ========================================================= */
 
 .secondary-btn {
-  background: var(--primary);
+  background: transparent;
 
-  color: var(--primary);
   color: var(--text);
 
   border: 1px solid var(--primary);
 }
 
 .secondary-btn:hover {
-  background: var(--bg);
+  background: var(--primary);
 
-  color: var(--text);
+  color: var(--bg);
 }
 
 /* =========================================================

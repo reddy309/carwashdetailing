@@ -1141,7 +1141,7 @@ svg {
 
   color: var(--text-soft);
 
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 600;
 
   white-space: nowrap;
@@ -1167,9 +1167,9 @@ svg {
 
   margin-top: 4px;
 
-  color: var(--muted);
+  color: var(--text);
 
-  font-size: 8px;
+  font-size: 10px;
 }
 
 /* =========================================================
@@ -1241,7 +1241,7 @@ svg {
 
   color: var(--primary);
 
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
 }
 
@@ -1325,7 +1325,7 @@ svg {
 
   color: var(--text-soft);
 
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .booking-info p svg {
@@ -1344,7 +1344,7 @@ svg {
 
   color: var(--success);
 
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 700;
 
   white-space: nowrap;
@@ -1412,7 +1412,7 @@ svg {
 
   color: var(--text-soft);
 
-  font-size: 9px;
+  font-size: 10px;
 
   line-height: 1.5;
 }
@@ -1439,7 +1439,7 @@ svg {
 
   color: var(--success);
 
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: 1px;
@@ -1562,7 +1562,7 @@ svg {
 
   color: var(--text);
 
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
 }
 
@@ -1571,15 +1571,15 @@ svg {
 
   margin-top: 4px;
 
-  color: var(--muted);
+  color: var(--text);
 
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .service-price {
   color: var(--text);
 
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
 
   white-space: nowrap;
@@ -1616,7 +1616,7 @@ svg {
 
   color: var(--text);
 
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
 }
 
@@ -1625,9 +1625,9 @@ svg {
 
   margin-top: 4px;
 
-  color: var(--muted);
+  color: var(--text);
 
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .payment-right {
@@ -1645,7 +1645,7 @@ svg {
 
   color: var(--success);
 
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 700;
 }
 
@@ -1723,9 +1723,9 @@ svg {
 
   margin-top: 5px;
 
-  color: var(--muted);
+  color: var(--text);
 
-  font-size: 8px;
+  font-size: 10px;
 
   line-height: 1.5;
 }
@@ -1743,7 +1743,7 @@ svg {
 
   color: var(--primary);
 
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 700;
 
   white-space: nowrap;
@@ -1758,7 +1758,7 @@ svg {
 .price {
   color: var(--text);
 
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
 
   white-space: nowrap;
@@ -1826,7 +1826,7 @@ svg {
 
   color: var(--text-soft);
 
-  font-size: 9px;
+  font-size: 11px;
 
   line-height: 1.65;
 }
@@ -1905,7 +1905,7 @@ svg {
 .tracking-info p {
   margin-top: 5px;
 
-  color: var(--text-soft);
+  color: var(--text);
 
   font-size: 10px;
 
@@ -1919,7 +1919,7 @@ svg {
 
   color: var(--success);
 
-  font-size: 10px;
+  font-size: 11px;
 }
 
 /* =========================================================
@@ -1970,9 +1970,9 @@ svg {
 
   margin-top: 5px;
 
-  color: var(--muted);
+  color: var(--text);
 
-  font-size: 8px;
+  font-size: 10px;
 
   line-height: 1.5;
 }
@@ -2035,7 +2035,7 @@ svg {
 
   color: var(--text-soft);
 
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .profile-details span {
@@ -2045,7 +2045,7 @@ svg {
 
   color: var(--primary);
 
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
 }
 

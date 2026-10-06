@@ -6,15 +6,20 @@
   position: relative;
 
   width: 100%;
-  min-height: 580px;
+  height: 90vh;
+  min-height: 570px;
+
+  margin-top: 70px;
 
   display: flex;
   align-items: center;
-
+  justify-content: center;
   background: url("images/service\ area\ bg.jpg") center center / cover
     no-repeat;
 
-  color: var(--text);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 
   overflow: hidden;
   box-sizing: border-box;
@@ -43,12 +48,15 @@ body.dark .service-area-hero-overlay {
 
 .service-area-hero-container {
   position: relative;
+  z-index: 3;
 
-  width: min(1180px, calc(100% - 40px));
+  width: min(1100px, calc(100% - 80px));
+  min-height: 680px;
 
   margin: 0 auto;
 
-  z-index: 2;
+  display: flex;
+  align-items: center;
 
   box-sizing: border-box;
 }
@@ -988,11 +996,13 @@ body {
   min-height: 44px;
   padding: 0 22px;
   border-radius: 14px;
-  background: transparent;
+  background: var(--primary);
 
+  color: var(--primary);
   color: var(--text);
 
   border: 1px solid var(--primary);
+
   font-family: var(--font-body);
   font-size: 12px;
   font-weight: 700;
@@ -1005,9 +1015,9 @@ body {
 }
 
 .coverage-btn:hover {
-  background: var(--primary);
+  background: var(--bg);
 
-  color: var(--bg);
+  color: var(--text);
 }
 
 .coverage-btn span {
@@ -1504,10 +1514,13 @@ body {
   min-height: 42px;
 
   padding: 0 18px;
-  background: transparent;
 
-  color: var(--text);
   border-radius: 14px;
+
+  background: var(--primary);
+
+  color: var(--primary);
+  color: var(--text);
 
   border: 1px solid var(--primary);
 
@@ -1530,9 +1543,9 @@ body {
 }
 
 .where-we-serve-btn:hover {
-  background: var(--primary);
+  background: var(--bg);
 
-  color: var(--bg);
+  color: var(--text);
 }
 
 .where-we-serve-btn svg {
@@ -2409,5 +2422,402 @@ body {
 
   .service-area-cta h2 {
     font-size: 60px;
+  }
+}
+
+/* =========================================================
+   SERVICE AREA CTA
+========================================================= */
+
+.service-area-cta {
+  width: 100%;
+  padding: 75px 0;
+  background: var(--bg);
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   CONTAINER — GRADIENT CARD
+========================================================= */
+
+.service-area-cta-container {
+  width: min(1100px, calc(100% - 80px));
+  margin: 0 auto;
+  padding: 65px 70px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(9, 35, 145, 0.08),
+    rgba(5, 183, 243, 0.15)
+  );
+
+  border-radius: 18px;
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.service-area-cta-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 18px;
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+  border-radius: 30px;
+
+  color: var(--primary);
+
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.service-area-cta h2 {
+  max-width: 800px;
+  margin: 0 auto;
+
+  color: var(--text);
+
+  font-family: var(--font-heading);
+  font-size: clamp(45px, 6vw, 60px);
+  font-weight: 500;
+  line-height: 1.02;
+}
+
+.service-area-cta h2 span {
+  display: block;
+  color: var(--primary);
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.service-area-cta p {
+  max-width: 620px;
+  margin: 22px auto 0;
+
+  color: var(--text);
+  opacity: 0.68;
+
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.service-area-location {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-top: 24px;
+  padding: 9px 14px;
+
+  border: 1px solid var(--primary);
+  border-radius: 14px;
+
+  color: var(--text);
+
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+
+  box-sizing: border-box;
+}
+
+.service-area-location svg {
+  width: 14px;
+  height: 14px;
+
+  color: var(--secondary);
+
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.service-area-cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+  margin-top: 30px;
+
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   COMMON BUTTON
+========================================================= */
+
+.service-area-cta-primary,
+.service-area-cta-secondary {
+  min-height: 46px;
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border-radius: 8px;
+
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  box-sizing: border-box;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.service-area-cta-primary {
+  background: var(--primary);
+
+  color: var(--primary);
+  color: var(--text);
+
+  border: 1px solid var(--primary);
+}
+
+/* PRIMARY HOVER */
+
+.service-area-cta-primary:hover {
+  background: var(--bg);
+
+  color: var(--text);
+}
+
+/* =========================================================
+   PRIMARY ICON
+========================================================= */
+
+.service-area-cta-primary svg {
+  width: 15px;
+  height: 15px;
+
+  display: block;
+  flex-shrink: 0;
+
+  stroke: currentColor;
+
+  transition: transform 0.3s ease;
+}
+
+/* ICON HOVER */
+
+.service-area-cta-primary:hover svg {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.service-area-cta-secondary {
+  background: transparent;
+
+  color: var(--text);
+
+  border: 1px solid var(--primary);
+}
+
+/* SECONDARY HOVER */
+
+.service-area-cta-secondary:hover {
+  background: var(--primary);
+
+  color: var(--bg);
+}
+
+/* =========================================================
+   NEST HUB — 1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+  .service-area-cta {
+    padding: 65px 0;
+  }
+
+  .service-area-cta-container {
+    width: min(900px, calc(100% - 50px));
+    padding: 60px 50px;
+  }
+
+  .service-area-cta h2 {
+    font-size: 52px;
+  }
+
+  .service-area-cta p {
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   IPAD MINI — 768px
+========================================================= */
+
+@media (max-width: 768px) {
+  .service-area-cta {
+    padding: 55px 0;
+  }
+
+  .service-area-cta-container {
+    width: calc(100% - 40px);
+    padding: 50px 35px;
+  }
+
+  .service-area-cta h2 {
+    font-size: 44px;
+  }
+
+  .service-area-cta p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .service-area-location {
+    margin-top: 20px;
+  }
+}
+
+/* =========================================================
+   MOBILE — 576px
+========================================================= */
+
+@media (max-width: 576px) {
+  .service-area-cta {
+    padding: 45px 0;
+  }
+
+  .service-area-cta-container {
+    width: calc(100% - 30px);
+    padding: 45px 25px;
+
+    border-radius: 16px;
+  }
+
+  .service-area-cta-label {
+    margin-bottom: 15px;
+    padding: 6px 14px;
+
+    font-size: 10px;
+  }
+
+  .service-area-cta h2 {
+    font-size: 38px;
+    line-height: 1.05;
+  }
+
+  .service-area-cta p {
+    margin-top: 18px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .service-area-location {
+    margin-top: 20px;
+    padding: 8px 12px;
+
+    font-size: 10px;
+  }
+
+  .service-area-cta-actions {
+    width: 100%;
+    margin-top: 25px;
+
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .service-area-cta-primary,
+  .service-area-cta-secondary {
+    width: 100%;
+    min-height: 45px;
+  }
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+ — 360px
+========================================================= */
+
+@media (max-width: 360px) {
+  .service-area-cta {
+    padding: 40px 0;
+  }
+
+  .service-area-cta-container {
+    width: calc(100% - 24px);
+    padding: 38px 20px;
+
+    border-radius: 14px;
+  }
+
+  .service-area-cta-label {
+    padding: 6px 12px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .service-area-cta h2 {
+    font-size: 34px;
+  }
+
+  .service-area-cta p {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .service-area-location {
+    padding: 8px 10px;
+    font-size: 9px;
+  }
+
+  .service-area-cta-actions {
+    margin-top: 22px;
+  }
+
+  .service-area-cta-primary,
+  .service-area-cta-secondary {
+    min-height: 43px;
+    padding: 0 16px;
+    font-size: 12px;
   }
 }
