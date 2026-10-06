@@ -3932,7 +3932,7 @@ body.dark .our-story-section {
   justify-content: center;
   gap: 8px;
 
-  color: #ffffff;
+  color: var(--text);
 
   background: var(--primary);
 
@@ -4357,7 +4357,7 @@ body.dark .our-story-section {
 
   gap: 9px;
 
-  color: #ffffff;
+  color: var(--text);
 
   background: var(--primary);
 

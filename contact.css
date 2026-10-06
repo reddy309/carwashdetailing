@@ -1936,7 +1936,7 @@ body.dark .booking-field textarea {
   border: 1px solid var(--primary);
 
   background: var(--primary);
-  color: #ffffff;
+  color: var(--text);
 
   font-family: var(--font-body);
   font-size: 10px;
