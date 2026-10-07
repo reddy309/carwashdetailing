@@ -292,20 +292,179 @@ html.dark .service-details-hero-overlay {
   font-weight: 400;
   color: var(--text);
 }
+/* =========================================================
+   SAMSUNG GALAXY S8+
+   360px - 599px
+========================================================= */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .service-overview {
+    padding: 80px 14px;
+  }
+
+  .service-overview-container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .service-overview-image {
+    width: 100%;
+    height: 330px;
+  }
+
+  .service-overview-content {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .service-overview-content .section-label {
+    margin-bottom: 15px;
+    transform: none;
+  }
+
+  .service-overview-content h2 {
+    margin: 0 0 20px;
+    justify-content: center;
+    gap: 7px;
+    font-size: 42px;
+    line-height: 1;
+    white-space: normal;
+  }
+
+  .service-overview-content p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+}
 
 /* =========================================================
+   IPAD MINI
+   600px - 768px
+========================================================= */
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .service-overview {
+    padding: 90px 24px;
+  }
+
+  .service-overview-container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .service-overview-image {
+    width: 100%;
+    height: 400px;
+  }
+
+  .service-overview-content {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .service-overview-content .section-label {
+    margin-bottom: 17px;
+    transform: none;
+  }
+
+  .service-overview-content h2 {
+    margin: 0 0 22px;
+    justify-content: center;
+    gap: 8px;
+    font-size: 50px;
+    line-height: 1;
+    white-space: normal;
+  }
+
+  .service-overview-content p {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+}
+
+/* =========================================================
+   NETBOOK
+   769px - 1024px
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .service-overview {
+    padding: 105px 25px;
+  }
+
+  .service-overview-container {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+  }
+
+  .service-overview-image {
+    width: 100%;
+    height: 450px;
+  }
+
+  .service-overview-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .service-overview-content .section-label {
+    margin-bottom: 17px;
+    transform: none;
+  }
+
+  .service-overview-content h2 {
+    margin: 0 0 22px;
+    justify-content: center;
+    gap: 8px;
+    font-size: 48px;
+    line-height: 1;
+    white-space: normal;
+  }
+
+  .service-overview-content p {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+}
+/* =========================================================
    PRODUCTS & MATERIALS
+   DESKTOP / TABLET / MOBILE
+   SAMSUNG GALAXY S8+
+   IPAD MINI
+   NETBOOK
+   RTL / LTR
+   LIGHT / DARK MODE
+========================================================= */
+
+/* =========================================================
+   PRODUCTS & MATERIALS SECTION
 ========================================================= */
 
 .products-materials {
   width: 100%;
-  padding: 90px 0px;
+  padding: 90px 0;
+  margin-top: -90px;
+
   background: var(--bg);
   color: var(--text);
+
   overflow: hidden;
   box-sizing: border-box;
-  margin-top: -90px;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
+
+/* =========================================================
+   CONTAINER
+========================================================= */
 
 .products-materials-container {
   width: min(1100px, 100%);
@@ -313,142 +472,655 @@ html.dark .service-details-hero-overlay {
   box-sizing: border-box;
 }
 
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
 .products-materials-header {
   width: min(760px, 100%);
   margin: 0 auto 65px;
+
   text-align: center;
   box-sizing: border-box;
 }
 
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
 .products-materials-header .section-label {
   display: inline-block;
+
   padding: 7px 18px;
   margin-bottom: 18px;
+
   border: 1px solid var(--primary);
   border-radius: 30px;
+
   color: var(--primary);
+
   font-family: var(--font-body);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 2px;
+
   box-sizing: border-box;
 }
 
+/* =========================================================
+   HEADING
+========================================================= */
+
 .products-materials-header h2 {
   margin: 0 0 18px;
+
   font-family: var(--font-heading);
   font-size: clamp(40px, 5vw, 58px);
   font-weight: 600;
   line-height: 1.05;
+
   color: var(--text);
+
+  transition: color 0.3s ease;
 }
 
 .products-materials-header h2 span {
   color: var(--primary);
 }
 
+/* =========================================================
+   HEADER DESCRIPTION
+========================================================= */
+
 .products-materials-header p {
   width: min(680px, 100%);
   margin: 0 auto;
+
   font-family: var(--font-body);
   font-size: 15px;
   font-weight: 400;
   line-height: 1.8;
+
   color: var(--text);
+
+  transition: color 0.3s ease;
 }
+
+/* =========================================================
+   PRODUCTS GRID
+========================================================= */
 
 .products-materials-grid {
   display: grid;
+
   grid-template-columns: repeat(3, minmax(0, 1fr));
+
   gap: 22px;
   width: 100%;
+
+  box-sizing: border-box;
 }
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
 
 .product-material-card {
   position: relative;
+
   min-width: 0;
   min-height: 300px;
+
   padding: 30px 28px;
+
   background: var(--bg);
+  color: var(--text);
+
   border: 2px solid var(--border);
   border-radius: 14px;
+
   box-sizing: border-box;
+
   transition:
-    transform 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease,
     border-color 0.3s ease,
+    transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
 .product-material-card:hover {
   transform: translateY(-5px);
+
   border-color: var(--primary);
+
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1);
 }
 
+/* =========================================================
+   NUMBER
+========================================================= */
+
 .product-material-number {
   position: absolute;
+
   top: 25px;
   right: 25px;
+
   font-family: var(--font-heading);
   font-size: 17px;
   font-weight: 700;
   letter-spacing: 1.5px;
+
   color: var(--primary);
 }
 
+/* =========================================================
+   ICON
+========================================================= */
+
 .product-material-icon {
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   width: 46px;
   height: 46px;
+
   margin-bottom: 24px;
+
   border: 1px solid var(--primary);
+
   color: var(--primary);
+
   box-sizing: border-box;
 }
 
 .product-material-icon svg {
   width: 20px;
   height: 20px;
+
   stroke-width: 1.7;
 }
 
+/* =========================================================
+   CARD HEADING
+========================================================= */
+
 .product-material-card h3 {
   margin: 0 0 13px;
+
   font-family: var(--font-heading);
   font-size: 28px;
   font-weight: 600;
   line-height: 1.1;
+
   color: var(--text);
+
+  transition: color 0.3s ease;
 }
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
 
 .product-material-card p {
   margin: 0 0 18px;
+
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 400;
   line-height: 1.75;
+
   color: var(--text);
+
+  transition: color 0.3s ease;
 }
+
+/* =========================================================
+   CARD FOCUS
+========================================================= */
 
 .product-material-focus {
   display: inline-block;
+
   font-family: var(--font-body);
   font-size: 12px;
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: 0.6px;
+
   color: var(--secondary);
+
   white-space: nowrap;
+}
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark .products-materials {
+  background: var(--bg);
+  color: var(--text);
 }
 
 body.dark .product-material-card {
   background: var(--bg);
+  color: var(--text);
+
+  border-color: var(--border);
+}
+
+body.dark .products-materials-header h2,
+body.dark .products-materials-header p,
+body.dark .product-material-card h3,
+body.dark .product-material-card p {
+  color: var(--text);
 }
 
 body.dark .product-material-card:hover {
+  border-color: var(--primary);
+
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+
+   360px - 599px
+========================================================= */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .products-materials {
+    padding: 65px 12px;
+    margin-top: -50px;
+  }
+
+  .products-materials-container {
+    width: 100%;
+  }
+
+  /* HEADER */
+
+  .products-materials-header {
+    width: 100%;
+    margin-bottom: 45px;
+  }
+
+  .products-materials-header .section-label {
+    padding: 6px 14px;
+    margin-bottom: 14px;
+
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .products-materials-header h2 {
+    font-size: 40px;
+    line-height: 1.08;
+    margin-bottom: 14px;
+  }
+
+  .products-materials-header p {
+    width: 100%;
+
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  /* GRID */
+
+  .products-materials-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  /* CARD */
+
+  .product-material-card {
+    min-height: 260px;
+
+    padding: 25px 22px;
+
+    border-width: 1px;
+    border-radius: 12px;
+  }
+
+  /* NUMBER */
+
+  .product-material-number {
+    top: 20px;
+    right: 20px;
+
+    font-size: 15px;
+  }
+
+  /* ICON */
+
+  .product-material-icon {
+    width: 43px;
+    height: 43px;
+
+    margin-bottom: 20px;
+  }
+
+  .product-material-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  /* CARD HEADING */
+
+  .product-material-card h3 {
+    font-size: 24px;
+    margin-bottom: 11px;
+  }
+
+  /* DESCRIPTION */
+
+  .product-material-card p {
+    margin-bottom: 15px;
+
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  /* FOCUS */
+
+  .product-material-focus {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* =========================================================
+   IPAD MINI
+   600px - 768px
+========================================================= */
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .products-materials {
+    padding: 75px 20px;
+    margin-top: -65px;
+  }
+
+  .products-materials-container {
+    width: 100%;
+  }
+
+  /* HEADER */
+
+  .products-materials-header {
+    width: min(650px, 100%);
+    margin-bottom: 55px;
+  }
+
+  .products-materials-header .section-label {
+    padding: 7px 16px;
+    margin-bottom: 16px;
+
+    font-size: 10px;
+    letter-spacing: 1.8px;
+  }
+
+  .products-materials-header h2 {
+    font-size: 48px;
+    line-height: 1.06;
+    margin-bottom: 16px;
+  }
+
+  .products-materials-header p {
+    width: min(600px, 100%);
+
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  /* GRID */
+
+  .products-materials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  /* CARD */
+
+  .product-material-card {
+    min-height: 275px;
+
+    padding: 27px 22px;
+
+    border-width: 1px;
+    border-radius: 13px;
+  }
+
+  /* NUMBER */
+
+  .product-material-number {
+    top: 21px;
+    right: 21px;
+
+    font-size: 16px;
+  }
+
+  /* ICON */
+
+  .product-material-icon {
+    width: 44px;
+    height: 44px;
+
+    margin-bottom: 21px;
+  }
+
+  .product-material-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  /* CARD HEADING */
+
+  .product-material-card h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+  }
+
+  /* DESCRIPTION */
+
+  .product-material-card p {
+    margin-bottom: 16px;
+
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  /* FOCUS */
+
+  .product-material-focus {
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   NETBOOK
+   769px - 1024px
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .products-materials {
+    padding: 80px 20px;
+    margin-top: -70px;
+  }
+
+  .products-materials-container {
+    width: min(900px, 100%);
+  }
+
+  /* HEADER */
+
+  .products-materials-header {
+    width: min(700px, 100%);
+    margin-bottom: 60px;
+  }
+
+  .products-materials-header .section-label {
+    padding: 7px 17px;
+    margin-bottom: 17px;
+
+    font-size: 10px;
+  }
+
+  .products-materials-header h2 {
+    font-size: 54px;
+    line-height: 1.06;
+    margin-bottom: 17px;
+  }
+
+  .products-materials-header p {
+    width: min(650px, 100%);
+
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  /* GRID */
+
+  .products-materials-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  /* CARD */
+
+  .product-material-card {
+    min-height: 285px;
+
+    padding: 28px 20px;
+
+    border-width: 1px;
+    border-radius: 13px;
+  }
+
+  /* NUMBER */
+
+  .product-material-number {
+    top: 22px;
+    right: 20px;
+
+    font-size: 16px;
+  }
+
+  /* ICON */
+
+  .product-material-icon {
+    width: 45px;
+    height: 45px;
+
+    margin-bottom: 22px;
+  }
+
+  /* HEADING */
+
+  .product-material-card h3 {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+
+  /* DESCRIPTION */
+
+  .product-material-card p {
+    margin-bottom: 16px;
+
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  /* FOCUS */
+
+  .product-material-focus {
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL GALAXY
+   360px - 390px
+========================================================= */
+
+@media (min-width: 360px) and (max-width: 390px) {
+  .products-materials {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .products-materials-header h2 {
+    font-size: 37px;
+  }
+
+  .products-materials-header p {
+    font-size: 11px;
+  }
+
+  .product-material-card {
+    padding: 23px 19px;
+  }
+
+  .product-material-card h3 {
+    font-size: 23px;
+  }
+
+  .product-material-card p {
+    font-size: 11px;
+  }
+
+  .product-material-focus {
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   RTL
+========================================================= */
+
+html.rtl .product-material-number {
+  right: auto;
+  left: 25px;
+}
+
+/* =========================================================
+   RTL - GALAXY
+========================================================= */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  html.rtl .product-material-number {
+    right: auto;
+    left: 20px;
+  }
+}
+
+/* =========================================================
+   RTL - IPAD MINI
+========================================================= */
+
+@media (min-width: 600px) and (max-width: 768px) {
+  html.rtl .product-material-number {
+    right: auto;
+    left: 21px;
+  }
+}
+
+/* =========================================================
+   RTL - NETBOOK
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  html.rtl .product-material-number {
+    right: auto;
+    left: 20px;
+  }
 }
 
 /* =========================================================
@@ -466,7 +1138,7 @@ body.dark .product-material-card:hover {
 }
 
 .care-details-container {
-  width: min(1180px, 100%);
+  width: min(1100px, 100%);
   margin: 0 auto;
   display: grid;
   grid-template-columns:
@@ -628,27 +1300,6 @@ body.dark .product-material-card:hover {
 }
 
 /* =========================================================
-   CARE RTL
-========================================================= */
-
-body.rtl .care-details-container {
-  direction: rtl;
-}
-
-body.rtl .care-details-content {
-  text-align: right;
-}
-
-body.rtl .care-detail-item {
-  text-align: right;
-}
-
-body.rtl .care-detail-item > svg {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-/* =========================================================
    PAINT & WAX — SERVICE DETAILS
    FULL RESPONSIVE CSS
    Desktop | Nest Hub | iPad Mini | Galaxy S8+
@@ -672,7 +1323,7 @@ body.rtl .care-detail-item > svg {
 ========================================================= */
 
 .service-details-container {
-  width: min(1150px, calc(100% - 80px));
+  width: min(1100px, calc(100% - 80px));
   max-width: 1200px;
   min-height: 570px;
   margin: 0 auto;
@@ -2130,94 +2781,6 @@ html.rtl .service-feature-text {
 
   /* PRODUCTS */
 
-  .products-materials {
-    padding: 65px 15px;
-  }
-
-  .products-materials-container {
-    width: min(350px, 100%);
-  }
-
-  .products-materials-header {
-    width: min(330px, 100%);
-    margin: 0 auto 35px;
-  }
-
-  .products-materials-header .section-label {
-    padding: 6px 11px;
-    margin-bottom: 10px;
-    font-size: 8.5px;
-    letter-spacing: 1.5px;
-  }
-
-  .products-materials-header h2 {
-    width: 100%;
-    margin-bottom: 13px;
-    font-size: 33px;
-    line-height: 1.08;
-  }
-
-  .products-materials-header p {
-    width: 100%;
-    font-size: 11px;
-    line-height: 1.7;
-  }
-
-  .products-materials-grid {
-    width: min(330px, 100%);
-    margin: 0 auto;
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-
-  .product-material-card {
-    width: 100%;
-    min-width: 0;
-    min-height: auto;
-    padding: 21px 18px;
-    border-radius: 2px;
-  }
-
-  .product-material-card:hover {
-    transform: none;
-  }
-
-  .product-material-number {
-    top: 18px;
-    right: 18px;
-    font-size: 8px;
-  }
-
-  .product-material-icon {
-    width: 38px;
-    height: 38px;
-    margin-bottom: 16px;
-  }
-
-  .product-material-icon svg {
-    width: 17px;
-    height: 17px;
-  }
-
-  .product-material-card h3 {
-    width: 100%;
-    margin-bottom: 9px;
-    font-size: 23px;
-    line-height: 1.1;
-  }
-
-  .product-material-card p {
-    width: 100%;
-    margin-bottom: 12px;
-    font-size: 10.5px;
-    line-height: 1.7;
-  }
-
-  .product-material-focus {
-    font-size: 8px;
-    line-height: 1.6;
-  }
-
   /* CARE */
 
   .care-details {
@@ -2321,19 +2884,15 @@ html.rtl .service-feature-text {
     font-size: 37px;
   }
 
-  .products-materials-container,
   .care-details-container,
   .exterior-care-details .care-details-container {
     width: min(320px, 100%);
   }
-
-  .products-materials-header,
   .care-details-content {
     max-width: 310px;
   }
 
-  .care-details-content h2,
-  .products-materials-header h2 {
+  .care-details-content h2 {
     font-size: 30px;
   }
 
@@ -2373,40 +2932,6 @@ html.rtl .service-feature-text {
   .service-details-hero-content p {
     width: min(540px, 100%);
     font-size: 12px;
-  }
-
-  .products-materials-container {
-    width: min(700px, 100%);
-  }
-
-  .products-materials-header {
-    max-width: 600px;
-    margin-bottom: 42px;
-  }
-
-  .products-materials-header h2 {
-    font-size: 40px;
-  }
-
-  .products-materials-header p {
-    font-size: 12px;
-  }
-
-  .products-materials-grid {
-    gap: 16px;
-  }
-
-  .product-material-card {
-    min-height: 250px;
-    padding: 21px 19px;
-  }
-
-  .product-material-card h3 {
-    font-size: 23px;
-  }
-
-  .product-material-card p {
-    font-size: 10.5px;
   }
 
   .care-details {
@@ -2474,44 +2999,6 @@ html.rtl .service-feature-text {
     font-size: 13px;
   }
 
-  .products-materials {
-    padding: 85px 30px;
-  }
-
-  .products-materials-container {
-    width: min(900px, 100%);
-  }
-
-  .products-materials-header {
-    max-width: 650px;
-    margin-bottom: 50px;
-  }
-
-  .products-materials-header h2 {
-    font-size: 48px;
-  }
-
-  .products-materials-header p {
-    font-size: 12px;
-  }
-
-  .products-materials-grid {
-    gap: 18px;
-  }
-
-  .product-material-card {
-    min-height: 270px;
-    padding: 24px 21px;
-  }
-
-  .product-material-card h3 {
-    font-size: 25px;
-  }
-
-  .product-material-card p {
-    font-size: 11px;
-  }
-
   .care-details {
     padding: 85px 30px;
   }
@@ -2571,7 +3058,6 @@ html.rtl .service-feature-text {
 @media (max-width: 1024px) {
   .service-details-hero,
   .detailing-process,
-  .products-materials,
   .care-details {
     width: 100%;
     max-width: 100%;
@@ -2580,7 +3066,6 @@ html.rtl .service-feature-text {
 
   .service-details-hero-content,
   .detailing-process-container,
-  .products-materials-container,
   .care-details-container {
     min-width: 0;
     box-sizing: border-box;
@@ -2588,7 +3073,6 @@ html.rtl .service-feature-text {
 
   .service-details-hero-content h1,
   .detailing-process-header h2,
-  .products-materials-header h2,
   .care-details-content h2,
   .book-service-cta h2,
   .timeline-card h3,
@@ -2601,7 +3085,6 @@ html.rtl .service-feature-text {
 
   .service-details-hero-content p,
   .detailing-process-header p,
-  .products-materials-header p,
   .care-details-intro,
   .care-detail-item p,
   .service-duration-header p,
@@ -2612,7 +3095,6 @@ html.rtl .service-feature-text {
 
   .service-details-hero img,
   .detailing-process img,
-  .products-materials img,
   .care-details img,
   .service-duration img {
     max-width: 100%;
@@ -2634,8 +3116,7 @@ html.rtl .service-feature-text {
   }
 
   .service-details-hero-content h1,
-  .detailing-process-header h2,
-  .products-materials-header h2 {
+  .detailing-process-header h2 {
     max-width: 100%;
   }
 
@@ -2656,7 +3137,6 @@ html.rtl .service-feature-text {
 
   /* PREVENT LARGE INTERNAL WIDTH */
 
-  .products-materials-container,
   .care-details-container {
     margin-left: auto;
     margin-right: auto;
@@ -2929,360 +3409,27 @@ html.rtl .service-feature-text {
 }
 
 /* =========================================================
-   RTL
+   SAMSUNG GALAXY S8+
+   360px - 599px
 ========================================================= */
 
-body.rtl .duration-overview {
-  direction: rtl;
-}
-
-body.rtl .duration-item + .duration-item {
-  border-left: 0;
-  border-right: 1px solid var(--text);
-}
-
-body.rtl .duration-process {
-  direction: rtl;
-}
-
-body.rtl .duration-note {
-  direction: rtl;
-}
-
-/* =========================================================
-   NETBOOK / SMALL LAPTOP
-   992px – 1024px
-========================================================= */
-
-@media (min-width: 821px) and (max-width: 1100px) {
-  .service-duration {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .service-duration-container {
-    width: 100%;
-  }
-
-  .duration-process {
-    gap: 20px;
-  }
-
-  .duration-step-content {
-    max-width: 205px;
-  }
-
-  .duration-step-content h3 {
-    font-size: 25px;
-  }
+@media (min-width: 360px) and (max-width: 599px) {
 }
 
 /* =========================================================
    IPAD MINI
-   768px – 820px
+   600px - 768px
 ========================================================= */
 
-@media (min-width: 768px) and (max-width: 820px) {
-  .service-duration {
-    padding: 80px 24px;
-  }
-
-  .service-duration-header {
-    margin-bottom: 60px;
-  }
-
-  .duration-overview {
-    margin-bottom: 70px;
-  }
-
-  .duration-item {
-    padding: 28px 15px;
-  }
-
-  .duration-item strong {
-    font-size: 28px;
-  }
-
-  .duration-item p {
-    font-size: 12px;
-  }
-
-  .duration-process {
-    gap: 14px;
-  }
-
-  .duration-step-marker {
-    width: 48px;
-    height: 48px;
-    flex-basis: 48px;
-  }
-
-  .duration-step-content {
-    max-width: 165px;
-  }
-
-  .duration-step-content h3 {
-    font-size: 23px;
-  }
-
-  .duration-step-content p {
-    font-size: 12px;
-    line-height: 1.65;
-  }
+@media (min-width: 600px) and (max-width: 768px) {
 }
 
 /* =========================================================
-   SAMSUNG GALAXY S8+ / SMALL TABLET
-   481px – 767px
+   NETBOOK
+   769px - 1024px
 ========================================================= */
 
-@media (min-width: 481px) and (max-width: 767px) {
-  .service-duration {
-    padding: 70px 20px;
-  }
-
-  .service-duration-header {
-    width: min(680px, 100%);
-    margin-bottom: 50px;
-  }
-
-  .service-duration-header h2 {
-    font-size: clamp(40px, 8vw, 50px);
-  }
-
-  .service-duration-header p {
-    font-size: 13px;
-    line-height: 1.7;
-  }
-
-  /* -----------------------------------------
-     OVERVIEW
-  ----------------------------------------- */
-
-  .duration-overview {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    margin-bottom: 65px;
-  }
-
-  .duration-item {
-    min-height: 125px;
-    padding: 24px 12px;
-  }
-
-  .duration-label {
-    font-size: 8px;
-    letter-spacing: 1.5px;
-  }
-
-  .duration-item strong {
-    font-size: 26px;
-  }
-
-  .duration-item p {
-    font-size: 11px;
-    line-height: 1.5;
-  }
-
-  /* -----------------------------------------
-     PROCESS
-  ----------------------------------------- */
-
-  .duration-process {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 45px 20px;
-  }
-
-  .duration-process-line {
-    display: none;
-  }
-
-  .duration-step {
-    width: 100%;
-  }
-
-  .duration-step-marker {
-    width: 48px;
-    height: 48px;
-    flex-basis: 48px;
-    margin-bottom: 20px;
-  }
-
-  .duration-step-content {
-    max-width: 250px;
-  }
-
-  .duration-step-content h3 {
-    font-size: 24px;
-  }
-
-  .duration-step-content p {
-    font-size: 12px;
-    line-height: 1.65;
-  }
-}
-
-/* =========================================================
-   SAMSUNG GALAXY S8+
-   360px – 480px
-========================================================= */
-
-@media (max-width: 480px) {
-  .service-duration {
-    padding: 65px 16px;
-  }
-
-  .service-duration-container {
-    width: 100%;
-  }
-
-  /* -----------------------------------------
-     HEADER
-  ----------------------------------------- */
-
-  .service-duration-header {
-    width: 100%;
-    margin-bottom: 42px;
-  }
-
-  .service-duration-header .section-label {
-    padding: 6px 15px;
-    margin-bottom: 15px;
-
-    font-size: 9px;
-    letter-spacing: 1.6px;
-  }
-
-  .service-duration-header h2 {
-    margin-bottom: 15px;
-
-    font-size: clamp(36px, 11vw, 46px);
-    line-height: 1.05;
-  }
-
-  .service-duration-header p {
-    width: 100%;
-
-    font-size: 12px;
-    line-height: 1.7;
-  }
-
-  /* -----------------------------------------
-     OVERVIEW
-  ----------------------------------------- */
-
-  .duration-overview {
-    grid-template-columns: 1fr;
-    margin-bottom: 55px;
-  }
-
-  .duration-item {
-    min-height: auto;
-    padding: 23px 15px;
-  }
-
-  .duration-item + .duration-item {
-    border-left: 0;
-    border-top: 1px solid var(--text);
-  }
-
-  .duration-label {
-    margin-bottom: 7px;
-    font-size: 8px;
-    letter-spacing: 1.6px;
-  }
-
-  .duration-item strong {
-    margin-bottom: 5px;
-    font-size: 27px;
-  }
-
-  .duration-item p {
-    font-size: 12px;
-    line-height: 1.55;
-  }
-
-  /* -----------------------------------------
-     PROCESS
-  ----------------------------------------- */
-
-  .duration-process {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .duration-process-line {
-    top: 25px;
-    bottom: 25px;
-
-    left: 50%;
-    right: auto;
-
-    width: 1px;
-    height: auto;
-
-    transform: translateX(-50%);
-  }
-
-  .duration-step {
-    width: 100%;
-  }
-
-  .duration-step-marker {
-    width: 48px;
-    height: 48px;
-    flex-basis: 48px;
-
-    margin-bottom: 20px;
-  }
-
-  .duration-step-content {
-    width: min(100%, 290px);
-    max-width: 290px;
-  }
-
-  .duration-step-content > span {
-    margin-bottom: 8px;
-    font-size: 8px;
-    letter-spacing: 1.4px;
-  }
-
-  .duration-step-content h3 {
-    margin-bottom: 8px;
-    font-size: 24px;
-  }
-
-  .duration-step-content p {
-    font-size: 12px;
-    line-height: 1.65;
-  }
-}
-
-/* =========================================================
-   VERY SMALL PHONES
-   320px – 359px
-========================================================= */
-
-@media (max-width: 359px) {
-  .service-duration {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
-  .service-duration-header h2 {
-    font-size: 34px;
-  }
-
-  .duration-item strong {
-    font-size: 25px;
-  }
-
-  .duration-step-content {
-    max-width: 270px;
-  }
-
-  .duration-step-content h3 {
-    font-size: 22px;
-  }
+@media (min-width: 769px) and (max-width: 1024px) {
 }
 /* =========================================================
    BOOK THIS SERVICE CTA
