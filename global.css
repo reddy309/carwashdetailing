@@ -416,7 +416,7 @@ body.rtl .logo-name {
 .rtl-button {
   height: 40px;
 
-  min-width: 62px;
+  width: 40px;
 
   padding: 0 9px;
 
