@@ -217,10 +217,9 @@ svg {
 }
 
 .logo-icon img {
-  width: 65px;
-  height: 65px;
-  font-weight: 600;
-
+  width: 97px;
+  height: 97px;
+  display: block;
   object-fit: contain;
 }
 
@@ -235,6 +234,10 @@ svg {
   font-weight: 700;
 
   white-space: nowrap;
+  transform: translate(-10px);
+}
+html[dir="rtl"] .logo-text {
+  transform: translateX(10px);
 }
 
 .logo-text span {

@@ -261,7 +261,7 @@ body.dark .service-details-hero {
 ========================================================= */
 
 .service-details-hero-btn {
-  min-height: 46px;
+  min-height: 45px;
 
   padding: 0 22px;
 
@@ -278,13 +278,13 @@ body.dark .service-details-hero {
 
   color: var(--text);
 
-  border: 1px solid var(--primary);
+  border: 2px solid var(--primary);
 
-  border-radius: 14px;
+  border-radius: 9px;
 
   font-family: var(--font-body);
 
-  font-size: 14px;
+  font-size: 12px;
 
   font-weight: 700;
 
@@ -337,6 +337,7 @@ body.dark .service-details-hero {
   color: var(--text);
 
   border-color: var(--bg);
+  border: 2px solid var(--primary);
 }
 
 .service-details-hero-btn:hover i {
@@ -1745,7 +1746,7 @@ body.dark .foam-deep-card:hover {
 
   margin-top: 30px;
 
-  min-height: 46px;
+  min-height: 45px;
 
   padding: 0 22px;
   background: var(--primary);
@@ -1754,11 +1755,11 @@ body.dark .foam-deep-card:hover {
   color: var(--text);
 
   border: 1px solid var(--primary);
-  border-radius: 14px;
+  border-radius: 9px;
 
   font-family: var(--font-body);
 
-  font-size: 13px;
+  font-size: 12px;
 
   font-weight: 700;
 
@@ -2285,7 +2286,7 @@ body.dark .foam-deep-card:hover {
 
   margin-top: 30px;
 
-  min-height: 46px;
+  min-height: 45px;
 
   padding: 0 22px;
   background: var(--primary);
@@ -2295,10 +2296,10 @@ body.dark .foam-deep-card:hover {
 
   border: 1px solid var(--primary);
 
-  border-radius: 14px;
+  border-radius: 9px;
 
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
 
   line-height: 1;
@@ -2746,7 +2747,6 @@ body.dark .foam-deep-card:hover {
 ========================================================= */
 
 .comparison-featured {
-  background: rgba(5, 183, 243, 0.06);
   border-top: 3px solid var(--primary);
 }
 
@@ -2934,22 +2934,21 @@ body.dark .foam-deep-card:hover {
   /* IMPORTANT */
   margin-top: auto;
 
-  min-height: 43px;
+  min-height: 45px;
 
-  padding: 0 18px;
+  padding: 0 20px;
 
-  background: var(--primary);
+  background: transparent;
 
-  color: var(--primary);
   color: var(--text);
 
   border: 1px solid var(--primary);
 
-  border-radius: 7px;
+  border-radius: 9px;
 
   font-family: var(--font-body);
 
-  font-size: 9px;
+  font-size: 12px;
 
   font-weight: 700;
 
@@ -2958,8 +2957,6 @@ body.dark .foam-deep-card:hover {
   line-height: 1;
 
   text-decoration: none;
-
-  text-transform: uppercase;
 
   white-space: nowrap;
 
@@ -2981,9 +2978,9 @@ body.dark .foam-deep-card:hover {
 }
 
 .comparison-btn:hover {
-  background: var(--bg);
+  background: var(--primary);
 
-  color: var(--text);
+  color: var(--bg);
 }
 
 .comparison-btn:hover i {
@@ -3005,21 +3002,22 @@ body.dark .foam-deep-card:hover {
   /* IMPORTANT */
   margin-top: auto;
 
-  min-height: 43px;
+  min-height: 45px;
 
-  padding: 0 18px;
+  padding: 0 20px;
 
-  background: transparent;
+  background: var(--primary);
 
+  color: var(--primary);
   color: var(--text);
 
   border: 1px solid var(--primary);
 
-  border-radius: 7px;
+  border-radius: 9px;
 
   font-family: var(--font-body);
 
-  font-size: 9px;
+  font-size: 12px;
 
   font-weight: 700;
 
@@ -3028,8 +3026,6 @@ body.dark .foam-deep-card:hover {
   line-height: 1;
 
   text-decoration: none;
-
-  text-transform: uppercase;
 
   white-space: nowrap;
 
@@ -3041,9 +3037,9 @@ body.dark .foam-deep-card:hover {
     transform 0.3s ease;
 }
 .comparison-btn1:hover {
-  background: var(--primary);
+  background: var(--bg);
 
-  color: var(--bg);
+  color: var(--text);
 }
 /* =========================================================
    NETBOOK
@@ -3186,7 +3182,7 @@ body.dark .foam-deep-card:hover {
   }
 
   .comparison-featured {
-    border-top: 3px solid var(--primary) !important;
+    border-top: 3px solid var(--primary);
   }
 
   .comparison-badge {
@@ -3445,11 +3441,11 @@ body.dark .foam-deep-card:hover {
 
   gap: 10px;
 
-  min-height: 50px;
+  min-height: 45px;
 
-  padding: 0 26px;
+  padding: 0 20px;
 
-  border-radius: 10px;
+  border-radius: 9px;
 
   background: var(--primary);
 
@@ -3461,7 +3457,7 @@ body.dark .foam-deep-card:hover {
 
   font-family: "Montserrat", sans-serif;
 
-  font-size: 13px;
+  font-size: 12px;
 
   font-weight: 700;
 

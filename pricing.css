@@ -289,7 +289,7 @@
 ========================================================= */
 
 .pricing-btn {
-  min-height: 50px;
+  min-height: 45px;
 
   padding: 0 25px;
 
@@ -300,11 +300,11 @@
 
   gap: 9px;
 
-  border-radius: 8px;
+  border-radius: 9px;
 
   font-family: var(--font-body);
 
-  font-size: 13px;
+  font-size: 12px;
 
   font-weight: 700;
 
@@ -333,21 +333,16 @@
 .pricing-btn.primary {
   background: var(--primary);
 
-  color: #181b1d;
+  color: var(--primary);
+  color: var(--text);
 
-  border: 1px solid var(--primary);
+  border: 2px solid var(--primary);
 }
 
 .pricing-btn.primary:hover {
-  background: #ffffff;
+  background: var(--bg);
 
-  border-color: #ffffff;
-
-  color: #181b1d;
-
-  transform: translateY(-2px);
-
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  color: var(--text);
 }
 
 /* =========================================================
@@ -379,12 +374,6 @@
 
 .pricing-btn.secondary:hover {
   background: var(--primary);
-
-  border-color: var(--primary);
-
-  color: #181b1d;
-
-  transform: translateY(-2px);
 }
 
 /* =========================================================
@@ -947,15 +936,14 @@
   color: var(--text);
 
   border: 1px solid var(--primary);
-  border-radius: 14px;
+  border-radius: 9px;
 
   text-decoration: none;
 
   font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
   letter-spacing: 1.3px;
-  text-transform: uppercase;
 
   transition:
     background 0.3s ease,
@@ -988,15 +976,14 @@
   color: var(--text);
 
   border: 1px solid var(--primary);
-  border-radius: 14px;
+  border-radius: 9px;
 
   text-decoration: none;
 
   font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
   letter-spacing: 1.3px;
-  text-transform: uppercase;
 
   transition:
     background 0.3s ease,
@@ -1132,8 +1119,14 @@
   }
 
   .wash-cleaning-label {
+    display: block;
+    width: 100%;
+
     font-size: 8px;
     letter-spacing: 1.5px;
+
+    margin-top: 40px;
+    text-align: center;
   }
 
   .wash-cleaning-header h2 {
@@ -1557,38 +1550,46 @@
 }
 
 .comparison-btn {
+  min-width: 145px;
+
+  min-height: 45px;
+
+  padding: 0 24px;
+
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
-
-  gap: 7px;
-
-  width: 100%;
-  min-height: 40px;
-
-  padding: 9px 12px;
-
   background: var(--primary);
 
   color: var(--primary);
   color: var(--text);
 
   border: 1px solid var(--primary);
-  font-family: var(--font-body);
-  font-size: 10px;
-  font-weight: 700;
-  border-radius: 8px;
-
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-  text-decoration: none;
+  gap: 8px;
 
   box-sizing: border-box;
 
+  border-radius: 9px;
+
+  font-family: var(--font-body);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
   transition:
-    background-color 0.25s ease,
-    color 0.25s ease,
-    border-color 0.25s ease;
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .comparison-btn svg {
@@ -1617,7 +1618,7 @@
 .comparison-btn-featured:hover {
   background: var(--primary);
 
-  color: var(--bg);
+  color: var(--text);
 }
 
 /* =========================================================
@@ -2331,7 +2332,8 @@
   display: inline-flex;
 
   align-items: center;
-
+  padding: 0px 20px;
+  min-height: 45px;
   gap: 7px;
 
   width: fit-content;
@@ -2340,25 +2342,30 @@
 
   font-family: var(--font-body);
 
-  font-size: 13px;
+  font-size: 12px;
 
   font-weight: 700;
+  border-radius: 9px;
 
   letter-spacing: 0.5px;
 
   text-decoration: none;
 
-  text-transform: uppercase;
+  background: var(--primary);
 
+  color: var(--primary);
+  color: var(--text);
+
+  border: 1px solid var(--primary);
   transition:
     color 0.3s ease,
     gap 0.3s ease;
 }
 
 .protection-package-link:hover {
-  color: var(--secondary);
+  background: var(--bg);
 
-  gap: 11px;
+  color: var(--text);
 }
 
 .protection-package-link svg {
@@ -2694,23 +2701,23 @@
 
   gap: 9px;
 
-  min-height: 44px;
+  min-height: 45px;
 
   padding: 0 20px;
-  background: transparent;
 
+  text-decoration: none;
+  background: var(--primary);
+
+  color: var(--primary);
   color: var(--text);
 
   border: 1px solid var(--primary);
-  text-decoration: none;
-
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
-  border-radius: 14px;
+  border-radius: 9px;
 
   letter-spacing: 1.2px;
-  text-transform: uppercase;
 
   box-sizing: border-box;
 
@@ -2726,9 +2733,9 @@
 }
 
 .pricing-help-btn:hover {
-  background: var(--primary);
+  background: var(--bg);
 
-  color: var(--bg);
+  color: var(--text);
 }
 
 /* =========================================================
@@ -3167,20 +3174,20 @@
 }
 
 .pricing-final-cta-btn {
-  min-height: 48px;
-  padding: 13px 24px;
+  min-height: 45px;
+  padding: 0px 20px;
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 9px;
 
-  border-radius: 8px;
+  border-radius: 9px;
   text-decoration: none;
 
   font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
 
   box-sizing: border-box;
 
@@ -3229,8 +3236,6 @@
 
 .pricing-final-cta-btn.secondary:hover {
   background: var(--primary);
-
-  color: var(--bg);
 }
 
 /* =========================================================

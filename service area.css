@@ -174,20 +174,20 @@ body.dark .service-area-hero-overlay {
 
   gap: 7px;
 
-  min-height: 42px;
+  min-height: 45px;
 
-  padding: 0 18px;
+  padding: 0 20px;
   background: var(--primary);
 
   color: var(--primary);
   color: var(--text);
 
-  border: 1px solid var(--primary);
+  border: 2px solid var(--primary);
 
   font-family: var(--font-body);
-  border-radius: 14px;
+  border-radius: 9px;
 
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 700;
 
   text-decoration: none;
@@ -216,9 +216,9 @@ body.dark .service-area-hero-overlay {
   align-items: center;
   justify-content: center;
 
-  min-height: 42px;
+  min-height: 45px;
 
-  padding: 0 18px;
+  padding: 0 20px;
 
   background: transparent;
 
@@ -228,9 +228,9 @@ body.dark .service-area-hero-overlay {
 
   font-family: var(--font-body);
 
-  font-size: 15px;
-  font-weight: 600;
-  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 9px;
 
   text-decoration: none;
 
@@ -966,9 +966,9 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  min-height: 44px;
-  padding: 0 22px;
-  border-radius: 14px;
+  min-height: 45px;
+  padding: 0 20px;
+  border-radius: 9px;
   background: var(--primary);
 
   color: var(--primary);
@@ -1846,11 +1846,11 @@ body {
 
   gap: 8px;
 
-  min-height: 42px;
+  min-height: 45px;
 
-  padding: 0 18px;
+  padding: 0 20px;
 
-  border-radius: 14px;
+  border-radius: 9px;
 
   background: var(--primary);
 
@@ -1861,7 +1861,7 @@ body {
 
   font-family: var(--font-body);
 
-  font-size: 13px;
+  font-size: 12px;
 
   font-weight: 700;
 
@@ -2610,7 +2610,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-height: 43px;
+  min-height: 45px;
   padding: 0 20px;
   background: transparent;
 
@@ -2619,8 +2619,8 @@ body {
   border: 1px solid var(--primary);
 
   font-family: var(--font-body);
-  font-size: 13px;
-  border-radius: 14px;
+  font-size: 12px;
+  border-radius: 9px;
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
@@ -2634,7 +2634,7 @@ body {
 .service-area-cta-primary:hover {
   background: var(--primary);
 
-  color: var(--bg);
+  color: var(--text);
 }
 
 .service-area-cta-primary svg {
@@ -2651,7 +2651,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 43px;
+  min-height: 45px;
   padding: 0 20px;
   background: var(--primary);
 
@@ -2660,9 +2660,9 @@ body {
 
   border: 1px solid var(--primary);
   font-family: var(--font-body);
-  font-size: 13px;
-  border-radius: 14px;
-  font-weight: 600;
+  font-size: 12px;
+  border-radius: 9px;
+  font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
   box-sizing: border-box;

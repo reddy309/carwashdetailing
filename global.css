@@ -141,12 +141,13 @@ html.dark {
 }
 
 .logo-icon img {
-  width: 65px;
-  height: 65px;
+  width: 90px;
+  height: 90px;
 
   display: block;
 
   object-fit: contain;
+  transform: translate(-3px, 8px);
 }
 
 /* =========================================================
@@ -514,7 +515,7 @@ body.rtl .logo-name {
   gap: 9px;
 
   font-family: var(--font-body);
-  border-radius: 13px;
+  border-radius: 9px;
 
   background: var(--primary);
 
@@ -525,6 +526,7 @@ body.rtl .logo-name {
   font-weight: 600;
 
   letter-spacing: 1px;
+  font-size: 12px;
 
   text-decoration: none;
 
@@ -541,6 +543,7 @@ body.rtl .logo-name {
   background: var(--bg);
 
   color: var(--text);
+  border: 2px solid var(--primary);
 }
 
 /* =========================================================
@@ -1148,8 +1151,8 @@ body.rtl .logo-name {
 ========================================================= */
 
 .footer-logo .logo-icon img {
-  width: 65px;
-  height: 65px;
+  width: 90px;
+  height: 90px;
 
   display: block;
 
@@ -1161,6 +1164,7 @@ body.rtl .logo-name {
   transform: none;
 
   box-sizing: border-box;
+  transform: translate(-3px, 8px);
 }
 
 /* =========================================================
@@ -1873,18 +1877,39 @@ body.rtl .footer-bottom {
     width: auto;
   }
 
-  /* CONTACT */
-
   .footer-contact {
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
   }
 
   .footer-contact p {
-    width: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 
-    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
 
     text-align: left;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+
+    box-sizing: border-box;
+  }
+  .footer-contact span {
+    .footer-contact span {
+      display: inline-block;
+      text-align: left;
+      font-size: 10px;
+      transform: translateX(-10px);
+      white-space: nowrap;
+    }
   }
 
   /* BOTTOM */

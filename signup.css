@@ -432,20 +432,16 @@ html.dark body::before {
 }
 
 /* =========================================================
-   BRAND LOGO
+   BRAND LOGO — LTR
 ========================================================= */
 
 .brand-logo {
-  width: 65px;
-  height: 65px;
-
+  width: 90px;
+  height: 90px;
   object-fit: contain;
-
   display: block;
-
   flex-shrink: 0;
 }
-
 /* =========================================================
    BRAND TEXT
 ========================================================= */
@@ -466,8 +462,12 @@ html.dark body::before {
   font-weight: 700;
 
   letter-spacing: -0.5px;
+  transform: translate(-15px);
 }
-
+html[dir="rtl"] .brand-name {
+  transform: translateX(15px);
+  letter-spacing: 0;
+}
 .brand-name span {
   color: var(--secondary);
 }
@@ -649,13 +649,15 @@ html.dark body::before {
 
 .create-btn {
   width: 100%;
-  height: 37px;
+  min-height: 45px;
+  padding: 0px 20px;
 
   border: none;
-  border-radius: 8px;
+  border-radius: 9px;
 
-  background: transparent;
+  background: var(--primary);
 
+  color: var(--primary);
   color: var(--text);
 
   border: 1px solid var(--primary);
@@ -670,9 +672,9 @@ html.dark body::before {
 }
 
 .create-btn:hover {
-  background: var(--primary);
+  background: var(--bg);
 
-  color: var(--bg);
+  color: var(--text);
 }
 
 /* =========================================================
